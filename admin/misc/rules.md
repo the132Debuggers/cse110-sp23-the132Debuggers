@@ -8,7 +8,7 @@ updatedAt: 04/17/2023
 
 ## 1) Group Identification
 
-Instructor: Thomas A. Powell 
+Instructor: Thomas A. Powell
 
 Teaching Assistant: Gagan Gopalaiah
 
@@ -24,7 +24,7 @@ Team Member Info: [Team](/admin/team.md)
 ## 3) Scheduling Meetings
 
 1. Members are expected to attend **routine** meetings
-    - Time for routine meetings is chosen based on the `when2meet` responses
+   - Time for routine meetings is chosen based on the `when2meet` responses
 2. Routine meetings are not subject to change in most cases
 3. Members who cannot attend a meeting are expected to read meeting notes under `/admin/meetings`
 4. Reminders will be sent 30 mins before the meeting by either the team planner or the host of the meeting
