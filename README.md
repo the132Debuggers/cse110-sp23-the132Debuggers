@@ -36,7 +36,7 @@ However, to make sure we have a linear, simple-to-track commit histroy, the repo
 
 PR titles have to follow [this convention](https://www.conventionalcommits.org/en/v1.0.0/#summary).
 
-Also, `main` branch is never a place you want to `push` directly, and it is thereby *protected*. If you try to push to `main`, your push will prompt error. Please checkout to your own branch in order to contribute.
+Also, `main` branch is never a place you want to `push` directly, and it is thereby _protected_. If you try to push to `main`, your push will prompt error. Please checkout to your own branch in order to contribute.
 
 A recommended way of naming your branch is:
 
@@ -86,10 +86,10 @@ git reset --hard <target_commit>
 There are two recommended ways to specify `target_commit`:
 
 - Relative
-    - Definition: relative to current commit, how many commits you want to go back?
-    - Syntax: `HEAD~<number_of_commits>`
-    - Example: `git reset --hard HEAD~1` (I want to go back one commit without preserving changes made in current commit)
+  - Definition: relative to current commit, how many commits you want to go back?
+  - Syntax: `HEAD~<number_of_commits>`
+  - Example: `git reset --hard HEAD~1` (I want to go back one commit without preserving changes made in current commit)
 - Absolute
-    - Definition: which commit in commit history you want to go?
-    - Syntax: `<some_hash_value>`
+  - Definition: which commit in commit history you want to go?
+  - Syntax: `<some_hash_value>`
     Example: `git reset --soft 589b7a4` (I want go go back to commit with hash value `589b7a4` with all my changes preserved)
