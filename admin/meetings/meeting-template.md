@@ -6,23 +6,29 @@ time: <time> - <time>
 method: <in-person | virtual | hybrid>
 ---
 
+#Meeting Title 
+
 ## Attendance
 
 In-person:
 
-- [ ] Edwin
-- [ ] Frank
-- [ ] Grace
-- [ ] Helena
-- [ ] Kiyoshi
-- [ ] Leica
-- [ ] Nathan
-- [ ] Shreya
-- [ ] William
+- [ ] Edwin Pham 
+- [ ] Frank Li 
+- [ ] Grace Yang 
+- [ ] Helena Hundhausen 
+- [ ] Kiyoshi Guo 
+- [ ] Leica Shen
+- [ ] Pascal Huang 
+- [ ] Nathaniel Greenburg 
+- [ ] Shreya Gupta 
+- [ ] William Heng 
+
 
 Virtual:
 
 - [ ] ...
+
+--- 
 
 ## Objectives
 
@@ -31,21 +37,43 @@ Virtual:
 - Complete ...
 
 ### Agenda
+#### New Business
+- ...
+- ...
+- ...
 
+#### Old Business
 - ...
 - ...
 - ...
+
+--- 
 
 ## Notes
 
 ### Completed Tasks
+- [ ] insert here. . .
 
-### Tasks TBD
+### Tasks To Be completed 
+- [ ] insert here. . . 
+---
 
 ## Project Timeline
 
+---
+
 ### Upcoming Deadlines
+#### *Date*
+- ... 
+- ...
+
+---
 
 ### Decisions Made
+1. ... 
+2. ... 
+3. ... 
+---
 
 ## Misc / Q&As
+- 
