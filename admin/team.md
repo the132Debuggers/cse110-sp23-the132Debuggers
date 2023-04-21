@@ -57,10 +57,10 @@ Frank is a second-year student studying Math-CS. He is interested in personal-le
 Edwin is currently a student at UC San Diego pursuing a Cognitive Science Major with a Specialization in Design and Interaction. Very interested in programming, and data science. I’m currently learning multiple programming languages such as Python, Java, and C++. I’m looking for collaborations to learn more and work on projects that solves real-world problems.\
 [More About Edwin](https://epham4.github.io/CSE110_Repo/).
 
-### Lecia Shen
+### Leica Shen
 **Developer**\
 Leica is a second-year student studying Mathematics-Computer Science. She is interested in web development and the principles of programming languages. In her free time, she likes to read fiction and play golf.\
-[More About Lecia](https://jshen101.github.io/CSE110/).
+[More About Leica](https://jshen101.github.io/CSE110/).
 
 ### Grace Yang
 **Developer**\
