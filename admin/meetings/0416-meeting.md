@@ -53,6 +53,9 @@ The main objective for this weekly Sunday Team Meeting is to complete two **mana
      - /source
      - /specs
 
+#### New Business 
+1. n/a 
+
 ---
 
 ## Notes
@@ -68,13 +71,12 @@ The main objective for this weekly Sunday Team Meeting is to complete two **mana
      - [x] /source
      - [x] /specs
 2. _Management: Group Kickoff, Repo and Meeting Prep_ Assignment
-
+   - [X] Invite your team mentor (TA) to repo
    - [x] Design an icon for our team
 
 ### Tasks To Be Completed
 
 1. _Management: Group Kickoff, Repo and Meeting Prep_ Assignment
-   - [ ] Invite your team mentor (TA) to repo
    - [ ] Submit the link to your repo so the TA can check your meeting notes and repository set-up
 2. _Management: Group Kickoff, Repo and Meeting Prep_ Assignment
 
