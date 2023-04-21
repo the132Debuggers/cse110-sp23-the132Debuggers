@@ -35,18 +35,15 @@ Team Member Info: [Team](/admin/team.md)
 2. Attend meetings and finish work before deadlines
 3. Have fun and share knowledge
 
-## 5) Specific Team Member Responsibilities
+## 5) Conflict Resolution
 
-TBD
+1. To resolve conflict in a tech team: listen, understand each perspective, collaborate on solutions, remain respectful, follow up, and check in regularly.
+2. If conflicts stay unresolved, bring the issue to team leaders or the TA
 
-## 6) Conflict Resolution
-
-TBD
-
-## 7) Expectations of Faculty and GTA's
+## 6) Expectations of Faculty and GTA's
 
 If a team member fails to live up to this agreement, the situation may be reported to the staff, but the team will still be responsible for submitting a completed assignment. Staff will be available to meet with teams to resolve issues.
 
-## 8) Member Signature
+## 7) Member Signature
 
 Signature and date:
