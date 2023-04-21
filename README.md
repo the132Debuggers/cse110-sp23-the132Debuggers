@@ -3,7 +3,7 @@
 ## Team Members
 
 - Designer: Kiyoshi
-- Developers: Edwin, Frank, Grace, Leica, Nathaniel, William
+- Developers: Edwin, Frank, Grace, Leica, Nathaniel, William, Pascal
 - Planner: Helena
 - Team Leaders: Kiyoshi, Shreya
 
