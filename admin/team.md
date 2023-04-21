@@ -33,9 +33,9 @@ Helena is a second year student at UCSD majoring in computer science. She is ver
 [More About Helena](https://hhundhausen.github.io/CSE110_Lab-1/).
 
 ### Nathaniel Greenberg
-**Developer**
-
-[More About Nathaniel]().
+**Developer**\
+Nathaniel is a third-year student studying Computer Engineering and minoring in Finance. He is interested in software engineering and product management. In his free time, he likes to do calisthenics and build robots.\
+[More About Nathaniel](https://github.com/nathanielgberg/Projects/blob/beff4f8567871c8082b50e2b52acc38141ea920d/index.md).
 
 ### William Heng
 **Developer**\
