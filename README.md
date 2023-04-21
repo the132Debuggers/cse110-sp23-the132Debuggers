@@ -7,6 +7,9 @@
 - Planner: Helena
 - Team Leaders: Kiyoshi, Shreya
 
+## Team Page 
+[the132Debuggers team page](./admin/team.md)
+
 ## Development Guides
 
 ### Code Style and Formatting
