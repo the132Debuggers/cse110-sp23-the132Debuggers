@@ -3,5 +3,5 @@
 
 Team Colors : Green and Gold 
 Custom Font: Roboto 
-Powerpoint Theme: 
+Powerpoint Theme: Pitch Deck Presentation
 Mascot: Software Bug 
