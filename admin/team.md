@@ -1,6 +1,6 @@
 # 132 Debuggers
 
-![Image](https://cdn.discordapp.com/attachments/852059394195062785/1098790749170053160/cse110_team_9_brand.png)
+![Image](branding/logo.png)
 
 ---
 
@@ -14,9 +14,8 @@ At 132 Debuggers, we value
 
 ## Our Team
 
+![The 132 Debuggers](branding/team-photo.jpg)
 
-
-![Image](teamphoto.png)
 
 ### Kiyoshi Guo
 **Team Lead and Designer**\
@@ -35,6 +34,7 @@ Helena is a second year student at UCSD majoring in computer science. She is ver
 
 ### Nathaniel Greenberg
 **Developer**
+
 [More About Nathaniel]().
 
 ### William Heng
