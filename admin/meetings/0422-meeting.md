@@ -1,12 +1,12 @@
 ---
-title: <04-22-23>  Saturday Meeting 
-type: <routine> 
-date: <4-22-23>
-time: <1:00PM> - <time>
-method: <virtual>
+title: Routine Saturday Meeting 
+type: routine
+date: 4-22-23
+time: 1:00 PM - 4:00 PM 
+method: virtual
 ---
 
-#Routine Saturday Meeting 04-22-23 
+# Routine Saturday Meeting 04-22-23 
 
 ---
 
