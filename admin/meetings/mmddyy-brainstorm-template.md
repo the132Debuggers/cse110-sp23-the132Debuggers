@@ -1,12 +1,12 @@
 ---
-title: <date> Meeting
+title: <date> Brainstorm Meeting
 type: <routine | popup | others>
 date: <date>
 time: <time> - <time>
 method: <in-person | virtual | hybrid>
 ---
 
-# Meeting Title 
+# Brainstorm Meeting Title 
 
 ## Attendance
 
@@ -30,13 +30,8 @@ Virtual:
 
 --- 
 
-## Objectives
+## Agenda
 
-### Objective Statements
-
-- Complete ...
-
-### Agenda
 #### New Business
 - ...
 - ...
@@ -51,14 +46,14 @@ Virtual:
 
 ## Notes
 
+### Brainstorm Summary 
+- insert here. . . 
+
 ### Completed Tasks
 - [ ] insert here. . .
 
 ### Tasks To Be completed 
 - [ ] insert here. . . 
----
-
-## Project Timeline
 
 ---
 
@@ -76,4 +71,7 @@ Virtual:
 ---
 
 ## Misc / Q&As
-- 
+- . . .  
+
+--- 
+## Media 
