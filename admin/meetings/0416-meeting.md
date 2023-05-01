@@ -1,7 +1,7 @@
 ---
 title: Sunday Routine Meeting
 type: routine
-date: 2023-04-16
+date: 2023/04/16
 time: 4:00 PM - 5:30 PM
 method: hybrid
 ---

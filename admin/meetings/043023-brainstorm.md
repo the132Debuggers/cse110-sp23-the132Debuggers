@@ -1,12 +1,12 @@
 ---
-title: 04-30-22 Brainstorm Meeting
-type:  Popup
-date:  04-30-23
-time:  2:00 PM - 3:00 PM 
+title: 04-30-23 Brainstorm Meeting
+type: Popup
+date: 2023/04/30
+time: 2:00 PM - 3:00 PM 
 method: virtual
 ---
 
-# 04-30-22 Brainstorm Meeting Title 
+# 04-30-23 Brainstorm Meeting Title 
 
 ## Attendance
 

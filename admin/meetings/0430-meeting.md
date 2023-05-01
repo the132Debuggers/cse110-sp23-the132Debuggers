@@ -1,12 +1,12 @@
 ---
-title: 04-30-22 Brainstorm Meeting
-type:  Routine
-date:  04-30-22
-time:  2:00 PM - 3:00 PM
+title: 04-30-23 Brainstorm Meeting
+type: Routine
+date: 2023/04/30
+time: 2:00 PM - 3:00 PM
 method: Virtual
 ---
 
-# 04-30-22 Routine Sunday Meeting 
+# 04-30-23 Routine Sunday Meeting 
 
 ## Attendance
 

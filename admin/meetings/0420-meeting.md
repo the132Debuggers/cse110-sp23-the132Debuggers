@@ -1,7 +1,7 @@
 ---
 title: 04-20-23 Popup Thursday Meeting
 type: popup
-date: 2023-04-20
+date: 2023/04/20
 time: 6:20 pm - 8:10 pm
 method: in-person
 ---

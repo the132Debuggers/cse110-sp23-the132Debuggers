@@ -1,7 +1,7 @@
 ---
 title: Routine Saturday Meeting 
 type: routine
-date: 4-22-23
+date: 2023/04/22
 time: 1:00 PM - 4:00 PM 
 method: virtual
 ---
