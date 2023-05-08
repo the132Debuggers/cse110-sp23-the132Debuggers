@@ -1,7 +1,7 @@
 ---
 title: 05-01-23 Brainstorm Meeting
 type: popup
-date: 05/01/23
+date: 2023/05/01
 time: 6:20 pm - 7:30 pm
 method: in-person 
 ---

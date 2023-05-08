@@ -1,7 +1,7 @@
 ---
 title: 05-07-23 Meeting
 type: routine 
-date: 05-07-23
+date: 2023/05/07
 time: 2:00 pm - 3:30 pm 
 method: virtual 
 ---
