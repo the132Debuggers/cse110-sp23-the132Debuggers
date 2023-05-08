@@ -79,7 +79,7 @@ Virtual:
 ---
 
 ### Decisions Made
-1. Complete the starting pitch after recieving feedback  
+1. Completed the starting pitch after recieving feedback  
    
 ---
 
