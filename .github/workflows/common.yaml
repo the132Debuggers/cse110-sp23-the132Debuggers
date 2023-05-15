@@ -2,6 +2,8 @@ name: Common CI
 on:
   pull_request:
     types: ['opened', 'edited', 'reopened', 'synchronize']
+  merge_group:
+    types: [checks_requested]
 
 jobs:
   check_code_style:
