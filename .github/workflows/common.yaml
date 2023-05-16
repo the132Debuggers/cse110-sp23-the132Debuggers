@@ -1,15 +1,14 @@
 name: Common CI
 on:
   pull_request:
-    types: ['opened', 'edited', 'reopened', 'synchronize']
   merge_group:
-    types: [checks_requested]
 
 jobs:
   check_code_style:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - name: Install Dependencies
         run: npm install
       - name: Check Code Style
@@ -19,6 +18,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - name: Install Dependencies
         run: npm install @commitlint/config-conventional
       - uses: JulienKode/pull-request-name-linter-action@v0.5.0
+
+  run_unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Unit Tests
+        run: npm test
