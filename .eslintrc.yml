@@ -1,11 +1,10 @@
 env:
   browser: true
   es2021: true
+  jest: true
 extends: airbnb-base
 overrides: []
 parserOptions:
   ecmaVersion: latest
   sourceType: module
 rules: {}
-env:
-  jest: true
