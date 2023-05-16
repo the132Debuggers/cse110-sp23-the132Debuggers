@@ -6,7 +6,7 @@ time: 2:00 pm - 3:00 pm
 method: virtual 
 ---
 
-# UI-UX Meeting Minutes 
+# UI-UX Team Meeting Minutes  
 
 ## Attendance
 
@@ -33,6 +33,7 @@ Virtual:
 - Create central themes and ideas 
 - Distribute tasks on Figma 
 - Create GitHub issues 
+- Establish Team Leader 
 
 #### Old Business
 - n/a
@@ -45,6 +46,7 @@ Virtual:
 - [X] Add all members to the Figma account 
 - [X] Create GitHub issues  
 - [X] Distribute tasks on Figma 
+- [X] Team Leader Created
 
 ### Tasks To Be completed 
 - [ ] Create central themes and ideas 
@@ -90,6 +92,7 @@ Virtual:
 1. Figma primary tool for designs 
 2. UI-UX team created + solified 
 3. Create GitHub issues 
+4. Team leader (Grace + Helena)
 
 ---
 
