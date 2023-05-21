@@ -13,9 +13,9 @@ jobs:
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
-          source_dir: ./
+          source_dir: ./source
           recurse: true
-          output_dir: ./out
+          output_dir: ./docs
           config_file: package.json
           template: minami
           front_page: README.md
@@ -24,7 +24,10 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./out
+          external_repository: the132Debuggers/documentation
+          publish_branch: main
+          publish_dir: ./docs
+          commit_message: docs(documentation):${{ github.event.head_commit.message }}
           
   check_code_style:
     runs-on: ubuntu-latest
