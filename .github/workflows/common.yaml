@@ -18,7 +18,7 @@ jobs:
           output_dir: ./docs
           config_file: package.json
           template: minami
-          front_page: README.md
+          front_page: ./admin/cipipeline/phase1.md
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
