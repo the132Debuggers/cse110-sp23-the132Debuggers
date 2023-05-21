@@ -1,10 +1,10 @@
 class AppHeader extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
 
-        const style = new CSSStyleSheet();
-        style.replaceSync(`
+    const style = new CSSStyleSheet();
+    style.replaceSync(`
             header {
                 font-size: 1.25rem;
                 color: #fff;
@@ -33,9 +33,9 @@ class AppHeader extends HTMLElement {
             svg {
                 width: 1.5em;
             }
-        `)
+        `);
 
-        this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
             <style>
                 @import "../css/normalize.css";
             </style>
@@ -55,8 +55,8 @@ class AppHeader extends HTMLElement {
                 </div>
             </header>
         `;
-        this.shadowRoot.adoptedStyleSheets = [style];
-    }
+    this.shadowRoot.adoptedStyleSheets = [style];
+  }
 }
 
-export default AppHeader
+export default AppHeader;
