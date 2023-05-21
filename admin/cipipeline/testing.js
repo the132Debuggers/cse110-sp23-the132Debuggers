@@ -13,5 +13,4 @@ function createPerson(name, age, house) {
   };
 }
 
-const person = createPerson('a', 18, 'house');
-console.log(person.name);
+createPerson('a', 18, 'house');
