@@ -13,4 +13,4 @@ function createPerson(name, age, house) {
   };
 }
 
-createPerson('a', 18, 'house');
+console.log(createPerson('a', 18, 'Slytherin'));

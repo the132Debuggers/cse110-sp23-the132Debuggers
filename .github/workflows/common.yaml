@@ -28,7 +28,7 @@ jobs:
           publish_branch: main
           publish_dir: ./docs
           commit_message: docs(documentation):${{ github.event.head_commit.message }}
-          
+
   check_code_style:
     runs-on: ubuntu-latest
     steps:
