@@ -46,3 +46,4 @@ We installed `CodeClimate` for our code quality check and improve. We are still 
   - Installed already, pending further development
 
 ## Diagram of Phase 1 Build Pipeline
+![Diagram](./phase1.drawio.png)
