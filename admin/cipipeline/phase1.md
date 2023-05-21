@@ -1,10 +1,10 @@
 # CI/CD Pipeline Phase 1
 
 - [x] linting and code style enforcement (may happen in pipeline and/or in editor)
-- [ ] code quality via tool  (ex. Codeclimate, Codacy, etc.)
+- [x] code quality via tool  (ex. Codeclimate, Codacy, etc.)
 - [x] code quality via human review (ex. Pull Requests)
 - [x] unit tests via automation (ex. Jest, Tape, Ava, Cypress, Mocha/Chai, etc.)*
-- [ ] documentation generation via automation (ex. JSDocs)
+- [x] documentation generation via automation (ex. JSDocs)
 
 ## Currently Functional 
 
@@ -32,8 +32,17 @@ We decided to use `Jest` for our unit tests. The documentation of this decision 
 
 `Jest` is a delightful JavaScript Testing Framework with a focus on simplicity that we used in our CI/CD pipeline. It will scan the entire project, detect all the `**/*.test.js` file, and run all the content to perform unit tests. 
 
+### - Documentation generation via automation
+We are using `JSDocs` for the documentation of our codes. The CI pipeline uses JSDocs to deploy the documentation of js files to another repository under the132Debuggers organization called `documentation`, and it will publish [a github page of our documentations](https://the132debuggers.github.io/documentation/index.html). 
+
+This process will run automatically when creating any pull request. 
+
+### - Code Quality via Tool
+We installed `CodeClimate` for our code quality check and improve. We are still working on merging it to part of our CI/CD pipeline process. 
+
 ## Planned/In Progress 
-- JSDocs for documentation generation via automation
-- code quality via tool (?)
+
+- code quality via tool 
+  - Installed already, pending further development
 
 ## Diagram of Phase 1 Build Pipeline
