@@ -14,6 +14,7 @@ jobs:
         uses: andstor/jsdoc-action@v1
         with:
           source_dir: ./
+          recurse: true
           output_dir: ./out
           config_file: package.json
           template: minami
@@ -22,7 +23,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           
   check_code_style:
