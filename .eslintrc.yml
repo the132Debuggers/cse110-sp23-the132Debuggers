@@ -4,15 +4,23 @@ env:
   jest: true
 extends:
   - airbnb-base
-parser: '@babel/eslint-parser'
 parserOptions:
   ecmaVersion: latest
   sourceType: module
-  requireConfigFile: false
-  babelOptions:
-    plugins:
-      - '@babel/plugin-syntax-import-assertions'
 rules:
   import/extensions:
     - error
     - ignorePackages
+  no-plusplus:
+    - off
+  no-param-reassign:
+    - error
+    - props: false
+  max-len:
+    - error
+    - code: 80
+      ignoreStrings: true
+      ignoreTemplateLiterals: true
+  operator-linebreak:
+    - error
+    - after
