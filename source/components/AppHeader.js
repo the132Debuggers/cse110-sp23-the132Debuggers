@@ -37,7 +37,7 @@ class AppHeader extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
             <style>
-                @import "../css/normalize.css";
+                @import "/source/css/normalize.css";
             </style>
             <header>
                 <div id="logo">
