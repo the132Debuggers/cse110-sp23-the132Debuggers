@@ -8,12 +8,73 @@
     <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
     <link type="text/css" rel="stylesheet" href="./css/main.css" />
     <script defer type="module" src="./components/setup.js"></script>
+    <style>
+      #app {
+        background-image: url('./images/home.jpeg');
+        background-size: cover;
+        background-position: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        color: #fff;
+      }
+
+      #banner {
+        color: #fef08a;
+        -webkit-text-stroke: 1px #1e293b;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+      }
+
+      #banner h1 {
+        font-size: 4.5rem;
+      }
+
+      #banner h2 {
+        font-size: 3rem;
+      }
+
+      app-header {
+        flex: none;
+      }
+
+      main {
+        padding: 1em;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #banner {
+        flex: 1;
+      }
+
+      #notice {
+        flex: none;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
     <div id="app">
       <app-header></app-header>
-      <main></main>
+      <main>
+        <div id="banner">
+          <h2>Welcome to The</h2>
+          <h1>Wizarding World</h1>
+          <h1>Of</h1>
+          <h2>Fortune Telling</h2>
+        </div>
+        <div id="notice" class="fade-in">Click Anywhere to Continue</div>
+      </main>
     </div>
   </body>
 </html>

@@ -1,7 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
 
-html {
+body {
   font-family: 'Almendra SC', serif;
   height: 100vh;
   width: 100vw;
+  word-spacing: 0.125em;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fade-in ease 3s;
+  animation-iteration-count: infinite;
 }
