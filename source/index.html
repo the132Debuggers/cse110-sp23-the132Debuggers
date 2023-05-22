@@ -39,17 +39,6 @@
         font-size: 3rem;
       }
 
-      app-header {
-        flex: none;
-      }
-
-      main {
-        padding: 1em;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
       #banner {
         flex: 1;
       }
@@ -67,14 +56,33 @@
     <div id="app">
       <app-header></app-header>
       <main>
+        <div class="stars"></div>
         <div id="banner">
           <h2>Welcome to The</h2>
           <h1>Wizarding World</h1>
           <h1>Of</h1>
           <h2>Fortune Telling</h2>
         </div>
-        <div id="notice" class="fade-in">Click Anywhere to Continue</div>
+        <div id="notice" class="fade-in">Click Anywhere to Continue...</div>
       </main>
     </div>
   </body>
+
+  <script>
+    const { offsetHeight: maxHeight, offsetWidth: maxWidth } =
+      document.querySelector('main');
+    const stars = document.querySelector('.stars');
+
+    for (let i = 0; i < 100; i++) {
+      const el = document.createElement('div');
+      el.classList.add('star');
+      el.style.top = `${Math.random() * maxHeight - 16}px`;
+      el.style.left = `${Math.random() * maxWidth - 16}px`;
+      const size = Math.random() * 0.35;
+      el.style.width = `${0.25 + size}em`;
+      el.style.height = `${0.25 + size}em`;
+      el.style.animationDelay = `${Math.random() * 10}s`;
+      stars.appendChild(el);
+    }
+  </script>
 </html>

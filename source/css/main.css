@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Almendra SC', serif;
+  user-select: none;
   height: 100vh;
   width: 100vw;
   word-spacing: 0.125em;
@@ -12,6 +13,16 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+app-header {
+  flex: none;
+  z-index: 50;
+}
+
+main {
+  padding: 1em;
+  flex: 1;
 }
 
 @keyframes fade-in {
@@ -31,4 +42,30 @@ body {
 .fade-in {
   animation: fade-in ease 3s;
   animation-iteration-count: infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.star {
+  width: 0.25em;
+  height: 0.25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 100%;
+  animation: twinkle 2s infinite;
+  backdrop-filter: blur(2px);
 }
