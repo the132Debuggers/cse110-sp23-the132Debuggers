@@ -1,3 +1,5 @@
+import normalize from '../css/normalize.css' assert { type: 'css' };
+
 class AppHeader extends HTMLElement {
   constructor() {
     super();
@@ -36,9 +38,6 @@ class AppHeader extends HTMLElement {
         `);
 
     this.shadowRoot.innerHTML = `
-            <style>
-                @import "/source/css/normalize.css";
-            </style>
             <header>
                 <div id="logo">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -55,7 +54,8 @@ class AppHeader extends HTMLElement {
                 </div>
             </header>
         `;
-    this.shadowRoot.adoptedStyleSheets = [style];
+
+    this.shadowRoot.adoptedStyleSheets = [normalize, style];
   }
 }
 
