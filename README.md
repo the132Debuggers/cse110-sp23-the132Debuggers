@@ -11,7 +11,7 @@
 
 [the132Debuggers team page](./admin/team.md)
 
-## Important Links:
+## Important Links
 
 [Figma](https://www.figma.com/file/zfSDto1UGzXm4tzKI93PNn/CSE-110?type=design&node-id=0%3A1&t=vlmWkIqrb74kL6z8-1)
 
