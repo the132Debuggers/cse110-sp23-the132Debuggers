@@ -1,0 +1,19 @@
+body{
+    background-image: url("home-page-assets/background.jpg");
+    position: relative;
+}
+p {
+    font-family: 'Almendra SC', serif;
+    color: white;
+    position: absolute;
+}
+.welcome {
+    position: absolute;
+    align-content: center;
+    width: 100%;
+}
+.start {
+    position: absolute;
+    align-content: center;
+    width: 100%
+}
