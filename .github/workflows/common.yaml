@@ -4,6 +4,31 @@ on:
   merge_group:
 
 jobs:
+  documentation_generation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./source
+          recurse: true
+          output_dir: ./docs
+          config_file: package.json
+          template: minami
+          front_page: ./admin/cipipeline/phase1.md
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: the132Debuggers/documentation
+          publish_branch: main
+          publish_dir: ./docs
+          commit_message: docs(documentation):${{ github.event.head_commit.message }}
+
   check_code_style:
     runs-on: ubuntu-latest
     steps:
