@@ -43,7 +43,7 @@ class SortOrChooseSection extends HTMLElement {
       }
 
       .option img {
-        height: 10rem;
+        height: 8rem;
         margin-left: auto;
         margin-right: auto;
       }

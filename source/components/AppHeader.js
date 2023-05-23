@@ -22,6 +22,7 @@ class AppHeader extends HTMLElement {
             #logo {
                 display: flex;
                 flex-direction: row;
+                place-items: center;
                 gap: 0.5rem;
                 flex: none;
             }
@@ -34,7 +35,7 @@ class AppHeader extends HTMLElement {
             }
 
             svg {
-                width: 1.5rem;
+                width: 2rem;
             }
 
             @media (min-width: 768px) {
