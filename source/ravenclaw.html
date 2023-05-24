@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
+
     <script defer type="module" src="./components/setup.js"></script>
 
 <head>
@@ -41,7 +42,7 @@
             z-index: 50;
         }
 
-        #cedric {
+        #luna {
             position: absolute;
             height: 53%;
             width: 20%;
@@ -92,6 +93,10 @@
             color:grey;
         }
 
+        form.example input[type=text]:focus {
+            outline: none;
+        }
+
         input:-webkit-autofill,
         input:-webkit-autofill:hover, 
         input:-webkit-autofill:focus,
@@ -101,9 +106,9 @@
         select:-webkit-autofill,
         select:-webkit-autofill:hover,
         select:-webkit-autofill:focus {
-            border: 1px solid #B9B3C0;
-            -webkit-text-fill-color: #B9B3C0;
-            -webkit-box-shadow: 0 0 0px 1000px #00865D inset;
+            border: 1px solid #9EA8A0;
+            -webkit-text-fill-color: #9EA8A0;
+            -webkit-box-shadow: 0 0 0px 1000px #0B3259 inset;
             transition: background-color 5000s ease-in-out 0s;
         }
 
@@ -122,9 +127,8 @@
             left: 3%;
             filter: brightness(0) invert(1);
         }
-        form.bb button:hover {
-            color:grey;
-        }
+
+
     </style>
 
 </head>
@@ -133,8 +137,8 @@
     <div id="app">
       <app-header></app-header>
       <main>
-        <div id="cedric">
-            <img src="images/luna-lovegood.png" alt="Cedric" />
+        <div id="luna">
+            <img src="images/luna-lovegood.png" alt="luna" />
         </div>
         <form class="bb">
             <button type="button"><span><img src="images/back-button.png" /></span>&nbsp;</button>

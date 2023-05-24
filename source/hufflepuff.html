@@ -1,6 +1,8 @@
+
 <!DOCTYPE html>
 <html>
     <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
+
     <script defer type="module" src="./components/setup.js"></script>
 
 <head>
@@ -64,27 +66,12 @@
             border-radius: 10px;
         }
 
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
-        input:-webkit-autofill:focus,
-        textarea:-webkit-autofill,
-        textarea:-webkit-autofill:hover,
-        textarea:-webkit-autofill:focus,
-        select:-webkit-autofill,
-        select:-webkit-autofill:hover,
-        select:-webkit-autofill:focus {
-            border: 1px solid #B9B3C0;
-            -webkit-text-fill-color: #B9B3C0;
-            -webkit-box-shadow: 0 0 0px 1000px #00865D inset;
-            transition: background-color 5000s ease-in-out 0s;
-        }
-
             /* Style the search field */
         form.example input[type=text] {
             float: left;
             width: 90%;
             background-color: #F8BE12;
-            color: black;
+            color: #040005;
             border: none;
             border-radius: 10px;
             padding: 10px;
@@ -96,7 +83,7 @@
             width: 10%;
             padding: 10px;
             background: #F8BE12;
-            color: black;
+            color: #040005;
             border: none;
             border-radius: 10px;
             padding: 10px;
@@ -105,6 +92,25 @@
 
         form.example button:hover {
             color:grey;
+        }
+
+        form.example input[type=text]:focus {
+            outline: none;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            border: 1px solid #040005;
+            -webkit-text-fill-color: #040005;
+            -webkit-box-shadow: 0 0 0px 1000px #F8BE12 inset;
+            transition: background-color 5000s ease-in-out 0s;
         }
 
             /* Clear floats */
@@ -122,9 +128,8 @@
             left: 3%;
             filter: brightness(0) invert(1);
         }
-        form.bb button:hover {
-            color:grey;
-        }
+
+
     </style>
 
 </head>
@@ -134,7 +139,7 @@
       <app-header></app-header>
       <main>
         <div id="cedric">
-            <img src="images/ceddric-in-frame.png" alt="Cedric" />
+            <img src="images/cedric-diggory.png" alt="cedric" />
         </div>
         <form class="bb">
             <button type="button"><span><img src="images/back-button.png" /></span>&nbsp;</button>
