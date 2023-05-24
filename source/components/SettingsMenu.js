@@ -117,7 +117,7 @@ class SettingsMenu extends HTMLElement{
 
         this.shadowRoot.adoptedStyleSheets = [normalize, style];
         
-        document.querySelector("app-header").shadowRoot.querySelector("#settings").addEventListener('click', () => {
+        document.querySelector("app-header").shadowRoot.querySelector("#settings > svg").addEventListener('click', () => {
             const settingsMenu = document.querySelector("#app > settings-menu").shadowRoot.querySelector("#settingsMenu");
             if(settingsMenu.getAttribute('hidden') === null) {
                 settingsMenu.setAttribute('hidden', '');
