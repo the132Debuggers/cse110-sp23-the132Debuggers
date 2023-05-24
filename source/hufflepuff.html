@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
+    <script defer type="module" src="./components/setup.js"></script>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
+
+        body {
+            font-family: 'Almendra SC', serif;
+            user-select: none;
+            font-size: 20px;
+            height: 100vh;
+            width: 100vw;
+            word-spacing: 0.125em;
+        }
+
+        #app {
+            background-image: url(images/hufflepuff-common-room.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+        }
+
+
+        app-header {
+            flex: none;
+            z-index: 50;
+        }
+
+        #cedric {
+            position: absolute;
+            height: 53%;
+            width: 20%;
+            top: 16.7%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+         form.example {
+            position: absolute;
+            width: 51%;
+            height: 8%;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background-color: #F8BE12;
+            display: flex;
+            border: 2px solid #040005;
+            border-radius: 10px;
+        }
+
+            /* Style the search field */
+        form.example input[type=text] {
+            float: left;
+            width: 90%;
+            background-color: #F8BE12;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+            /* Style the submit button */
+        form.example button {
+            float: left;
+            width: 10%;
+            padding: 10px;
+            background: #F8BE12;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            color:grey;
+        }
+
+            /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        form.bb {
+            position: absolute;
+            height: 5%;
+            width: 5%;
+            top: 86%;
+            left: 3%;
+        }
+        form.bb button:hover {
+            color:grey;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+      <app-header></app-header>
+      <main>
+        <div id="cedric">
+            <img src="images/ceddric-in-frame.png" alt="Cedric" />
+        </div>
+        <form class="bb">
+            <button type="button"><span><img src="images/back-button.png" /></span>&nbsp;</button>
+        </form>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <form class="example" action=>
+            <input type="text" placeholder="Text  Here..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </main>
+</body>
+
+
+</html>
