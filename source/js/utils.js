@@ -14,23 +14,23 @@ function twinkle(injectedElement) {
         @keyframes twinkle {
           0% {
             background-color: rgba(255, 255, 255, 0);
-            box-shadow: 0 0 0.125em 0.125em rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0.125rem 0.125rem rgba(255, 255, 255, 0);
           }
   
           50% {
             background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 0 0.125em 0.125em rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 0.125rem 0.125rem rgba(255, 255, 255, 0.8);
           }
   
           100% {
             background-color: rgba(255, 255, 255, 0);
-            box-shadow: 0 0 0.125em 0.125em rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0.125rem 0.125rem rgba(255, 255, 255, 0);
           }
         }
   
         .star {
-          width: 0.25em;
-          height: 0.25em;
+          width: 0.25rem;
+          height: 0.25rem;
           position: absolute;
           top: 0;
           left: 0;
@@ -38,7 +38,7 @@ function twinkle(injectedElement) {
           border-radius: 100%;
           animation: twinkle 2s infinite;
           backdrop-filter: blur(2px);
-          box-shadow: 0 0 0.125em 0.125em rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0.125rem 0.125rem rgba(255, 255, 255, 0);
         }
     `);
 
@@ -54,8 +54,8 @@ function twinkle(injectedElement) {
     el.style.top = `${Math.random() * maxHeight - 16}px`;
     el.style.left = `${Math.random() * maxWidth - 16}px`;
     const size = Math.random() * 0.25;
-    el.style.width = `${0.25 + size}em`;
-    el.style.height = `${0.25 + size}em`;
+    el.style.width = `${0.25 + size}rem`;
+    el.style.height = `${0.25 + size}rem`;
     el.style.animationDelay = `${Math.random() * 10}s`;
     injectedElement.appendChild(el);
   }
