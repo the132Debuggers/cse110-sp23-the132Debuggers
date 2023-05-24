@@ -24,7 +24,7 @@ app-header {
 }
 
 main {
-  padding: 1em;
+  padding: 1rem;
   flex: 1;
   color: #fff;
   z-index: 10;
