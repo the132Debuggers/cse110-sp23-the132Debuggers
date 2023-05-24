@@ -92,6 +92,21 @@
             color:grey;
         }
 
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            border: 1px solid #B9B3C0;
+            -webkit-text-fill-color: #B9B3C0;
+            -webkit-box-shadow: 0 0 0px 1000px #00865D inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
             /* Clear floats */
         form.example::after {
             content: "";
