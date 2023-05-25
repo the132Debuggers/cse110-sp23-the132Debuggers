@@ -1,159 +1,155 @@
 <!DOCTYPE html>
-<html>
-    <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
+<html lang="en">
+    <head>
+        <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
+        <script defer type="module" src="./components/setup.js"></script>
+        <title>Ravenclaw</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
 
-    <script defer type="module" src="./components/setup.js"></script>
+            body {
+                font-family: 'Almendra SC', serif;
+                user-select: none;
+                font-size: 20px;
+                height: 100vh;
+                width: 100vw;
+                word-spacing: 0.125em;
+            }
 
-<head>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
+            #app {
+                background-image: url(images/ravenclaw-common-room.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
 
-        body {
-            font-family: 'Almendra SC', serif;
-            user-select: none;
-            font-size: 20px;
-            height: 100vh;
-            width: 100vw;
-            word-spacing: 0.125em;
-        }
-
-        #app {
-            background-image: url(images/ravenclaw-common-room.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            place-items: center;
-        }
-
-
-        app-header {
-            flex: none;
-            z-index: 50;
-        }
-
-        #luna {
-            position: absolute;
-            height: 53%;
-            width: 20%;
-            top: 16.7%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-         form.example {
-            position: absolute;
-            width: 51%;
-            height: 8%;
-            top: 80%;
-            left: 50%;
-            transform: translateX(-50%);
-
-            background-color: #0B3259;
-            display: flex;
-            border: 2px solid #9EA8A0;
-            border-radius: 10px;
-        }
-
-            /* Style the search field */
-        form.example input[type=text] {
-            float: left;
-            width: 90%;
-            background-color: #0B3259;
-            color: #9EA8A0;
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-        }
-
-        input::placeholder {
-            color: white;
-            opacity: 1;
-        }
-
-            /* Style the submit button */
-        form.example button {
-            float: left;
-            width: 10%;
-            padding: 10px;
-            background: #0B3259;
-            color: #9EA8A0;
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        form.example button:hover {
-            color:grey;
-        }
-
-        form.example input[type=text]:focus {
-            outline: none;
-        }
-
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
-        input:-webkit-autofill:focus,
-        textarea:-webkit-autofill,
-        textarea:-webkit-autofill:hover,
-        textarea:-webkit-autofill:focus,
-        select:-webkit-autofill,
-        select:-webkit-autofill:hover,
-        select:-webkit-autofill:focus {
-            border: 1px solid #9EA8A0;
-            -webkit-text-fill-color: #9EA8A0;
-            -webkit-box-shadow: 0 0 0px 1000px #0B3259 inset;
-            transition: background-color 5000s ease-in-out 0s;
-        }
-
-            /* Clear floats */
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        #bb {
-            position: absolute;
-            height: 5%;
-            width: 5%;
-            top: 86%;
-            left: 3%;
-            filter: brightness(0) invert(1);
-        }
+            main {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                place-items: center;
+            }
 
 
-    </style>
+            app-header {
+                flex: none;
+                z-index: 50;
+            }
 
-</head>
+            #luna {
+                position: absolute;
+                height: 53%;
+                width: 20%;
+                top: 16.7%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
 
-<body>
-    <div id="app">
-      <app-header></app-header>
-      <main>
-        <div id="luna">
-            <img src="images/luna-lovegood.png" alt="luna" />
+            form.example {
+                position: absolute;
+                width: 51%;
+                height: 8%;
+                top: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                background-color: #0B3259;
+                display: flex;
+                border: 2px solid #9EA8A0;
+                border-radius: 10px;
+            }
+
+                /* Style the search field */
+            form.example input[type=text] {
+                float: left;
+                width: 90%;
+                background-color: #0B3259;
+                color: #9EA8A0;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            input::placeholder {
+                color: white;
+                opacity: 1;
+            }
+
+                /* Style the submit button */
+            form.example button {
+                float: left;
+                width: 10%;
+                padding: 10px;
+                background: #0B3259;
+                color: #9EA8A0;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            form.example button:hover {
+                color:grey;
+            }
+
+            form.example input[type=text]:focus {
+                outline: none;
+            }
+
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus,
+            textarea:-webkit-autofill,
+            textarea:-webkit-autofill:hover,
+            textarea:-webkit-autofill:focus,
+            select:-webkit-autofill,
+            select:-webkit-autofill:hover,
+            select:-webkit-autofill:focus {
+                border: 1px solid #9EA8A0;
+                -webkit-text-fill-color: #9EA8A0;
+                -webkit-box-shadow: 0 0 0px 1000px #0B3259 inset;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+
+                /* Clear floats */
+            form.example::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            #bb {
+                position: absolute;
+                height: 5%;
+                width: 5%;
+                top: 86%;
+                left: 3%;
+                filter: brightness(0) invert(1);
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <div id="app">
+        <app-header></app-header>
+        <main>
+            <div id="luna">
+                <img src="images/luna-lovegood.png" alt="luna" />
+            </div>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <form class="example">
+                <input type="text" placeholder="Text  Here..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <button type="button" id="bb"><span><img src="images/back-button.png" alt="back-button"/></span>&nbsp;</button>
+            </main>
         </div>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <form class="example" action=>
-            <input type="text" placeholder="Text  Here..." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-        <button type="button" id="bb"><span><img src="images/back-button.png" /></span>&nbsp;</button>
-        </main>
-    </div>
-</body>
-
-
+    </body>
 </html>
