@@ -21,16 +21,16 @@ class SortingHatSection extends HTMLElement {
         place-content: center;
       }
 
-      .button{
+      #button{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
 
-      .button h1 {
+      #button h1 {
         display: inline-block;
-        padding: 10px 20px;
+        padding: 0.5rem 1.5rem;
         background-color: rgba(0, 0, 0, 0.5);
         border-radius: 15px;
         border: 1px solid black;
@@ -38,13 +38,13 @@ class SortingHatSection extends HTMLElement {
         font-size: 2.5rem;
       }
 
-      .button img {
+      #button img {
         vertical-align: middle;
         margin-bottom: 2rem;
         height: 25rem;
       }
 
-      @media (max-width: 555px) {
+      @media (max-width: 640px) {
         .button img {
           height: 12rem;
           justify-items: center;
@@ -55,37 +55,17 @@ class SortingHatSection extends HTMLElement {
           border-radius: 10px;
         }
       }
-
-      @media (max-width: 395px) {
-        .button h1 {
-          font-size: 1.5rem;
-          border-radius: 5px;
-        }
-      }
-
-      #bb {
-        position: absolute;
-        height: 5%;
-        width: 5%;
-        top: 86%;
-        left: 3%;
-        filter: brightness(0) invert(1);
-      }
     `);
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
     this.shadowRoot.innerHTML = ` 
         <div class="wrapper">
-            <button class="button"> 
-              <img src="./images/sorting-hat.svg" alt="Image of the sorting hat" />
-              <h1> CLICK ME TO BE SORTED </h1>
+            <button id="button"> 
+              <img src="./images/sorting-hat.svg" alt="Image of the sorting hat"/>
+              <h1>CLICK ME TO BE SORTED</h1>
             </button>
-            <button type="button" id="bb">
-          <span><img src="images/back-button.png" alt="back-button" /></span
-          >&nbsp;
-        </button>
-        <div>
+          <div>
     `;
 
     document.querySelector('#app').style.backgroundImage =
