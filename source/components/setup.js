@@ -6,4 +6,4 @@ import SortingHatSection from './SortingHatSection.js';
 customElements.define('app-header', AppHeader);
 customElements.define('home-section', HomeSection);
 customElements.define('sort-or-choose-section', SortOrChooseSection);
-customElements.define('sorting-hat-section', SortingHatSection)
+customElements.define('sorting-hat-section', SortingHatSection);
