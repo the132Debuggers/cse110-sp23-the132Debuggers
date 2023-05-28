@@ -2,7 +2,7 @@
 <html>
   <head>
     <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
-    <script defer type="module" src="./components/setup.js"></script>
+    <script defer  src="./components/setup.js"></script>
     <title>Ravenclaw</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
@@ -57,9 +57,9 @@
         left: 50%;
         transform: translateX(-50%);
 
-        background-color: #B91C23;
+        background-color: #b91c23;
         display: flex;
-        border: 2px solid #F2B200;
+        border: 2px solid #f2b200;
         border-radius: 10px;
       }
 
@@ -67,15 +67,15 @@
       form.example input[type='text'] {
         float: left;
         width: 90%;
-        background-color: #B91C23;
-        color: #F2B200;
+        background-color: #b91c23;
+        color: #f2b200;
         border: none;
         border-radius: 10px;
         padding: 10px;
       }
 
       input::placeholder {
-        color:#F2B200;
+        color: #f2b200;
         opacity: 1;
       }
 
@@ -84,8 +84,8 @@
         float: left;
         width: 10%;
         padding: 10px;
-        background: #B91C23;
-        color: #F2B200;
+        background: #b91c23;
+        color: #f2b200;
         border: none;
         border-radius: 10px;
         padding: 10px;
@@ -109,9 +109,9 @@
       select:-webkit-autofill,
       select:-webkit-autofill:hover,
       select:-webkit-autofill:focus {
-        border: 1px solid #F2B200;
-        -webkit-text-fill-color: #F2B200;
-        -webkit-box-shadow: 0 0 0px 1000px #B91C23 inset;
+        border: 1px solid #f2b200;
+        -webkit-text-fill-color: #f2b200;
+        -webkit-box-shadow: 0 0 0px 1000px #b91c23 inset;
         transition: background-color 5000s ease-in-out 0s;
       }
 
@@ -137,7 +137,7 @@
     <div id="app">
       <app-header></app-header>
       <main>
-        <div id="harry">
+        <div id="luna">
           <img src="images/harry-potter.png" alt="harry" />
         </div>
         <button type="button" id="bb">
@@ -148,9 +148,10 @@
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <form class="example" action=>
-        <input type="text" placeholder="Text  Here..." name="search" />
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <form class="example">
+          <input type="text" placeholder="Text  Here..." name="search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </main>
     </div>
   </body>
