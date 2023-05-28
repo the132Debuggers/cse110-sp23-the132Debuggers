@@ -15,36 +15,33 @@ class ChooseHouseSection extends HTMLElement {
             gap: 0.25rem;
         }
 
-        .row {
-            display: flex;
-            justify-content: center;
+        
+        .wrapper {
+            text-align: center;
         }
 
-        .row h1 {
+        .wrapper h1 {
             font-family: 'Almendra SC';
             font-style: normal;
             font-weight: 400;
-            font-size: 85px;
-            line-height: 101px;
+            font-size: 5rem;
+            line-height: 6rem;
             text-align: center;
 
             color: #FFFFFF;
         }
 
-        .wrapper {
+
+        .row{
             display: flex;
-            flex-direction: row;
-            place-items: center;
-            place-content: center;
+            justify-content: center;
+            align-items: center;
         }
 
         .option {
-            display: flex;
-            gap: 1.5rem;
-            flex-direction: column;
-            text-align: center;
-            border-radius: 0.5rem;
-            padding: 2rem 1rem;
+            gap: 3rem;
+            border-radius: 1rem;
+            padding: 4rem 5rem;
         }
 
         .option:hover {
@@ -54,35 +51,36 @@ class ChooseHouseSection extends HTMLElement {
 
         @media (min-width: 768px) {
             :host {
-              grid-template-rows: repeat(4, minmax(0, 1fr));
+              grid-template-columns: repeat(1, minmax(0, 1fr));
             }
     
             .option img {
-              height: 12rem;
+              width: 10rem;
+              height: 20rem;
             }
           }
     `);
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
-    // TODO: add image links
     this.shadowRoot.innerHTML = `
-        <div class="row">
-          <h1>CHOOSE YOUR HOUSE</h1>
-        </div>
+        
 
         <div class="wrapper">
-          <div class="option">
-              <img src="./images/gryffindor.png" alt="Gryffindor" />
-          </div>
-          <div class="option">
-              <img src="./images/ravenclaw.png" alt="Ravenclaw" />
-          </div>
-          <div class="option">
-              <img src="./images/slytherin.png" alt="Slytherin" />
-          </div>
-          <div class="option">
-              <img src="./images/hufflepuff.png" alt="Hufflepuff" />
+          <h1>CHOOSE YOUR HOUSE</h1>
+          <div class="row">
+            <div class="option">
+                <img src="./images/gryffindor.png" alt="Gryffindor" />
+            </div>
+            <div class="option">
+                <img src="./images/ravenclaw.png" alt="Ravenclaw" />
+            </div>
+            <div class="option">
+                <img src="./images/slytherin.png" alt="Slytherin" />
+            </div>
+            <div class="option">
+                <img src="./images/hufflepuff.png" alt="Hufflepuff" />
+            </div>
           </div>
         </div>
     `;
