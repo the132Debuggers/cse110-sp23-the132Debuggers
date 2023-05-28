@@ -62,6 +62,15 @@ class SortingHatSection extends HTMLElement {
           border-radius: 5px;
         }
       }
+
+      #bb {
+        position: absolute;
+        height: 5%;
+        width: 5%;
+        top: 86%;
+        left: 3%;
+        filter: brightness(0) invert(1);
+      }
     `);
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
@@ -72,7 +81,10 @@ class SortingHatSection extends HTMLElement {
               <img src="./images/sorting-hat.svg" alt="Image of the sorting hat" />
               <h1> CLICK ME TO BE SORTED </h1>
             </button>
-
+            <button type="button" id="bb">
+          <span><img src="images/back-button.png" alt="back-button" /></span
+          >&nbsp;
+        </button>
         <div>
     `;
 
