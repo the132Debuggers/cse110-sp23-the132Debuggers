@@ -5,7 +5,7 @@ class ChooseHouseSection extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
 
-    // TODO: change px to rem
+    
     const style = new CSSStyleSheet();
     style.replaceSync(`
         :host {
@@ -21,7 +21,6 @@ class ChooseHouseSection extends HTMLElement {
         }
 
         .wrapper h1 {
-            font-family: 'Almendra SC';
             font-style: normal;
             font-weight: 400;
             font-size: 5rem;
@@ -32,15 +31,16 @@ class ChooseHouseSection extends HTMLElement {
         }
 
 
-        .row{
+        .flagrow {
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
         }
 
         .option {
-            gap: 3rem;
-            border-radius: 1rem;
+            gap: 1.5rem;
+            border-radius: 0.5rem;
             padding: 4rem 5rem;
         }
 
@@ -68,7 +68,7 @@ class ChooseHouseSection extends HTMLElement {
 
         <div class="wrapper">
           <h1>CHOOSE YOUR HOUSE</h1>
-          <div class="row">
+          <div class="flagrow">
             <div class="option">
                 <img src="./images/gryffindor.png" alt="Gryffindor" />
             </div>
