@@ -1,0 +1,280 @@
+{
+    "en": {
+        "Welcome": {
+            "es": "Bienvenido",
+            "fr": "Bienvenue"
+        },
+        "to": {
+            "es": "a",
+            "fr": "a"
+        },
+        "The": {
+            "es": "El",
+            "fr": "Le"
+        },
+        "Wizarding": {
+            "es": "Magia",
+            "fr": "Magie"
+        },
+        "World": {
+            "es": "Mundo",
+            "fr": "Monde"
+        },
+        "Of": {
+            "es": "De",
+            "fr": "De"
+        },
+        "Fortune": {
+            "es": "Fortuna",
+            "fr": "Fortune"
+        },
+        "Telling": {
+            "es": "Adivinación",
+            "fr": "Divination"
+        },
+        "Volume": {
+            "es": "Volumen",
+            "fr": "Volume"
+        },
+        "Music": {
+            "es": "Música",
+            "fr": "Musique"
+        },
+        "Language": {
+            "es": "Idioma",
+            "fr": "Langue"
+        },
+        "Click": {
+            "es": "Pulse",
+            "fr": "Cliquez"
+        },
+        "Anywhere": {
+            "es": "en_cualquier_lugar_para",
+            "fr": "partout"
+        },
+        "Continue": {
+            "es": "Continuar",
+            "fr": "Continuer"
+        },
+        "Choose": {
+            "es": "Elige",
+            "fr": "Choisis"
+        },
+        "Your": {
+            "es": "Tu",
+            "fr": "Ton"
+        },
+        "Own": {
+            "es": "Propia",
+            "fr": "Propre"
+        },
+        "House": {
+            "es": "Casa",
+            "fr": "Maison"
+        },
+        "Be": {
+            "es": "Sé",
+            "fr": "Sois"
+        },
+        "Sorted": {
+            "es": "Ordenado",
+            "fr": "Classé"
+        },
+        "by": {
+            "es": "por",
+            "fr": "par"
+        },
+        "Sorting": {
+            "es": "Clasificación",
+            "fr": "Tri"
+        },
+        "Hat": {
+            "es": "Sombrero",
+            "fr": "Chapeau"
+        }
+    },
+    "fr": {
+        "Bienvenue": {
+            "en": "Welcome",
+            "es": "Bienvenido"
+        },
+        "a": {
+            "en": "to",
+            "es": "a"
+        },
+        "Le": {
+            "en": "The",
+            "es": "El"
+        },
+        "Magie": {
+            "en": "Wizarding ",
+            "es": "Magia"
+        },
+        "Monde": {
+            "en": "World",
+            "es": "Mundo"
+        },
+        "De": {
+            "en": "Of",
+            "es": "De"
+        },
+        "Divination": {
+            "en": "Telling",
+            "es": "Adivinación"
+        },
+        "Volume": {
+            "en": "Volume",
+            "es": "Volumen"
+        },
+        "Musique": {
+            "en": "Music",
+            "es": "Música"
+        },
+        "Langue": {
+            "en": "Language",
+            "es": "Idioma"
+        },
+        "Cliquez": {
+            "en": "Click",
+            "es": "Pulse"
+        },
+        "partout": {
+            "en": "Anywhere",
+            "es": "en_cualquier_lugar_para"
+        },
+        "Continuer": {
+            "en": "Continue",
+            "es": "Continuar"
+        },
+        "Choisis": {
+            "en": "Choose",
+            "es": "Elige"
+        },
+        "Ton": {
+            "en": "Your",
+            "es": "Tu"
+        },
+        "Propre": {
+            "en": "Own",
+            "es": "Propia"
+        },
+        "Maison": {
+            "en": "House",
+            "es": "Casa"
+        },
+        "Sois": {
+            "en": "Be",
+            "es": "Sé"
+        },
+        "Classé": {
+            "en": "Sorted",
+            "es": "Ordenado"
+        },
+        "par": {
+            "en": "by",
+            "es": "por"
+        },
+        "Tri": {
+            "en": "Sorting",
+            "es": "Clasificación"
+        },
+        "Chapeau": {
+            "en": "Hat",
+            "es": "Sombrero"
+        }
+    },
+    "es": {
+        "Bienvenido": {
+            "en": "Welcome",
+            "fr": "Bienvenue"
+        },
+        "a": {
+            "en": "to",
+            "fr": "à"
+        },
+        "El": {
+            "en": "The",
+            "fr": "Le"
+        },
+        "Magia": {
+            "en": "Wizarding ",
+            "fr": "Magie"
+        },
+        "Mundo": {
+            "en": "World",
+            "fr": "Monde"
+        },
+        "De": {
+            "en": "Of",
+            "fr": "De"
+        },
+        "Fortuna": {
+            "en": "Fortune",
+            "fr": "Fortune"
+        },
+        "Adivinación": {
+            "en": "Telling",
+            "fr": "Divination"
+        },
+        "Volumen": {
+            "en": "Volume",
+            "fr": "Volume"
+        },
+        "Música": {
+            "en": "Music",
+            "fr": "Musique"
+        },
+        "Idioma": {
+            "en": "Language",
+            "fr": "Langue"
+        },
+        "Pulse": {
+            "en": "Click",
+            "fr": "Cliquez"
+        },
+        "en_cualquier_lugar_para": {
+            "en": "Anywhere",
+            "fr": "partout"
+        },
+        "Continuar": {
+            "en": "Continue",
+            "fr": "Continuer"
+        },
+        "Elige": {
+            "en": "Choose",
+            "fr": "Choisis"
+        },
+        "Tu": {
+            "en": "Your",
+            "fr": "Ton"
+        },
+        "Propia": {
+            "en": "Own",
+            "fr": "Propre"
+        },
+        "Casa": {
+            "en": "House",
+            "fr": "Maison"
+        },
+        "Sé": {
+            "en": "Be",
+            "fr": "Sois"
+        },
+        "Ordenado": {
+            "en": "Sorted",
+            "fr": "Classé"
+        },
+        "por": {
+            "en": "by",
+            "fr": "par"
+        },
+        "Clasificación": {
+            "en": "Sorting",
+            "fr": "Tri"
+        },
+        "Sombrero": {
+            "en": "Hat",
+            "fr": "Chapeau"
+        }
+    }
+}

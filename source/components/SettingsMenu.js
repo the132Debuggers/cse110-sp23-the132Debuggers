@@ -18,9 +18,11 @@ class SettingsMenu extends HTMLElement{
             }
   
             #settingsMenu h1{
+                display:inline;
                 font-size:1.5em;
                 padding-left:2em;
                 padding-right:2em;
+
             }
 
             #settingsMenu h1 select{
@@ -35,6 +37,7 @@ class SettingsMenu extends HTMLElement{
                 padding-left:5em;
                 padding-bottom:1.5em;
                 font-size:1.2em;
+                padding-top:1em;
             }
 
             .slidercontainer p{
@@ -78,6 +81,10 @@ class SettingsMenu extends HTMLElement{
                 background: #000000;
                 cursor: pointer;
             }
+            select#language{
+                display: inline-block;
+                vertical-align: middle;
+            }
         `);
 
         this.shadowRoot.innerHTML = `
@@ -102,13 +109,12 @@ class SettingsMenu extends HTMLElement{
                     <input type="range" min="0" max="100" value="50" class="slider" id="musicRange">
                 </div>
 
-                <h1> 
-                    Language
-                    <select id="language" onchange="">
-                        <option value="en">English</option>
-                        <option value="es">Spanish</option>
-                    </select>
-                </h1>
+                <h1>Language</h1>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                </select>
             </div>
             <audio id="audio_music" class="hidden" src="./audio/music_hedwigs_theme.mp3" loop></audio>
             <audio id="audio_sfx" class="hidden" src="./audio/sfx_harry_potter_expecto_patronum_sound_effect.mp3"></audio>
@@ -149,6 +155,54 @@ class SettingsMenu extends HTMLElement{
         document.querySelector("main").addEventListener('click', () => {
             audio_sfx.play();
         });
+ 
+
+        const language = this.shadowRoot.querySelector('#language');
+        language.addEventListener('click', () => {
+            localStorage.setItem('previousLanguage',language.value);
+        });
+        language.addEventListener('change', () => {
+            translate(language.value);
+        });
+
+        var wordsList;
+        fetch('./js/wordsList.json').then(response => response.json())
+        .then(data => {
+                wordsList = data;
+        })
+        .catch(error => {
+        console.error('Error:', error);
+        });
+
+        function replaceWords(inputString, wordsList, sourceLanguage, targetLanguage) {
+            const words = inputString.split(' ');
+            const translatedWords = words.map(word => {
+                if (wordsList.hasOwnProperty(sourceLanguage) && wordsList[sourceLanguage].hasOwnProperty(word)) {
+                    const translation = wordsList[sourceLanguage][word];
+                    if (translation.hasOwnProperty(targetLanguage)) {
+                        return translation[targetLanguage];
+                    }
+                }
+                return word;
+            });
+            
+            const replacedString = translatedWords.join(' ');
+            return replacedString;
+        }
+        function translate(currentLanguage){
+            const elements = document.querySelectorAll('*');
+            elements.forEach(element => {
+                if(element.shadowRoot !== null){
+                    element.shadowRoot.querySelectorAll('p, h1, h2, h3, h4, h5, div#notice').forEach(words => {
+                        words.innerHTML = replaceWords(words.innerHTML, wordsList, localStorage.getItem('previousLanguage'), currentLanguage);
+                    })
+                }
+            });
+
+        
+
+        
+        }
     } 
 }
 export default SettingsMenu;
