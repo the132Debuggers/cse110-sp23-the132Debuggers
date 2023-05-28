@@ -15,13 +15,12 @@ class ChooseHouseSection extends HTMLElement {
             gap: 0.25rem;
         }
 
-        .h1 {
-            position: absolute;
-            width: 835px;
-            height: 108px;
-            left: 446px;
-            top: 136px;
+        .row {
+            display: flex;
+            justify-content: center;
+        }
 
+        .row h1 {
             font-family: 'Almendra SC';
             font-style: normal;
             font-weight: 400;
@@ -68,20 +67,22 @@ class ChooseHouseSection extends HTMLElement {
 
     // TODO: add image links
     this.shadowRoot.innerHTML = `
-        <h1>CHOOSE YOUR HOUSE</h1>
+        <div class="row">
+          <h1>CHOOSE YOUR HOUSE</h1>
+        </div>
 
         <div class="wrapper">
           <div class="option">
-              <img src="" alt="Gryffindor" />
+              <img src="./images/gryffindor.png" alt="Gryffindor" />
           </div>
           <div class="option">
-              <img src="" alt="Ravenclaw" />
+              <img src="./images/ravenclaw.png" alt="Ravenclaw" />
           </div>
           <div class="option">
-              <img src="" alt="Slytherin" />
+              <img src="./images/slytherin.png" alt="Slytherin" />
           </div>
           <div class="option">
-              <img src="" alt="Hufflepuff" />
+              <img src="./images/hufflepuff.png" alt="Hufflepuff" />
           </div>
         </div>
     `;
