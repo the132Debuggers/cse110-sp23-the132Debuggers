@@ -1,3 +1,4 @@
+import { navigateTo } from '../js/navigation.js';
 import { normalize } from '../js/utils.js';
 
 class ChooseHouseSection extends HTMLElement {
@@ -44,6 +45,7 @@ class ChooseHouseSection extends HTMLElement {
         .option:hover {
           background-color: rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.3);
+          cursor: pointer;
         }
 
         @media (max-width: 768px) {
@@ -68,24 +70,27 @@ class ChooseHouseSection extends HTMLElement {
         <div id="wrapper">
           <h1>Choose Your House</h1>
           <div id="flags">
-            <div class="option">
-                <img src="./images/gryffindor/flag.png" alt="Gryffindor" />
-            </div>
-            <div class="option">
-                <img src="./images/ravenclaw/flag.png" alt="Ravenclaw" />
-            </div>
-            <div class="option">
-                <img src="./images/slytherin/flag.png" alt="Slytherin" />
-            </div>
-            <div class="option">
-                <img src="./images/hufflepuff/flag.png" alt="Hufflepuff" />
-            </div>
           </div>
         </div>
     `;
 
-    document.querySelector('#app').style.backgroundImage =
-      'url(./images/backgrounds/choose-house.png)';
+    const flags = this.shadowRoot.querySelector('#flags');
+
+    const houses = ['gryffindor', 'ravenclaw', 'slytherin', 'hufflepuff'];
+
+    // eslint-disable-next-line no-restricted-syntax
+    for (const house of houses) {
+      const option = document.createElement('div');
+      option.classList.add('option');
+      option.innerHTML = `
+        <img src="./images/${house}/flag.png" alt="${house}'s flag" />
+      `;
+      option.addEventListener('click', () => {
+        localStorage.setItem('house', house);
+        navigateTo('house-search');
+      });
+      flags.appendChild(option);
+    }
   }
 }
 

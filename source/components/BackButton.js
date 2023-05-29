@@ -1,3 +1,4 @@
+import { navigateBack } from '../js/navigation.js';
 import { normalize } from '../js/utils.js';
 
 class BackButton extends HTMLElement {
@@ -12,6 +13,10 @@ class BackButton extends HTMLElement {
         z-index: 10;
         width: 0;
         height: 0;
+      }
+
+      :host(:hover) {
+        cursor: pointer;
       }
 
       #wrapper {
@@ -34,6 +39,10 @@ class BackButton extends HTMLElement {
         </svg>
       </div>
     `;
+
+    this.addEventListener('click', () => {
+      navigateBack();
+    });
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
   }
