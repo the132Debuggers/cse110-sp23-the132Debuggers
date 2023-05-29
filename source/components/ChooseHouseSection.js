@@ -5,81 +5,80 @@ class ChooseHouseSection extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
 
-    
     const style = new CSSStyleSheet();
     style.replaceSync(`
         :host {
-            height: 100%;
-            display: grid;
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            gap: 0.25rem;
+          height: 100%;
+          display: flex;
         }
 
-        
-        .wrapper {
-            text-align: center;
+        #wrapper {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          place-items: center;
+          place-content: center;
         }
 
-        .wrapper h1 {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 5rem;
-            line-height: 6rem;
-            text-align: center;
-
-            color: #FFFFFF;
+        h1 {
+          font-size: 3rem;
+          text-align: center;
+          margin-top: 4rem;
         }
 
-
-        .flagrow {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        #flags {
+          flex: 1;
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          place-items: center;
+          place-content: center;
+          gap: 2rem;
         }
 
         .option {
-            gap: 1.5rem;
-            border-radius: 0.5rem;
-            padding: 4rem 5rem;
+          order-radius: 0.5rem;
+          padding: 1.5rem;
+          max-width: 12rem;
         }
 
         .option:hover {
-            background-color: rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.3);
+          background-color: rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.3);
         }
 
-        @media (min-width: 768px) {
-            :host {
-              grid-template-columns: repeat(1, minmax(0, 1fr));
-            }
-    
-            .option img {
-              width: 10rem;
-              height: 20rem;
-            }
+        @media (max-width: 768px) {
+          h1 {
+            font-size: 2rem;
           }
+
+          #flags {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .option {
+            max-width: 8rem;
+            padding: 1rem;
+          }
+        }
     `);
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
     this.shadowRoot.innerHTML = `
-        
-
-        <div class="wrapper">
-          <h1>CHOOSE YOUR HOUSE</h1>
-          <div class="flagrow">
+        <div id="wrapper">
+          <h1>Choose Your House</h1>
+          <div id="flags">
             <div class="option">
-                <img src="./images/gryffindor.png" alt="Gryffindor" />
+                <img src="./images/gryffindor/flag.png" alt="Gryffindor" />
             </div>
             <div class="option">
-                <img src="./images/ravenclaw.png" alt="Ravenclaw" />
+                <img src="./images/ravenclaw/flag.png" alt="Ravenclaw" />
             </div>
             <div class="option">
-                <img src="./images/slytherin.png" alt="Slytherin" />
+                <img src="./images/slytherin/flag.png" alt="Slytherin" />
             </div>
             <div class="option">
-                <img src="./images/hufflepuff.png" alt="Hufflepuff" />
+                <img src="./images/hufflepuff/flag.png" alt="Hufflepuff" />
             </div>
           </div>
         </div>
