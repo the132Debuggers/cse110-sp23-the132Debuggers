@@ -81,7 +81,7 @@ class ChooseHouseSection extends HTMLElement {
       const option = document.createElement('div');
       option.classList.add('option');
       option.innerHTML = `
-        <img src="./images/${house}/flag.png" alt="${house}'s flag" />
+        <img src="./images/${house}/flag.webp" alt="${house}'s flag" />
       `;
       option.addEventListener('click', () => {
         localStorage.setItem('house', house);

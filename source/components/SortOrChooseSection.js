@@ -67,13 +67,13 @@ class SortOrChooseSection extends HTMLElement {
         <div class="wrapper">
           <div id="choose" class="option">
             <h1>Choose Your Own House</h1>
-            <img src="./images/all-crests.png" alt="Crests of all four houses" />
+            <img src="./images/all-crests.webp" alt="Crests of all four houses" />
           </div>
         </div>
         <div class="wrapper">
           <div id="sort" class="option">
             <h1>Be Sorted by Sorting Hat</h1>
-            <img src="./images/sorting-hat.png" alt="Image of the sorting hat" />
+            <img src="./images/sorting-hat.webp" alt="Image of the sorting hat" />
           </div>
         <div>
     `;

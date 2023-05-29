@@ -24,9 +24,9 @@ function setBackground() {
   const lastVisited = localStorage.getItem('lastVisited');
   if (lastVisited === 'house-search') {
     const house = localStorage.getItem('house');
-    app.style.backgroundImage = `url(./images/${house}/common-room.png)`;
+    app.style.backgroundImage = `url(./images/${house}/common-room.webp)`;
   } else {
-    app.style.backgroundImage = `url(./images/backgrounds/${lastVisited}.png)`;
+    app.style.backgroundImage = `url(./images/backgrounds/${lastVisited}.webp)`;
   }
 }
 

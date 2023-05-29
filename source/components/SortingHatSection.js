@@ -69,7 +69,7 @@ class SortingHatSection extends HTMLElement {
     this.shadowRoot.innerHTML = ` 
         <div class="wrapper">
           <div id="button"> 
-            <img src="./images/sorting-hat.png" alt="Image of the sorting hat"/>
+            <img src="./images/sorting-hat.webp" alt="Image of the sorting hat"/>
             <h1 id="notification">You have been sorted into...</h1>
             <h1 id="tip">Click Me To Be Sorted</h1>
           </div>

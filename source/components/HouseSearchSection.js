@@ -56,7 +56,7 @@ class HouseSearchSection extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
         <div id="avatar">
-            <img src="./images/${house}/avatar.png" alt="${house}'s avatar" />
+            <img src="./images/${house}/avatar.webp" alt="${house}'s avatar" />
         </div>
         <div id="input-area">
             <input type="text" placeholder="Text Here..." /> 
