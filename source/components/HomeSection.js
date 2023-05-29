@@ -96,10 +96,6 @@ class Home extends HTMLElement {
     this.addEventListener('click', () => {
       navigateTo('sort-or-choose');
     });
-
-    this.addEventListener('keydown', () => {
-      navigateTo('sort-or-choose');
-    });
   }
 }
 
