@@ -115,7 +115,7 @@ class HouseSearchSection extends HTMLElement {
       question.style.display = 'none';
       answer.style.display = 'flex';
 
-      const result = await query(text);
+      const result = await query(text, house);
       fortune.textContent = result;
     };
 
