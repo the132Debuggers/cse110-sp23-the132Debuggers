@@ -16,11 +16,14 @@ export default async function query(input, house) {
       method: 'POST',
       body: JSON.stringify({
         inputs: {
-          past_user_inputs: [`Can you tell my fortune in ${tones[house]} tone?`],
+          past_user_inputs: [`Answer my following question in ${tones[house]} tone.`],
           generated_responses: ['I can try. What is your question?'],
           text: input,
         },
-        use_cache: true,
+        options: {
+          use_cache: true,
+          wait_for_model: true
+        }
       }),
     }
   );
