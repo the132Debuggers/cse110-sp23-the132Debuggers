@@ -45,7 +45,7 @@ class SortOrChooseSection extends HTMLElement {
       }
 
       .option img {
-        width: 8rem;
+        height: 8rem;
         margin-left: auto;
         margin-right: auto;
       }
@@ -56,7 +56,7 @@ class SortOrChooseSection extends HTMLElement {
         }
 
         .option img {
-          width: 16rem;
+          height: 16rem;
         }
       }
     `);
