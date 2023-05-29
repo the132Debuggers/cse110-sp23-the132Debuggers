@@ -19,6 +19,7 @@ class SortingHatSection extends HTMLElement {
         place-items: center;
         place-content: center;
         width: 100%;
+        cursor: pointer;
       }
 
       #button {
