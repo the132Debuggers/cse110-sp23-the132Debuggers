@@ -19,15 +19,21 @@ class SortingHatSection extends HTMLElement {
         place-items: center;
         place-content: center;
         width: 100%;
-        cursor: pointer;
       }
 
       #button {
+        padding: 1rem;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         place-items: center;
         place-content: center;
+        cursor: pointer;
+      }
+
+      #button:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.3);
       }
 
       #button img {
@@ -92,7 +98,7 @@ class SortingHatSection extends HTMLElement {
       setTimeout(() => {
         navigateTo('house-search');
       }, 3000);
-    });
+    }, { once: true });
   }
 }
 
