@@ -70,6 +70,10 @@ export const themeColor = {
 
 export const houses = ['gryffindor', 'hufflepuff', 'ravenclaw', 'slytherin'];
 
+/**
+ * Get a random house from the houses array.
+ * @returns {string} A random house from the houses array.
+ */
 export function randomHouse() {
   return houses[Math.floor(Math.random() * houses.length)];
 }

@@ -76,29 +76,33 @@ class SortingHatSection extends HTMLElement {
          <div>
     `;
 
-    this.shadowRoot.querySelector('#button').addEventListener('click', () => {
-      const house = randomHouse();
-      localStorage.setItem('house', house);
+    this.shadowRoot.querySelector('#button').addEventListener(
+      'click',
+      () => {
+        const house = randomHouse();
+        localStorage.setItem('house', house);
 
-      const tip = this.shadowRoot.querySelector('#tip');
-      tip.textContent = house;
+        const tip = this.shadowRoot.querySelector('#tip');
+        tip.textContent = house;
 
-      tip.style = `
+        tip.style = `
         border: 2px solid ${themeColor[house][1]};
         background-color: ${themeColor[house][0]};
         -webkit-text-stroke: 1px ${themeColor[house][1]};
         color: ${themeColor[house][0]};
       `;
 
-      const notification = this.shadowRoot.querySelector('#notification');
-      notification.style = `
+        const notification = this.shadowRoot.querySelector('#notification');
+        notification.style = `
         display: block;
       `;
 
-      setTimeout(() => {
-        navigateTo('house-search');
-      }, 3000);
-    }, { once: true });
+        setTimeout(() => {
+          navigateTo('house-search');
+        }, 3000);
+      },
+      { once: true }
+    );
   }
 }
 
