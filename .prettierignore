@@ -1,2 +1,4 @@
 pnpm-lock.yaml
 **/*.md
+package-lock.json
+package.json

@@ -14,7 +14,7 @@ class AppHeader extends HTMLElement {
                 backdrop-filter: blur(2px);
                 box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
                 word-spacing: 0.125em;
-                padding: 0.5em;
+                padding: 0.5rem;
                 display: flex;
                 flex-direction: row;
             }
@@ -22,7 +22,8 @@ class AppHeader extends HTMLElement {
             #logo {
                 display: flex;
                 flex-direction: row;
-                gap: 0.5em;
+                place-items: center;
+                gap: 0.5rem;
                 flex: none;
             }
 
@@ -34,7 +35,7 @@ class AppHeader extends HTMLElement {
             }
 
             svg {
-                width: 1.5em;
+                width: 2rem;
             }
 
             @media (min-width: 768px) {
