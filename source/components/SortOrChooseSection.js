@@ -1,4 +1,5 @@
 import { normalize } from '../js/utils.js';
+import { navigateTo } from '../js/navigation.js';
 
 class SortOrChooseSection extends HTMLElement {
   constructor() {
@@ -33,6 +34,7 @@ class SortOrChooseSection extends HTMLElement {
       .option:hover {
         background-color: rgba(0, 0, 0, 0.3);
         box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.3);
+        cursor: pointer;
       }
 
       .option h1 {
@@ -63,21 +65,26 @@ class SortOrChooseSection extends HTMLElement {
 
     this.shadowRoot.innerHTML = ` 
         <div class="wrapper">
-          <div class="option">
-              <h1>Choose Your Own House</h1>
-              <img src="./images/all-crests.png" alt="Crests of all four houses" />
+          <div id="choose" class="option">
+            <h1>Choose Your Own House</h1>
+            <img src="./images/all-crests.png" alt="Crests of all four houses" />
           </div>
         </div>
         <div class="wrapper">
-          <div class="option">
-              <h1>Be Sorted by Sorting Hat</h1>
-              <img src="./images/sorting-hat.png" alt="Image of the sorting hat" />
+          <div id="sort" class="option">
+            <h1>Be Sorted by Sorting Hat</h1>
+            <img src="./images/sorting-hat.png" alt="Image of the sorting hat" />
           </div>
         <div>
     `;
 
-    document.querySelector('#app').style.backgroundImage =
-      'url(./images/backgrounds/sort-or-choose.png)';
+    this.shadowRoot.querySelector('#choose').addEventListener('click', () => {
+      navigateTo('choose-house');
+    });
+
+    this.shadowRoot.querySelector('#sort').addEventListener('click', () => {
+      navigateTo('sorting-hat');
+    });
   }
 }
 

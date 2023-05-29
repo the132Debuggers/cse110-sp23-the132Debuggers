@@ -11,7 +11,7 @@ class HouseSearchSection extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    const house = this.getAttribute('data-house') || 'gryffindor';
+    const house = localStorage.getItem('house') || 'gryffindor';
 
     const style = new CSSStyleSheet();
     style.replaceSync(`
@@ -25,7 +25,7 @@ class HouseSearchSection extends HTMLElement {
         }
 
         img {
-            width: 24rem;
+            width: 20rem;
         }
 
         #input-area {
@@ -63,7 +63,7 @@ class HouseSearchSection extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
         <div id="avatar">
-            <img src="./images/${house}/avatar.png" alt="${house} avatar" />
+            <img src="./images/${house}/avatar.png" alt="${house}'s avatar" />
         </div>
         <div id="input-area">
             <input type="text" placeholder="Text Here..." /> 
@@ -72,10 +72,6 @@ class HouseSearchSection extends HTMLElement {
             </svg>
         </div>
     `;
-
-    document.querySelector(
-      '#app'
-    ).style.backgroundImage = `url(./images/${house}/common-room.png)`;
   }
 }
 
