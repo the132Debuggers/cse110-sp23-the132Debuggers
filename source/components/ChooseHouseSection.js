@@ -85,7 +85,7 @@ class ChooseHouseSection extends HTMLElement {
     `;
 
     document.querySelector('#app').style.backgroundImage =
-      'url(./images/choose-house.png)';
+      'url(./images/backgrounds/choose-house.png)';
   }
 }
 

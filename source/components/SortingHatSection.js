@@ -9,9 +9,7 @@ class SortingHatSection extends HTMLElement {
     style.replaceSync(`
       :host {
         height: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 0.25rem;
+        display: flex;
       }
 
       .wrapper {
@@ -19,40 +17,36 @@ class SortingHatSection extends HTMLElement {
         flex-direction: column;
         place-items: center;
         place-content: center;
+        width: 100%;
       }
 
-      #button{
+      #button {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #button h1 {
-        display: inline-block;
-        padding: 0.5rem 1.5rem;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-        border: 1px solid black;
-        color: white;
-        font-size: 2.5rem;
+        gap: 1.5rem;
+        place-items: center;
+        place-content: center;
       }
 
       #button img {
-        vertical-align: middle;
-        margin-bottom: 2rem;
-        height: 25rem;
+        width: 24rem;
       }
 
-      @media (max-width: 640px) {
-        .button img {
-          height: 12rem;
-          justify-items: center;
+      #button h1 {
+        font-size: 2rem;
+        padding: 0.5rem 1.5rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        #button img {
+          width: 18rem;
         }
 
-        .button h1 {
-          font-size: 2rem;
-          border-radius: 10px;
+        #button h1 {
+          font-size: 1.5rem;
         }
       }
     `);
@@ -61,15 +55,15 @@ class SortingHatSection extends HTMLElement {
 
     this.shadowRoot.innerHTML = ` 
         <div class="wrapper">
-            <button id="button"> 
-              <img src="./images/sorting-hat.svg" alt="Image of the sorting hat"/>
-              <h1>CLICK ME TO BE SORTED</h1>
-            </button>
-          <div>
+          <div id="button"> 
+            <img src="./images/sorting-hat.png" alt="Image of the sorting hat"/>
+            <h1>Click Me To Be Sorted</h1>
+          </div>
+         <div>
     `;
 
     document.querySelector('#app').style.backgroundImage =
-      'url(./images/sorting-hat-bg.png)';
+      'url(./images/backgrounds/sorting-hat.png)';
   }
 }
 

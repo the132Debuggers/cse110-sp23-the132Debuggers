@@ -77,7 +77,7 @@ class SortOrChooseSection extends HTMLElement {
     `;
 
     document.querySelector('#app').style.backgroundImage =
-      'url(./images/sort-or-choose.png)';
+      'url(./images/backgrounds/sort-or-choose.png)';
   }
 }
 

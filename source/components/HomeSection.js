@@ -93,7 +93,7 @@ class Home extends HTMLElement {
     twinkle(this.shadowRoot, stars);
 
     document.querySelector('#app').style.backgroundImage =
-      'url(./images/home.jpeg)';
+      'url(./images/backgrounds/home.png)';
   }
 }
 
