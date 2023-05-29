@@ -1,11 +1,4 @@
-import { normalize } from '../js/utils.js';
-
-const themeColor = {
-  gryffindor: ['#b91c23', '#f2b200'],
-  hufflepuff: ['#f8be12', '#040005'],
-  ravenclaw: ['#0b3259', '#9ea8a0'],
-  slytherin: ['#00865d', '#b9b3c0'],
-};
+import { normalize, themeColor } from '../js/utils.js';
 
 class HouseSearchSection extends HTMLElement {
   constructor() {

@@ -1,5 +1,5 @@
 import { navigateTo } from '../js/navigation.js';
-import { normalize } from '../js/utils.js';
+import { normalize, houses } from '../js/utils.js';
 
 class ChooseHouseSection extends HTMLElement {
   constructor() {
@@ -75,8 +75,6 @@ class ChooseHouseSection extends HTMLElement {
     `;
 
     const flags = this.shadowRoot.querySelector('#flags');
-
-    const houses = ['gryffindor', 'ravenclaw', 'slytherin', 'hufflepuff'];
 
     // eslint-disable-next-line no-restricted-syntax
     for (const house of houses) {

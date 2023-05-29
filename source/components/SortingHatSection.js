@@ -1,12 +1,5 @@
-import { normalize } from '../js/utils.js';
+import { normalize, themeColor, randomHouse } from '../js/utils.js';
 import { navigateTo } from '../js/navigation.js';
-
-const themeColor = {
-  gryffindor: ['#b91c23', '#f2b200'],
-  hufflepuff: ['#f8be12', '#040005'],
-  ravenclaw: ['#0b3259', '#9ea8a0'],
-  slytherin: ['#00865d', '#b9b3c0'],
-};
 
 class SortingHatSection extends HTMLElement {
   constructor() {
@@ -77,18 +70,17 @@ class SortingHatSection extends HTMLElement {
     `;
 
     this.shadowRoot.querySelector('#button').addEventListener('click', () => {
-      const house = ['gryffindor', 'hufflepuff', 'ravenclaw', 'slytherin'];
-      const randomHouse = house[Math.floor(Math.random() * house.length)];
-      localStorage.setItem('house', randomHouse);
+      const house = randomHouse();
+      localStorage.setItem('house', house);
 
       const tip = this.shadowRoot.querySelector('#tip');
-      tip.textContent = randomHouse;
+      tip.textContent = house;
 
       tip.style = `
-        border: 2px solid ${themeColor[randomHouse][1]};
-        background-color: ${themeColor[randomHouse][0]};
-        -webkit-text-stroke: 1px ${themeColor[randomHouse][1]};
-        color: ${themeColor[randomHouse][0]};
+        border: 2px solid ${themeColor[house][1]};
+        background-color: ${themeColor[house][0]};
+        -webkit-text-stroke: 1px ${themeColor[house][1]};
+        color: ${themeColor[house][0]};
       `;
 
       const notification = this.shadowRoot.querySelector('#notification');
