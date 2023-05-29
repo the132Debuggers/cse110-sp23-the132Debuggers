@@ -1,0 +1,104 @@
+---
+title: <date> Meeting
+type: <routine | popup | others>
+date: <YYYY/MM/DD>
+time: <time> - <time>
+method: <in-person | virtual | hybrid>
+---
+
+# Meeting Title 
+
+## Attendance
+
+In-person:
+
+- [ ] Edwin Pham 
+- [ ] Frank Li 
+- [ ] Grace Yang 
+- [X] Helena Hundhausen 
+- [ ] Kiyoshi Guo 
+- [X] Leica Shen
+- [X] Pascal Huang 
+- [ ] Nathaniel Greenburg 
+- [X] Shreya Gupta 
+- [X] William Heng 
+
+Virtual:
+
+- [ ] ...
+
+--- 
+
+## Objectives
+
+### Objective Statements
+
+- Complete ...
+
+### Agenda
+#### New Business
+- ...
+- ...
+- ...
+
+#### Old Business
+- ...
+- ...
+- ...
+
+--- 
+
+## Notes
+
+### Completed Tasks
+- [ ] insert here. . .
+
+### Tasks To Be completed 
+- [ ] insert here. . . 
+---
+
+## Project Timeline
+*Week 5*		
+- [X] Complete Pitch and basic planning items
+
+*Week 6* 
+- [X] Receive approval from TA
+- [X] Apply feedback and solidify goals
+- [ ] Create sketches for frontend designs
+
+*Week 7*
+- [ ] Begin Implementation 
+- [ ] Ask TA for recommendations and other thoughts
+
+*Week 8*
+- [ ] Code, test, ask TA for review
+
+*Week 9*
+- [ ] Code, test, ask TA for review
+
+*Week 10*
+- [ ] Code, test, ask TA for review
+- [ ] Finalize application
+- [ ] Create presentation
+
+
+*Finals Week*
+- [ ] Present + Final Interviews 
+  
+---
+
+### Upcoming Deadlines
+#### *Date*
+- ... 
+- ...
+
+---
+
+### Decisions Made
+1. ... 
+2. ... 
+3. ... 
+---
+
+## Misc / Q&As
+- 
