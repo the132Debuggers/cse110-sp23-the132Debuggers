@@ -73,6 +73,16 @@ class HouseSearchSection extends HTMLElement {
         svg:hover {
             cursor: pointer;
         }
+
+        @media (max-width: 768px) {
+            :host {
+                place-content: flex-start;
+            }
+
+            img {
+                width: 15rem;
+            }
+        }
     `);
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
