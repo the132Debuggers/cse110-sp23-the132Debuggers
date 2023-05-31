@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wizarding World of Fortune Telling</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.webp" />
     <link type="text/css" rel="stylesheet" href="./css/normalize.css" />
     <link type="text/css" rel="stylesheet" href="./css/main.css" />
     <script defer type="module" src="./components/setup.js"></script>
-    <style></style>
+    <script type="module" defer>
+      import { initialize } from './js/navigation.js';
+      initialize();
+    </script>
   </head>
 
   <body>
     <div id="app">
       <app-header></app-header>
-      <main>
-        <home-section></home-section>
-      </main>
+      <main></main>
     </div>
   </body>
 </html>

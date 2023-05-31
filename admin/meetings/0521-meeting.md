@@ -1,9 +1,9 @@
 ---
-title: <date> Meeting
-type: <routine | popup | others>
-date: <YYYY/MM/DD>
-time: <time> - <time>
-method: <in-person | virtual | hybrid>
+title: 05-21-23 Meeting
+type: routine
+date: 2023/05/28
+time: 2:00 PM - 4:00 PM 
+method: in-person
 ---
 
 # Meeting Title 
@@ -34,7 +34,7 @@ Virtual:
 
 ### Objective Statements
 
-- Complete issues and begin development. 
+- Complete creating issues and begin development. 
 
 ### Agenda
 #### New Business
