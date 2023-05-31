@@ -24,3 +24,5 @@ rules:
   operator-linebreak:
     - error
     - after
+  comma-dangle:
+    - off
