@@ -91,7 +91,7 @@ class SettingsMenu extends HTMLElement{
             <div id="settingsMenu" hidden>
                 <app-header></app-header>
                 <br>  
-                <h1> Volume </h1>
+                <h1>Volume</h1>
                 <br>
                 <div class="slidercontainer">
                     <svg width="30" height="30" viewBox="0 0 78 86" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,29 +174,28 @@ class SettingsMenu extends HTMLElement{
         console.error('Error:', error);
         });
 
-        function replaceWords(inputString, wordsList, sourceLanguage, targetLanguage) {
-            const words = inputString.split(' ');
-            const translatedWords = words.map(word => {
-                if (wordsList.hasOwnProperty(sourceLanguage) && wordsList[sourceLanguage].hasOwnProperty(word)) {
-                    const translation = wordsList[sourceLanguage][word];
-                    if (translation.hasOwnProperty(targetLanguage)) {
-                        return translation[targetLanguage];
-                    }
-                }
-                return word;
-            });
-            
-            const replacedString = translatedWords.join(' ');
-            return replacedString;
-        }
+        function replaceWords(inputString, dictionary, sourceLanguage, targetLanguage) {
+            if (dictionary.hasOwnProperty(sourceLanguage) && dictionary[sourceLanguage].hasOwnProperty(inputString)) {
+              const translation = dictionary[sourceLanguage][inputString];
+              if (translation.hasOwnProperty(targetLanguage)) {
+                return translation[targetLanguage];
+              }
+            }
+            return inputString;
+          }
+
+
+        
         function translate(currentLanguage){
             const elements = document.querySelectorAll('*');
             elements.forEach(element => {
                 if(element.shadowRoot !== null){
+                    console.log(element.shadowRoot.querySelector)
                     element.shadowRoot.querySelectorAll('p, h1, h2, h3, h4, h5, div#notice').forEach(words => {
                         words.innerHTML = replaceWords(words.innerHTML, wordsList, localStorage.getItem('previousLanguage'), currentLanguage);
                     })
                 }
+                
             });
 
         

@@ -1,36 +1,16 @@
 {
     "en": {
-        "Welcome": {
-            "es": "Bienvenido",
-            "fr": "Bienvenue"
+        "Welcome to The":{
+            "es": "Bienvenido a la",
+            "fr": "Bienvenue dans le"
         },
-        "to": {
-            "es": "a",
-            "fr": "a"
+        "Wizarding World of Fortune Telling":{
+            "es": "Magia Mundo De Fortuna Adivinación",
+            "fr": "Monde Magique de la Divination"
         },
-        "The": {
-            "es": "El",
-            "fr": "Le"
-        },
-        "Wizarding": {
-            "es": "Magia",
-            "fr": "Magie"
-        },
-        "World": {
-            "es": "Mundo",
-            "fr": "Monde"
-        },
-        "Of": {
-            "es": "De",
-            "fr": "De"
-        },
-        "Fortune": {
-            "es": "Fortuna",
-            "fr": "Fortune"
-        },
-        "Telling": {
-            "es": "Adivinación",
-            "fr": "Divination"
+        " Wizarding World Of Fortune Telling":{
+            "es":" Magia Mundo De Fortuna Adivinación",
+            "fr":" Monde Magique de la Divination"
         },
         "Volume": {
             "es": "Volumen",
@@ -44,83 +24,35 @@
             "es": "Idioma",
             "fr": "Langue"
         },
-        "Click": {
-            "es": "Pulse",
-            "fr": "Cliquez"
+        "Fortune Telling":{
+            "es": "Adivinación",
+            "fr": "Divination"
         },
-        "Anywhere": {
-            "es": "en_cualquier_lugar_para",
-            "fr": "partout"
+        "Click Anywhere to Continue...":{
+            "es": "Pulse en cualquier lugar para continuar...",
+            "fr": "Cliquez n'importe où pour continuer..."
         },
-        "Continue": {
-            "es": "Continuar",
-            "fr": "Continuer"
-        },
-        "Choose": {
-            "es": "Elige",
-            "fr": "Choisis"
-        },
-        "Your": {
-            "es": "Tu",
-            "fr": "Ton"
-        },
-        "Own": {
-            "es": "Propia",
-            "fr": "Propre"
-        },
-        "House": {
-            "es": "Casa",
-            "fr": "Maison"
-        },
-        "Be": {
-            "es": "Sé",
-            "fr": "Sois"
-        },
-        "Sorted": {
-            "es": "Ordenado",
-            "fr": "Classé"
-        },
-        "by": {
-            "es": "por",
-            "fr": "par"
-        },
-        "Sorting": {
-            "es": "Clasificación",
-            "fr": "Tri"
-        },
-        "Hat": {
-            "es": "Sombrero",
-            "fr": "Chapeau"
+        "Choose Your Own House":{
+            "es": "Elige tu propia casa",
+            "fr": "Choisissez votre propre maison"
+        },  
+        "Be Sorted by Sorting Hat":{
+            "es": "Sé ordenado por el sombrero de clasificación",
+            "fr": "Sois classé par le chapeau de tri"
         }
     },
     "fr": {
-        "Bienvenue": {
-            "en": "Welcome",
-            "es": "Bienvenido"
+        "Bienvenue dans le":{
+            "en": "Welcome to The",
+            "es": "Bienvenido a la"
         },
-        "a": {
-            "en": "to",
-            "es": "a"
+        "Monde Magique de la Divination":{
+            "en": "Wizarding World of Fortune Telling",
+            "es": "Magia Mundo De Fortuna Adivinación"
         },
-        "Le": {
-            "en": "The",
-            "es": "El"
-        },
-        "Magie": {
-            "en": "Wizarding ",
-            "es": "Magia"
-        },
-        "Monde": {
-            "en": "World",
-            "es": "Mundo"
-        },
-        "De": {
-            "en": "Of",
-            "es": "De"
-        },
-        "Divination": {
-            "en": "Telling",
-            "es": "Adivinación"
+        " Monde Magique de la Divination":{
+            "en": " Wizarding World Of Fortune Telling",
+            "es": " Magia Mundo De Fortuna Adivinación"
         },
         "Volume": {
             "en": "Volume",
@@ -134,87 +66,35 @@
             "en": "Language",
             "es": "Idioma"
         },
-        "Cliquez": {
-            "en": "Click",
-            "es": "Pulse"
+        "Divination":{
+            "en": "Fortune Telling",
+            "es": "Adivinación"
         },
-        "partout": {
-            "en": "Anywhere",
-            "es": "en_cualquier_lugar_para"
+        "Cliquez n'importe où pour continuer...":{
+            "en": "Click Anywhere to Continue...",
+            "es": "Pulse en cualquier lugar para continuar..."
         },
-        "Continuer": {
-            "en": "Continue",
-            "es": "Continuar"
+        "Choisissez votre propre maison":{
+            "en": "Choose Your Own House",
+            "es": "Elige tu propia casa"
         },
-        "Choisis": {
-            "en": "Choose",
-            "es": "Elige"
-        },
-        "Ton": {
-            "en": "Your",
-            "es": "Tu"
-        },
-        "Propre": {
-            "en": "Own",
-            "es": "Propia"
-        },
-        "Maison": {
-            "en": "House",
-            "es": "Casa"
-        },
-        "Sois": {
-            "en": "Be",
-            "es": "Sé"
-        },
-        "Classé": {
-            "en": "Sorted",
-            "es": "Ordenado"
-        },
-        "par": {
-            "en": "by",
-            "es": "por"
-        },
-        "Tri": {
-            "en": "Sorting",
-            "es": "Clasificación"
-        },
-        "Chapeau": {
-            "en": "Hat",
-            "es": "Sombrero"
+        "Sois classé par le chapeau de tri":{
+            "en": "Be Sorted by Sorting Hat",
+            "es": "Sé ordenado por el sombrero de clasificación"
         }
     },
     "es": {
-        "Bienvenido": {
-            "en": "Welcome",
-            "fr": "Bienvenue"
+        "Bienvenido a la":{
+            "en": "Welcome to The",
+            "fr": "Bienvenue dans le"
         },
-        "a": {
-            "en": "to",
-            "fr": "à"
+        "Magia Mundo De Fortuna Adivinación":{
+            "en": "Wizarding World of Fortune Telling",
+            "fr": "Monde Magique de la Divination"
         },
-        "El": {
-            "en": "The",
-            "fr": "Le"
-        },
-        "Magia": {
-            "en": "Wizarding ",
-            "fr": "Magie"
-        },
-        "Mundo": {
-            "en": "World",
-            "fr": "Monde"
-        },
-        "De": {
-            "en": "Of",
-            "fr": "De"
-        },
-        "Fortuna": {
-            "en": "Fortune",
-            "fr": "Fortune"
-        },
-        "Adivinación": {
-            "en": "Telling",
-            "fr": "Divination"
+        " Magia Mundo De Fortuna Adivinación":{
+            "en": " Wizarding World Of Fortune Telling",
+            "fr": " Monde Magique de la Divination"
         },
         "Volumen": {
             "en": "Volume",
@@ -228,53 +108,21 @@
             "en": "Language",
             "fr": "Langue"
         },
-        "Pulse": {
-            "en": "Click",
-            "fr": "Cliquez"
+        "Adivinación":{
+            "en": "Fortune Telling",
+            "fr": "Divination"
         },
-        "en_cualquier_lugar_para": {
-            "en": "Anywhere",
-            "fr": "partout"
+        "Pulse en cualquier lugar para continuar...":{
+            "en": "Click Anywhere to Continue...",
+            "fr": "Cliquez n'importe où pour continuer..."
         },
-        "Continuar": {
-            "en": "Continue",
-            "fr": "Continuer"
+        "Elige tu propia casa":{
+            "en": "Choose Your Own House",
+            "fr": "Choisissez votre propre maison"
         },
-        "Elige": {
-            "en": "Choose",
-            "fr": "Choisis"
-        },
-        "Tu": {
-            "en": "Your",
-            "fr": "Ton"
-        },
-        "Propia": {
-            "en": "Own",
-            "fr": "Propre"
-        },
-        "Casa": {
-            "en": "House",
-            "fr": "Maison"
-        },
-        "Sé": {
-            "en": "Be",
-            "fr": "Sois"
-        },
-        "Ordenado": {
-            "en": "Sorted",
-            "fr": "Classé"
-        },
-        "por": {
-            "en": "by",
-            "fr": "par"
-        },
-        "Clasificación": {
-            "en": "Sorting",
-            "fr": "Tri"
-        },
-        "Sombrero": {
-            "en": "Hat",
-            "fr": "Chapeau"
+        "Sé ordenado por el sombrero de clasificación":{
+            "en": "Be Sorted by Sorting Hat",
+            "fr": "Sois classé par le chapeau de tri"
         }
     }
 }
