@@ -1,3 +1,4 @@
+import { navigateTo } from '../js/navigation.js';
 import { normalize, twinkle } from '../js/utils.js';
 
 class Home extends HTMLElement {
@@ -92,8 +93,9 @@ class Home extends HTMLElement {
 
     twinkle(this.shadowRoot, stars);
 
-    document.querySelector('#app').style.backgroundImage =
-      'url(./images/home.jpeg)';
+    this.addEventListener('click', () => {
+      navigateTo('sort-or-choose');
+    });
   }
 }
 
