@@ -1,14 +1,13 @@
 import { normalize } from '../js/utils.js';
 import { navigateTo } from '../js/navigation.js';
 
-
 class AppHeader extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
 
-        const style = new CSSStyleSheet();
-        style.replaceSync(`
+    const style = new CSSStyleSheet();
+    style.replaceSync(`
             header {
                 font-size: 1rem;
                 color: #fff;
@@ -51,7 +50,7 @@ class AppHeader extends HTMLElement {
             }
         `);
 
-        this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
             <header>
                 <a href="https://github.com/the132Debuggers/cse110-sp23-the132Debuggers" id="logo">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -70,12 +69,14 @@ class AppHeader extends HTMLElement {
             </header>
         `;
 
-        (this.shadowRoot.querySelector("#home-redirect")).addEventListener('click', () => {
-            navigateTo('home');
-        });
+    this.shadowRoot
+      .querySelector('#home-redirect')
+      .addEventListener('click', () => {
+        navigateTo('home');
+      });
 
-        this.shadowRoot.adoptedStyleSheets = [normalize, style];
-    }
+    this.shadowRoot.adoptedStyleSheets = [normalize, style];
+  }
 }
 
 export default AppHeader;
