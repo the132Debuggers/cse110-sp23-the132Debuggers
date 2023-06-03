@@ -9,6 +9,7 @@ class SettingsMenu extends HTMLElement{
         const style = new CSSStyleSheet();
         style.replaceSync(`
             #settingsMenu{
+                border-radius: 1em;
                 position:fixed;
                 right:1em;
                 width:30em;
@@ -22,16 +23,11 @@ class SettingsMenu extends HTMLElement{
                 display:inline;
                 font-size:1.5em;
                 padding-left:2em;
-                padding-right:2em;
+                padding-right:1em;
 
             }
 
-            #settingsMenu h1 select{
-                font-size:0.8em;
-                background: #d3d3d3;
-                width:10em;
-                text-align:center;
-            }
+ 
   
             .slidercontainer{
                 display:flex;
@@ -85,15 +81,18 @@ class SettingsMenu extends HTMLElement{
             select#language{
                 display: inline-block;
                 vertical-align: middle;
+                height: 1.5em;
+                width: 15em;
+                text-align: center;
+                background: #d3d3d3;
             }
         `);
 
         this.shadowRoot.innerHTML = `
             <div id="settingsMenu" hidden>
-                <app-header></app-header>
-                <br>  
+            <br>
+            <br>
                 <h1>Volume</h1>
-                <br>
                 <div class="slidercontainer">
                     <svg width="30" height="30" viewBox="0 0 78 86" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M66.8632 12.771C70.1365 16.7407 72.733 21.4534 74.5045 26.6401C76.276 31.8268 77.1878 37.3859 77.1878 43C77.1878 48.614 76.276 54.1731 74.5045 59.3598C72.733 64.5465 70.1365 69.2592 66.8632 73.229M56.4801 25.368C60.3356 30.0445 62.5015 36.3868 62.5015 43C62.5015 49.6131 60.3356 55.9554 56.4801 60.632M18.4375 25.1875L36.9242 2.76745C37.335 2.26986 37.8582 1.93107 38.4277 1.79387C38.9971 1.65667 39.5874 1.72721 40.1238 1.99659C40.6602 2.26597 41.1188 2.7221 41.4416 3.30738C41.7644 3.89265 41.937 4.58081 41.9375 5.28495V80.715C41.937 81.4191 41.7644 82.1073 41.4416 82.6925C41.1188 83.2778 40.6602 83.7339 40.1238 84.0033C39.5874 84.2727 38.9971 84.3432 38.4277 84.206C37.8582 84.0688 37.335 83.73 36.9242 83.2325L18.4375 60.8125H9.66419C6.21752 60.8125 2.99018 58.4042 2.07368 54.381C1.23363 50.6732 0.809428 46.8451 0.812517 43C0.812517 39.0575 1.25118 35.2432 2.07368 31.619C2.99018 27.591 6.21752 25.1875 9.66419 25.1875H18.4375Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
