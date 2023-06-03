@@ -4,13 +4,17 @@
             "es": "Bienvenido a la",
             "fr": "Bienvenue dans le"
         },
+        "Wizarding World":{
+            "es": "Magia Mundo",
+            "fr": "Monde Magique"
+        },
         "Wizarding World of Fortune Telling":{
             "es": "Magia Mundo De Fortuna Adivinación",
             "fr": "Monde Magique de la Divination"
         },
-        " Wizarding World Of Fortune Telling":{
-            "es":" Magia Mundo De Fortuna Adivinación",
-            "fr":" Monde Magique de la Divination"
+        "Of":{
+            "es": "De",
+            "fr": "de la"
         },
         "Volume": {
             "es": "Volumen",
@@ -35,24 +39,49 @@
         "Choose Your Own House":{
             "es": "Elige tu propia casa",
             "fr": "Choisissez votre propre maison"
-        },  
+        },
+        "Choose Your House":{
+            "es": "Elige tu casa",
+            "fr": "Choisissez votre maison"
+        },
         "Be Sorted by Sorting Hat":{
             "es": "Sé ordenado por el sombrero de clasificación",
-            "fr": "Sois classé par le chapeau de tri"
+            "fr": "Sois choisi par le chapeau de tri"
+        },
+        "You have been sorted into...":{
+            "es": "Has sido clasificado en...",
+            "fr": "Vous êtes dans la maison..."
+        },
+        "Click Me To Be Sorted":{
+            "es": "Haga clic en mí para ser clasificado",
+            "fr": "Cliquez sur moi pour déterminer votre maison"
+        },
+        "Casting spells...":{
+            "es": "Lanzando hechizos...",
+            "fr": "Lancement des sorts..."
+        },
+        "Text Here...":{
+            "es": "Texto aquí...",
+            "fr": "Ecrivez ici..."
         }
+        
     },
     "fr": {
         "Bienvenue dans le":{
             "en": "Welcome to The",
             "es": "Bienvenido a la"
         },
+        "Monde Magique":{
+            "en": "Wizarding World",
+            "es": "Magia Mundo"
+        },
         "Monde Magique de la Divination":{
             "en": "Wizarding World of Fortune Telling",
             "es": "Magia Mundo De Fortuna Adivinación"
         },
-        " Monde Magique de la Divination":{
-            "en": " Wizarding World Of Fortune Telling",
-            "es": " Magia Mundo De Fortuna Adivinación"
+        "de la":{
+            "en": "Of",
+            "es": "De"
         },
         "Volume": {
             "en": "Volume",
@@ -78,9 +107,29 @@
             "en": "Choose Your Own House",
             "es": "Elige tu propia casa"
         },
-        "Sois classé par le chapeau de tri":{
+        "Choisissez votre maison":{
+            "en": "Choose Your House",
+            "es": "Elige tu casa"
+        },
+        "Sois choisi par le chapeau de tri":{
             "en": "Be Sorted by Sorting Hat",
             "es": "Sé ordenado por el sombrero de clasificación"
+        },
+        "Vous êtes dans la maison...":{
+            "en": "You have been sorted into...",
+            "es": "Has sido clasificado en..."
+        },
+        "Cliquez sur moi pour déterminer votre maison":{
+            "en": "Click Me To Be Sorted",
+            "es": "Haga clic en mí para ser clasificado"
+        },
+        "Lancement des sorts...":{
+            "en": "Casting spells...",
+            "es": "Lanzando hechizos..."
+        },
+        "Ecrivez ici...":{
+            "en": "Text Here...",
+            "es": "Texto aquí..."
         }
     },
     "es": {
@@ -88,13 +137,17 @@
             "en": "Welcome to The",
             "fr": "Bienvenue dans le"
         },
+        "Magia Mundo":{
+            "en": "Wizarding World",
+            "fr": "Monde Magique"
+        },
         "Magia Mundo De Fortuna Adivinación":{
             "en": "Wizarding World of Fortune Telling",
             "fr": "Monde Magique de la Divination"
         },
-        " Magia Mundo De Fortuna Adivinación":{
-            "en": " Wizarding World Of Fortune Telling",
-            "fr": " Monde Magique de la Divination"
+        "De": {
+            "en": "Of",
+            "fr": "de la"
         },
         "Volumen": {
             "en": "Volume",
@@ -120,9 +173,29 @@
             "en": "Choose Your Own House",
             "fr": "Choisissez votre propre maison"
         },
+        "Elige tu casa":{
+            "en": "Choose Your House",
+            "fr": "Choisissez votre maison"
+        },
         "Sé ordenado por el sombrero de clasificación":{
             "en": "Be Sorted by Sorting Hat",
-            "fr": "Sois classé par le chapeau de tri"
+            "fr": "Sois choisi par le chapeau de tri"
+        },
+        "Has sido clasificado en...":{
+            "en": "You have been sorted into...",
+            "fr": "Vous êtes dans la maison..."
+        },
+        "Haga clic en mí para ser clasificado":{
+            "en": "Click Me To Be Sorted",
+            "fr": "Cliquez sur moi pour déterminer votre maison"
+        },
+        "Lanzando hechizos...":{
+            "en": "Casting spells...",
+            "fr": "Lancement des sorts..."
+        },
+        "Texto aquí...":{
+            "en": "Text Here...",
+            "fr": "Ecrivez ici..."
         }
     }
 }

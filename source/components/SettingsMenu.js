@@ -149,9 +149,13 @@ class SettingsMenu extends HTMLElement{
         }
         slider_sfx.addEventListener('input', volume_sfx);
 
+
+        //Need to be changed
         document.addEventListener('click', () => {
             audio_music.play();
         });
+
+        //Need to be changed
         document.querySelector("main").addEventListener('click', () => {
             audio_sfx.play();
         });
@@ -190,10 +194,12 @@ class SettingsMenu extends HTMLElement{
             const elements = document.querySelectorAll('*');
             elements.forEach(element => {
                 if(element.shadowRoot !== null){
-                    console.log(element.shadowRoot.querySelector)
                     element.shadowRoot.querySelectorAll('p, h1, h2, h3, h4, h5, div#notice').forEach(words => {
                         words.innerHTML = replaceWords(words.innerHTML, wordsList, localStorage.getItem('previousLanguage'), currentLanguage);
                     })
+                    if(element.shadowRoot.querySelector("input[type=text]") != null){
+                        element.shadowRoot.querySelector("input[type=text]").placeholder = replaceWords(element.shadowRoot.querySelector("input[type=text]").placeholder, wordsList, localStorage.getItem('previousLanguage'), currentLanguage);
+                    }
                 }
                 
             });
