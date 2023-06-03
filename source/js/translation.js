@@ -20,7 +20,7 @@ function replaceWords(inputString, dictionary, sourceLanguage, targetLanguage) {
 
 //Can't translate the output from Fortune Teller
 export function translate(currentLanguage){
-    document.querySelector("#app > settings-menu").shadowRoot.querySelector("#settingsMenu > app-header").shadowRoot.querySelector("#logo > h1").innerHTML = replaceWords(document.querySelector("#app > settings-menu").shadowRoot.querySelector("#settingsMenu > app-header").shadowRoot.querySelector("#logo > h1").innerHTML, wordsList, localStorage.getItem('previousLanguage'), currentLanguage);
+    localStorage.setItem('currentLanguage',currentLanguage);
     const elements = document.querySelectorAll('*');
     elements.forEach(element => {
         if(element.shadowRoot !== null){
@@ -31,6 +31,7 @@ export function translate(currentLanguage){
                 element.shadowRoot.querySelector("input[type=text]").placeholder = replaceWords(element.shadowRoot.querySelector("input[type=text]").placeholder, wordsList, localStorage.getItem('previousLanguage'), currentLanguage);
             }
         }
+    
         
     });
 }
