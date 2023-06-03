@@ -189,7 +189,8 @@ class SettingsMenu extends HTMLElement{
           }
 
 
-        
+        //Does not translate the page when switching,
+        //Can't translate the output from Fortune Teller
         function translate(currentLanguage){
             const elements = document.querySelectorAll('*');
             elements.forEach(element => {
