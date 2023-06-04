@@ -6,7 +6,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-async function predictFuture(hogwartsHouse, question) {
+async function query(hogwartsHouse, question) {
   const houseTraits = {
     gryffindor: 'brave and noble',
     hufflepuff: 'loyal and hardworking',

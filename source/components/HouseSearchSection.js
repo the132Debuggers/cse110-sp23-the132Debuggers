@@ -1,4 +1,4 @@
-import query from '../js/fortunes.js';
+import query from '../js/fortune-telling.js';
 import { normalize, themeColor } from '../js/utils.js';
 
 class HouseSearchSection extends HTMLElement {
