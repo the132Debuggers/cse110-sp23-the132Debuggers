@@ -1,13 +1,13 @@
 import { normalize } from '../js/utils.js';
 import { translate } from '../js/translation.js';
 
-class SettingsMenu extends HTMLElement{
-    constructor(){
-        super();
-        this.attachShadow({ mode: 'open' });
+class SettingsMenu extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
 
-        const style = new CSSStyleSheet();
-        style.replaceSync(`
+    const style = new CSSStyleSheet();
+    style.replaceSync(`
             #settingsMenu{
                 border-radius: 1em;
                 position:fixed;
@@ -88,7 +88,7 @@ class SettingsMenu extends HTMLElement{
             }
         `);
 
-        this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
             <div id="settingsMenu" hidden>
             <br>
             <br>
@@ -121,54 +121,55 @@ class SettingsMenu extends HTMLElement{
 
         `;
 
-        this.shadowRoot.adoptedStyleSheets = [normalize, style];
-        
-        document.querySelector("app-header").shadowRoot.querySelector("#settings > svg").addEventListener('click', () => {
-            const settingsMenu = document.querySelector("#app > settings-menu").shadowRoot.querySelector("#settingsMenu");
-            if(settingsMenu.getAttribute('hidden') === null) {
-                settingsMenu.setAttribute('hidden', '');
-            }
-            else{
-                settingsMenu.removeAttribute('hidden');
-            }
-        });
-        
-        const audioMusic = this.shadowRoot.querySelector('#audioMusic');
-        const sliderMusic = this.shadowRoot.querySelector('#musicRange');
-        function volume_music(){
-          audioMusic.volume = sliderMusic.value/100;
+    this.shadowRoot.adoptedStyleSheets = [normalize, style];
+
+    document
+      .querySelector('app-header')
+      .shadowRoot.querySelector('#settings > svg')
+      .addEventListener('click', () => {
+        const settingsMenu = document
+          .querySelector('#app > settings-menu')
+          .shadowRoot.querySelector('#settingsMenu');
+        if (settingsMenu.getAttribute('hidden') === null) {
+          settingsMenu.setAttribute('hidden', '');
+        } else {
+          settingsMenu.removeAttribute('hidden');
         }
-        sliderMusic.addEventListener('input', volume_music);
-        
-    
-        const audioSfx = this.shadowRoot.querySelector('#audioSfx');
-        const sliderSfx = this.shadowRoot.querySelector('#sfxRange');
+      });
 
-        function volume_sfx(){
-          audioSfx.volume = sliderSfx.value/100;
-        }
-        sliderSfx.addEventListener('input', volume_sfx);
+    const audioMusic = this.shadowRoot.querySelector('#audioMusic');
+    const sliderMusic = this.shadowRoot.querySelector('#musicRange');
+    function volumeMusic() {
+      audioMusic.volume = sliderMusic.value / 100;
+    }
+    sliderMusic.addEventListener('input', volumeMusic);
 
+    const audioSfx = this.shadowRoot.querySelector('#audioSfx');
+    const sliderSfx = this.shadowRoot.querySelector('#sfxRange');
 
-        //Need to be changed
-        document.addEventListener('click', () => {
-            audioMusic.play();
-        });
+    function volumeSfx() {
+      audioSfx.volume = sliderSfx.value / 100;
+    }
+    sliderSfx.addEventListener('input', volumeSfx);
 
-        //Need to be changed
-        document.querySelector("main").addEventListener('click', () => {
-            audioSfx.play();
-        });
- 
+    // Need to be changed
+    document.addEventListener('click', () => {
+      audioMusic.play();
+    });
 
-        const language = this.shadowRoot.querySelector('#language');
-        language.addEventListener('mousedown', () => {
-            localStorage.setItem('previousLanguage',language.value);
-        });
-        language.addEventListener('change', () => {
-            localStorage.setItem('currentLanguage',language.value);
-            translate(language.value);
-        });
-    } 
+    // Need to be changed
+    document.querySelector('main').addEventListener('click', () => {
+      audioSfx.play();
+    });
+
+    const language = this.shadowRoot.querySelector('#language');
+    language.addEventListener('mousedown', () => {
+      localStorage.setItem('previousLanguage', language.value);
+    });
+    language.addEventListener('change', () => {
+      localStorage.setItem('currentLanguage', language.value);
+      translate(language.value);
+    });
+  }
 }
 export default SettingsMenu;

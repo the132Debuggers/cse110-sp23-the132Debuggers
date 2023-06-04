@@ -1,4 +1,4 @@
-import { translate } from "./translation.js";
+import { translate } from './translation.js';
 
 const routes = {
   home: {

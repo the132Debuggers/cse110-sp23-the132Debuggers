@@ -30,7 +30,7 @@ main {
   z-index: 10;
 }
 
-settings-menu{
-  flex:none;
+settings-menu {
+  flex: none;
   z-index: 50;
 }
