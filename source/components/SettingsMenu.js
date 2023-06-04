@@ -116,8 +116,8 @@ class SettingsMenu extends HTMLElement{
                     <option value="fr">French</option>
                 </select>
             </div>
-            <audio id="audio_music" class="hidden" src="./audio/music_hedwigs_theme.mp3" loop></audio>
-            <audio id="audio_sfx" class="hidden" src="./audio/sfx_harry_potter_expecto_patronum_sound_effect.mp3"></audio>
+            <audio id="audioMusic" class="hidden" src="./audio/music_hedwigs_theme.mp3" loop></audio>
+            <audio id="audioSfx" class="hidden" src="./audio/sfx_harry_potter_expecto_patronum_sound_effect.mp3"></audio>
 
         `;
 
@@ -133,31 +133,31 @@ class SettingsMenu extends HTMLElement{
             }
         });
         
-        const audio_music = this.shadowRoot.querySelector('#audio_music');
-        const slider_music = this.shadowRoot.querySelector('#musicRange');
+        const audioMusic = this.shadowRoot.querySelector('#audioMusic');
+        const sliderMusic = this.shadowRoot.querySelector('#musicRange');
         function volume_music(){
-          audio_music.volume = slider_music.value/100;
+          audioMusic.volume = sliderMusic.value/100;
         }
-        slider_music.addEventListener('input', volume_music);
+        sliderMusic.addEventListener('input', volume_music);
         
     
-        const audio_sfx = this.shadowRoot.querySelector('#audio_sfx');
-        const slider_sfx = this.shadowRoot.querySelector('#sfxRange');
+        const audioSfx = this.shadowRoot.querySelector('#audioSfx');
+        const sliderSfx = this.shadowRoot.querySelector('#sfxRange');
 
         function volume_sfx(){
-          audio_sfx.volume = slider_sfx.value/100;
+          audioSfx.volume = sliderSfx.value/100;
         }
-        slider_sfx.addEventListener('input', volume_sfx);
+        sliderSfx.addEventListener('input', volume_sfx);
 
 
         //Need to be changed
         document.addEventListener('click', () => {
-            audio_music.play();
+            audioMusic.play();
         });
 
         //Need to be changed
         document.querySelector("main").addEventListener('click', () => {
-            audio_sfx.play();
+            audioSfx.play();
         });
  
 
