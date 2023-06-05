@@ -127,7 +127,7 @@ class SettingsMenu extends HTMLElement {
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
-    document
+    /*    document
       .querySelector('app-header')
       .shadowRoot.querySelector('#settings > svg')
       .addEventListener('click', () => {
@@ -139,7 +139,11 @@ class SettingsMenu extends HTMLElement {
         } else {
           settingsMenu.removeAttribute('hidden');
         }
-      });
+      }); */
+    const settingsMenu = this.shadowRoot.querySelector('#settingsMenu');
+    document.addEventListener('toggleHidden', () => {
+      settingsMenu.hidden = !settingsMenu.hidden;
+    });
 
     const audioMusic = this.shadowRoot.querySelector('#audioMusic');
     const sliderMusic = this.shadowRoot.querySelector('#musicRange');
