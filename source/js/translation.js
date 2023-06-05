@@ -6,7 +6,7 @@ await fetch('./js/wordsList.json')
   });
 
 /**
- * Replace a string from one source language to a target language using a dictionary
+ * Replace a string from a language to another according to a dictionary
  * @param {*} inputString The string to replace
  * @param {*} dictionary The dictionary to use for the replacement
  * @param {*} sourceLanguage The source language of the string
