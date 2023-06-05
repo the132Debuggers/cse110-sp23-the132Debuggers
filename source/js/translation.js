@@ -5,6 +5,14 @@ await fetch('./js/wordsList.json')
     wordsList = data;
   });
 
+/**
+ * Replace a string from one source language to a target language using a dictionary
+ * @param {*} inputString The string to replace
+ * @param {*} dictionary The dictionary to use for the replacement
+ * @param {*} sourceLanguage The source language of the string
+ * @param {*} targetLanguage The target language of the string
+ * @returns The replaced string in the target language
+ */
 export function replaceWords(
   inputString,
   dictionary,
@@ -27,6 +35,10 @@ export function replaceWords(
 }
 
 // Can't translate the output from Fortune Teller
+/**
+ * Translates the page to the specified language
+ * @param {*} currentLanguage The language to translate to
+ */
 export function translate(currentLanguage) {
   localStorage.setItem('currentLanguage', currentLanguage);
   const elements = document.querySelectorAll('*');
