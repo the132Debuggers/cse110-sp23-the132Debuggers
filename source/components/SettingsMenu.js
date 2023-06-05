@@ -8,6 +8,10 @@ class SettingsMenu extends HTMLElement {
 
     const style = new CSSStyleSheet();
     style.replaceSync(`
+            :host{
+                flex: none;
+                z-index: 50;
+            }
             #settingsMenu{
                 border-radius: 1em;
                 position:fixed;
