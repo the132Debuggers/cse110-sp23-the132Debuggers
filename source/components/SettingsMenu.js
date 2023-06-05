@@ -13,11 +13,11 @@ class SettingsMenu extends HTMLElement {
                 z-index: 50;
             }
             #settingsMenu{
-                border-radius: 1em;
+                border-radius: 1rem;
                 position:fixed;
-                right:1em;
-                width:30em;
-                height:20em;
+                right:1rem;
+                width:30rem;
+                height:20rem;
                 background-color: rgba(162, 162, 162, 0.8);
                 font-family:'Inter';
                 color:black;
@@ -25,9 +25,9 @@ class SettingsMenu extends HTMLElement {
   
             #settingsMenu h1{
                 display:inline;
-                font-size:1.5em;
-                padding-left:2em;
-                padding-right:1em;
+                font-size:1.5rem;
+                padding-left:2rem;
+                padding-right:1rem;
 
             }
 
@@ -35,15 +35,15 @@ class SettingsMenu extends HTMLElement {
   
             .slidercontainer{
                 display:flex;
-                padding-left:5em;
-                padding-bottom:1.5em;
-                font-size:1.2em;
-                padding-top:1em;
+                padding-left:5rem;
+                padding-bottom:1.5rem;
+                font-size:1.2rem;
+                padding-top:1rem;
             }
 
             .slidercontainer p{
-                padding-left:1em;
-                width:3em;
+                padding-left:1rem;
+                width:3rem;
             }
             .slidercontainer input{
                 margin:auto;
@@ -52,8 +52,8 @@ class SettingsMenu extends HTMLElement {
             .slider {
                 -webkit-appearance: none;
                 width: 50%;
-                height: 0.7em;
-                border-radius: 5px;
+                height: 0.7rem;
+                border-radius: 1rem;
                 background: #d3d3d3;
                 outline: none;
                 opacity: 0.7;
@@ -68,16 +68,16 @@ class SettingsMenu extends HTMLElement {
             .slider::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
-                width: 25px;
-                height: 25px;
+                width: 1.5rem;
+                height: 1.5rem;
                 border-radius: 50%;
                 background: #000000;
                 cursor: pointer;
             }
           
             .slider::-moz-range-thumb {
-                width: 25px;
-                height: 25px;
+                width: 1.5rem;
+                height: 1.5rem;
                 border-radius: 50%;
                 background: #000000;
                 cursor: pointer;
@@ -85,8 +85,8 @@ class SettingsMenu extends HTMLElement {
             select#language{
                 display: inline-block;
                 vertical-align: middle;
-                height: 1.5em;
-                width: 15em;
+                height: 1.5rem;
+                width: 15rem;
                 text-align: center;
                 background: #d3d3d3;
             }
