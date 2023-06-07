@@ -1,7 +1,6 @@
 {
   "name": "cse110-sp23-group9",
   "version": "1.0.0",
-  
   "scripts": {
     "lint": "prettier --check . && eslint .",
     "fix": "prettier --write . && eslint --fix .",
@@ -20,5 +19,4 @@
     "openai": "^3.2.1"
   },
   "type": "module"
-
 }

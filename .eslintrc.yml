@@ -26,4 +26,3 @@ rules:
     - after
   comma-dangle:
     - off
-"import/no-extraneous-dependencies": ["error", {"devDependencies": true}]

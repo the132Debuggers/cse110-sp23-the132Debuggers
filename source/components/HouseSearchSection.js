@@ -1,4 +1,4 @@
-import query from '../js/fortune-telling.js';
+import query from '../js/fortunes.js';
 import { normalize, themeColor } from '../js/utils.js';
 
 class HouseSearchSection extends HTMLElement {
@@ -127,7 +127,6 @@ class HouseSearchSection extends HTMLElement {
 
       const result = await query(text, house);
       fortune.textContent = result;
-     
     };
 
     questionButton.addEventListener('click', handleInput);
