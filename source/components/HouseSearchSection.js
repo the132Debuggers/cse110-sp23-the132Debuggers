@@ -127,6 +127,7 @@ class HouseSearchSection extends HTMLElement {
 
       const result = await query(text, house);
       fortune.textContent = result;
+     
     };
 
     questionButton.addEventListener('click', handleInput);

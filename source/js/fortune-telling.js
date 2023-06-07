@@ -1,12 +1,11 @@
-const { Configuration, OpenAIApi } = require('openai');
-require('dotenv').config();
+import { Configuration, OpenAIApi } from 'openai';
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
+export default async function query(question, hogwartsHouse) {
 
-async function query(hogwartsHouse, question) {
+  const configuration = new Configuration({
+    apiKey: "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",
+  });
+  const openai = new OpenAIApi(configuration);
   const houseTraits = {
     gryffindor: 'brave and noble',
     hufflepuff: 'loyal and hardworking',
@@ -32,14 +31,16 @@ async function query(hogwartsHouse, question) {
     temperature: 0.6,
   });
 
-  const prediction = response.data.choices[0].text;
-  return prediction;
+  const result = response.data.choices[0].text;
+  return result;
 }
 
 // Example usage
+
+
 const hogwartsHouse = 'hufflepuff'; // Replace with the user's Hogwarts house
 const question = 'What is my future career?'; // Replace with the user's question
-predictFuture(hogwartsHouse, question)
+query(hogwartsHouse, question)
   .then((prediction) => {
     console.log('Prediction:', prediction);
   })
