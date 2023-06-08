@@ -140,6 +140,9 @@ class HouseSearchSection extends HTMLElement {
       fortune.textContent = 'Casting spells...';
       answer.style.display = 'none';
       question.style.display = 'flex';
+
+      const audio = new Audio(`./audio/spells-${house}.mp3`);
+      audio.play();
     });
   }
 }
