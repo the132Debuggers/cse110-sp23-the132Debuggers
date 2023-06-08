@@ -147,7 +147,6 @@ class SettingsMenu extends HTMLElement {
     }
     sliderSfx.addEventListener('input', volumeSfx);
 
-
     // Need to be changed
     document.querySelector('main').addEventListener('click', () => {
       //audioSfx.play();
