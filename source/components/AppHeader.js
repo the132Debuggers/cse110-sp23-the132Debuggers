@@ -53,7 +53,7 @@ class AppHeader extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
             <header>
-                <a></a>
+            
                 <h1 id="home-redirect">Wizarding World of Fortune Telling</h1>
 
                 <div id="settings">
