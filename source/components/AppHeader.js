@@ -1,4 +1,5 @@
 import { normalize } from '../js/utils.js';
+import { navigateTo } from '../js/navigation.js';
 
 class AppHeader extends HTMLElement {
   constructor() {
@@ -38,6 +39,10 @@ class AppHeader extends HTMLElement {
                 width: 2rem;
             }
 
+            h1:hover {
+                cursor: pointer;
+            }
+
             @media (min-width: 768px) {
                 header {
                     font-size: 1.25rem;
@@ -47,13 +52,8 @@ class AppHeader extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
             <header>
-                <a href="https://github.com/the132Debuggers/cse110-sp23-the132Debuggers" id="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
 
-                    <h1>Wizarding World of Fortune Telling</h1>
-                </a>
+                <h1 id="home-redirect">Wizarding World of Fortune Telling</h1>
 
                 <div id="settings">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -62,6 +62,18 @@ class AppHeader extends HTMLElement {
                 </div>
             </header>
         `;
+
+    const toggleHiddenEvent = new CustomEvent('toggleHidden');
+    const triggerSvg = this.shadowRoot.querySelector('#settings > svg');
+    triggerSvg.addEventListener('click', () => {
+      document.dispatchEvent(toggleHiddenEvent);
+    });
+
+    this.shadowRoot
+      .querySelector('#home-redirect')
+      .addEventListener('click', () => {
+        navigateTo('home');
+      });
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
   }
