@@ -13,14 +13,12 @@ const houseTraits = {
 
 async function query(question, hogwartsHouse) {
   const prompt = `You are a fortune teller in the world of harry potter.
-    Your task is only to answer questions from wizards and witches about their future (every user is a witch or wizard).
-    Given the question delimited by ''', generate a response to the witches or wizards question.
-    If the question is not actually a question about the future, respond with "This is not a question about your future, and as a fortune teller I cannot answer this. Try again with a question about your future".
-    If the question is a question about the wizard/witch's future, answer the question by predicting the future. 
-    The wizard/witch is from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
-    Predict the future of this person based on what you know of their personality and the fact that they go to Hogwarts school in the world of Harry Potter.
-    Try to include specific elements of the magical harry potter world in your reponse
-    Question: '''${question}''' 
+    Your task is to answer questions delimited by ''' about someone's future.
+    If the question is a question about someone's future, answer the question by predicting the future in one sentence, shorter than 50 words. 
+    Now, I am from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
+    Predict my future based on what you know of their personality and the fact that they go to Hogwarts school in the world of Harry Potter.
+    Try to include specific elements of the magical harry potter world in your reponse.
+    Question: '''${question}'''
     `;
 
   const response = await openai.createCompletion({
@@ -38,6 +36,8 @@ export default async function handler(request, response) {
   const { house } = request.query;
   const { question } = request.body;
   const result = await query(question, house);
+  response.setHeader('Access-Control-Allow-Origin', '*');
+  response.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
   response.status(200).json({
     answer: result,
   });
