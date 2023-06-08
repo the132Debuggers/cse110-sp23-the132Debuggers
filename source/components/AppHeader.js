@@ -18,6 +18,7 @@ class AppHeader extends HTMLElement {
                 padding: 0.5rem;
                 display: flex;
                 flex-direction: row;
+                align-items: center
             }
 
             #logo {
@@ -52,7 +53,7 @@ class AppHeader extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
             <header>
-
+                <a></a>
                 <h1 id="home-redirect">Wizarding World of Fortune Telling</h1>
 
                 <div id="settings">
