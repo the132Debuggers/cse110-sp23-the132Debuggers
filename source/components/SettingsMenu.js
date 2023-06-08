@@ -121,7 +121,6 @@ class SettingsMenu extends HTMLElement {
                 </select>
             </div>
             <audio id="audioMusic" class="hidden" src="./audio/music_hedwigs_theme.mp3" autoplay loop></audio>
-            <audio id="audioSfx" class="hidden" src="./audio/sfx_harry_potter_expecto_patronum_sound_effect.mp3"></audio>
 
         `;
 
@@ -146,11 +145,6 @@ class SettingsMenu extends HTMLElement {
       audioSfx.volume = sliderSfx.value / 100;
     }
     sliderSfx.addEventListener('input', volumeSfx);
-
-    // Need to be changed
-    document.querySelector('main').addEventListener('click', () => {
-      //audioSfx.play();
-    });
 
     const language = this.shadowRoot.querySelector('#language');
     language.addEventListener('mousedown', () => {
