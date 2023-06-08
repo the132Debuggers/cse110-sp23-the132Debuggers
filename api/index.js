@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
@@ -39,7 +40,10 @@ export default async function handler(request, response) {
   const { question } = request.body;
   const result = await query(question, house);
   response.setHeader('Access-Control-Allow-Origin', '*');
-  response.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  response.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET,OPTIONS,PATCH,DELETE,POST,PUT'
+  );
   response.status(200).json({
     answer: result,
   });
