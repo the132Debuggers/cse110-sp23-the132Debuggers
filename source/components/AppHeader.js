@@ -63,6 +63,7 @@ class AppHeader extends HTMLElement {
             </header>
         `;
 
+
     const toggleHiddenEvent = new CustomEvent('toggleHidden');
     const triggerSvg = this.shadowRoot.querySelector('#settings > svg');
     triggerSvg.addEventListener('click', () => {
