@@ -82,24 +82,42 @@ class SortingHatSection extends HTMLElement {
         const house = randomHouse();
         localStorage.setItem('house', house);
 
+        const audio = new Audio(`./sounds/${house}_sort.m4a`);
+        audio.play();
+
         const tip = this.shadowRoot.querySelector('#tip');
-        tip.textContent = house;
+        tip.textContent = '';
 
         tip.style = `
         border: 2px solid ${themeColor[house][1]};
-        background-color: ${themeColor[house][0]};
         -webkit-text-stroke: 1px ${themeColor[house][1]};
-        color: ${themeColor[house][0]};
+        color: ${themeColor[house][0]}; 
+        background-color: transparent;
+        transition: background-color 3s ease;
       `;
-
+        setTimeout(() => {
+          // eslint-disable-next-line prefer-destructuring
+          tip.style.backgroundColor = themeColor[house][0];
+        }, 1000);
         const notification = this.shadowRoot.querySelector('#notification');
         notification.style = `
         display: block;
       `;
 
-        setTimeout(() => {
-          navigateTo('house-search');
-        }, 3000);
+        let currentIndex = 0;
+        const tipText = house;
+
+        const interval = setInterval(() => {
+          if (currentIndex >= tipText.length) {
+            clearInterval(interval);
+            setTimeout(() => {
+              navigateTo('house-search');
+            }, 500);
+          } else {
+            tip.textContent += tipText[currentIndex];
+            currentIndex++;
+          }
+        }, 300);
       },
       { once: true }
     );
