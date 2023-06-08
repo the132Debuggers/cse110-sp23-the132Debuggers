@@ -38,7 +38,7 @@ class ChooseHouseSection extends HTMLElement {
         .option {
           order-radius: 0.5rem;
           padding: 1.5rem;
-          max-width: 12rem;
+          max-width: 16rem;
         }
 
         .option:hover {

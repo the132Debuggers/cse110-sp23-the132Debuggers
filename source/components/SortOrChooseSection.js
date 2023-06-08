@@ -24,11 +24,11 @@ class SortOrChooseSection extends HTMLElement {
 
       .option {
         display: flex;
-        gap: 1.5rem;
+        gap: 0.5rem;
         flex-direction: column;
         text-align: center;
         border-radius: 0.5rem;
-        padding: 2rem 1rem;
+        padding: 1rem 0.5rem;
       }
 
       .option:hover {
@@ -45,7 +45,7 @@ class SortOrChooseSection extends HTMLElement {
       }
 
       .option img {
-        height: 8rem;
+        height: 11rem;
         margin-left: auto;
         margin-right: auto;
       }
