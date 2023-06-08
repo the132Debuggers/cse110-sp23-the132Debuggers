@@ -18,6 +18,7 @@ class AppHeader extends HTMLElement {
                 padding: 0.5rem;
                 display: flex;
                 flex-direction: row;
+                align-items: center
             }
 
             #logo {
