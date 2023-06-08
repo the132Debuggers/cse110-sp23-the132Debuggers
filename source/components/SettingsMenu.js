@@ -120,26 +120,13 @@ class SettingsMenu extends HTMLElement {
                     <option value="fr">French</option>
                 </select>
             </div>
-            <audio id="audioMusic" class="hidden" src="./audio/music_hedwigs_theme.mp3" loop></audio>
+            <audio id="audioMusic" class="hidden" src="./audio/music_hedwigs_theme.mp3" autoplay loop></audio>
             <audio id="audioSfx" class="hidden" src="./audio/sfx_harry_potter_expecto_patronum_sound_effect.mp3"></audio>
 
         `;
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
-    /*    document
-      .querySelector('app-header')
-      .shadowRoot.querySelector('#settings > svg')
-      .addEventListener('click', () => {
-        const settingsMenu = document
-          .querySelector('#app > settings-menu')
-          .shadowRoot.querySelector('#settingsMenu');
-        if (settingsMenu.getAttribute('hidden') === null) {
-          settingsMenu.setAttribute('hidden', '');
-        } else {
-          settingsMenu.removeAttribute('hidden');
-        }
-      }); */
     const settingsMenu = this.shadowRoot.querySelector('#settingsMenu');
     document.addEventListener('toggleHidden', () => {
       settingsMenu.hidden = !settingsMenu.hidden;
@@ -160,14 +147,10 @@ class SettingsMenu extends HTMLElement {
     }
     sliderSfx.addEventListener('input', volumeSfx);
 
-    // Need to be changed
-    document.addEventListener('click', () => {
-      audioMusic.play();
-    });
 
     // Need to be changed
     document.querySelector('main').addEventListener('click', () => {
-      audioSfx.play();
+      //audioSfx.play();
     });
 
     const language = this.shadowRoot.querySelector('#language');
