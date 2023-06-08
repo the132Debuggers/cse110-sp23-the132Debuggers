@@ -78,8 +78,7 @@ Virtual:
 
 ### Upcoming Deadlines
 #### *Date*
-- ... 
-- ...
+- n/a  
 
 ---
 

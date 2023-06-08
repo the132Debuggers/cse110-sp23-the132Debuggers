@@ -212,3 +212,4 @@ dist
 .svelte-kit
 
 ./jsdocs
+.vercel

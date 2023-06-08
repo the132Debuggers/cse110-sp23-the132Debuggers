@@ -1,5 +1,7 @@
 # CSE 110 SP23 Group 9 Repository
 
+[The Wizarding World of Fortune Telling](https://the132debuggers.github.io/cse110-sp23-the132Debuggers/source/)
+
 ## Team Members
 
 - Designer: Kiyoshi
