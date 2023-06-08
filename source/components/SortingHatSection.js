@@ -82,6 +82,9 @@ class SortingHatSection extends HTMLElement {
         const house = randomHouse();
         localStorage.setItem('house', house);
 
+        const audio = new Audio(`./sounds/${house}_sort.m4a`);
+        audio.play();
+
         const tip = this.shadowRoot.querySelector('#tip');
         tip.textContent = house;
 
@@ -99,7 +102,7 @@ class SortingHatSection extends HTMLElement {
 
         setTimeout(() => {
           navigateTo('house-search');
-        }, 3000);
+        }, 3500);
       },
       { once: true }
     );
