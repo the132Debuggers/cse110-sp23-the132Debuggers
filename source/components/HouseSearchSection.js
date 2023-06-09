@@ -160,6 +160,7 @@ class HouseSearchSection extends HTMLElement {
     });
     this.connectedCallback();
   }
+
   connectedCallback() {
     setTimeout(() => {
       const input = this.shadowRoot.querySelector('input');
