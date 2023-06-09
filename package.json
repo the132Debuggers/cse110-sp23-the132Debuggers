@@ -8,6 +8,8 @@
     "generate-docs": "jsdoc -c .jsdoc.json"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
@@ -18,5 +20,5 @@
   "dependencies": {
     "openai": "^3.2.1"
   },
-  "type": "module"
+  "type": "commonjs"
 }
