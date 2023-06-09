@@ -1,5 +1,7 @@
 import { normalize } from '../js/utils.js';
 import { navigateTo } from '../js/navigation.js';
+import { translate } from '../js/translation.js';
+
 
 class AppHeader extends HTMLElement {
   constructor() {
@@ -58,24 +60,39 @@ class AppHeader extends HTMLElement {
 
                 <div id="settings">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
                     </svg>
+              
                 </div>
             </header>
+            <audio id="audioMusic" src="./audio/music_hedwigs_theme.mp3" autoplay loop></audio>
         `;
 
     const toggleHiddenEvent = new CustomEvent('toggleHidden');
     const triggerSvg = this.shadowRoot.querySelector('#settings > svg');
+    let isMuted = false;
+
     triggerSvg.addEventListener('click', () => {
-      document.dispatchEvent(toggleHiddenEvent);
+        isMuted = !isMuted;
+        if (isMuted){
+            this.shadowRoot.querySelector('#settings > svg').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.531V19.94a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.506-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.395C2.806 8.757 3.63 8.25 4.51 8.25H6.75z" /></svg>'
+            audioMusic.volume = 0;
+        }
+        else {
+            this.shadowRoot.querySelector('#settings > svg').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" /></svg>'
+            audioMusic.volume = 1;
+        }
     });
+
+    const audioMusic = this.shadowRoot.querySelector('#audioMusic');
+    translate(navigator.language);
 
     this.shadowRoot
       .querySelector('#home-redirect')
       .addEventListener('click', () => {
         navigateTo('home');
       });
-
+      
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
   }
 }
