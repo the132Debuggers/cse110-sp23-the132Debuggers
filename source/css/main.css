@@ -16,6 +16,7 @@ body {
   flex-direction: column;
   background-size: cover;
   background-position: center;
+  overflow: auto;
 }
 
 app-header {
