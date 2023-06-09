@@ -147,6 +147,7 @@ class SettingsMenu extends HTMLElement {
     sliderSfx.addEventListener('input', volumeSfx);
 
     const language = this.shadowRoot.querySelector('#language');
+    language.value = localStorage.getItem('currentLanguage');
     language.addEventListener('mousedown', () => {
       localStorage.setItem('previousLanguage', language.value);
     });
