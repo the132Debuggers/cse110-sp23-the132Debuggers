@@ -35,10 +35,11 @@ async function query(question, hogwartsHouse) {
 }
 
 export default async function handler(request, response) {
-  const { house } = request.query;
-  const { question } = request.body;
+  const { question, house } = request.body;
   const result = await query(question, house);
   response.status(200).json({
     answer: result,
+    house,
+    question
   });
 }
