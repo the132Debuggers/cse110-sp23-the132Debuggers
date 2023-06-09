@@ -86,6 +86,10 @@ class HouseSearchSection extends HTMLElement {
     `);
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
+
+        const audio = new Audio(`./sounds/${house}_house.m4a`);
+        audio.play(); 
+        
     this.shadowRoot.innerHTML = `
         <div id="avatar">
             <img src="./images/${house}/avatar.webp" alt="${house}'s avatar" />

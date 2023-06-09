@@ -92,3 +92,4 @@ class ChooseHouseSection extends HTMLElement {
 }
 
 export default ChooseHouseSection;
+
