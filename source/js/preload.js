@@ -1,17 +1,18 @@
-const images = ['/source/images/backgrounds/choose-house.webp',
-  '/source/images/backgrounds/home.webp',
-  '/source/images/backgrounds/sort-or-choose.webp',
-  '/source/images/backgrounds/sorting-hat.webp',
+const images = [
+  './images/backgrounds/choose-house.webp',
+  './images/backgrounds/home.webp',
+  './images/backgrounds/sort-or-choose.webp',
+  './images/backgrounds/sorting-hat.webp',
 
-  '/source/images/gryffindor/common-room.webp',
-  '/source/images/hufflepuff/common-room.webp',
-  '/source/images/ravenclaw/common-room.webp',
-  '/source/images/slytherin/common-room.webp',
+  './images/gryffindor/common-room.webp',
+  './images/hufflepuff/common-room.webp',
+  './images/ravenclaw/common-room.webp',
+  './images/slytherin/common-room.webp',
 
-  '/source/images/gryffindor/avatar.webp',
-  '/source/images/hufflepuff/avatar.webp',
-  '/source/images/ravenclaw/avatar.webp',
-  '/source/images/slytherin/avatar.webp',
+  './images/gryffindor/avatar.webp',
+  './images/hufflepuff/avatar.webp',
+  './images/ravenclaw/avatar.webp',
+  './images/slytherin/avatar.webp',
 ];
 
 export default function preload() {
