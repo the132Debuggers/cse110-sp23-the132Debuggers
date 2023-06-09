@@ -7,6 +7,10 @@
 export default async function query(input, house) {
   const response = await fetch('https://cse110-sp23-group9.vercel.app/api', {
     method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
     body: JSON.stringify({
       house,
       question: input,
