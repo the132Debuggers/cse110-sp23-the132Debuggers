@@ -74,6 +74,18 @@ class HouseSearchSection extends HTMLElement {
             cursor: pointer;
         }
 
+        #restart {
+            visibility: hidden;
+            margin-top: -1rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        svg + p {
+            margin-left: 0.3rem;
+        }
+
         @media (max-width: 768px) {
             :host {
                 place-content: flex-start;
@@ -99,12 +111,13 @@ class HouseSearchSection extends HTMLElement {
             </div>
             <div id="answer">
                 <p id="fortune">Casting spells...</p>
-                <div id="restart">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                    </svg>
-                </div>
             </div>
+        </div>
+        <div id="restart">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+            <p id='text-area'>Recasting spells...</p>
         </div>
     `;
 
@@ -112,7 +125,7 @@ class HouseSearchSection extends HTMLElement {
     const input = question.querySelector('input');
     const questionButton = question.querySelector('svg');
     const answer = this.shadowRoot.querySelector('#answer');
-    const restartButton = answer.querySelector('svg');
+    const restartButton = this.shadowRoot.querySelector('#restart');
     const fortune = answer.querySelector('#fortune');
 
     const handleInput = async () => {
@@ -127,9 +140,11 @@ class HouseSearchSection extends HTMLElement {
 
       const result = await query(text, house);
       fortune.textContent = result;
+      restartButton.style.visibility = 'visible';
     };
 
     questionButton.addEventListener('click', handleInput);
+
     input.addEventListener('keydown', async (event) => {
       if (event.key === 'Enter') {
         await handleInput();
@@ -140,6 +155,7 @@ class HouseSearchSection extends HTMLElement {
       fortune.textContent = 'Casting spells...';
       answer.style.display = 'none';
       question.style.display = 'flex';
+      restartButton.style.visibility = 'hidden';
     });
   }
 }
