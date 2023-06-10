@@ -139,7 +139,11 @@ class HouseSearchSection extends HTMLElement {
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
     this.shadowRoot.innerHTML = `
+<<<<<<< HEAD
         <audio id="bgm" src="./sounds/${house}_bgm.mp3" autoplay loop></audio>
+=======
+        <audio id="bgm" src="./sounds/house_bgm/${house}_bgm.mp3" autoplay loop></audio>
+>>>>>>> 798bb81746794604f23fd08320ac2c83fa2aac90
         <div id="avatar">
             <img src="./images/${house}/avatar.webp" alt="${house}'s avatar" />
         </div>
