@@ -92,6 +92,10 @@ class HouseSearchSection extends HTMLElement {
             margin-left: 0.3rem;
         }
 
+        #restart:hover {
+            cursor: pointer;
+        }
+
         p#fortune {
             width: 15ch;
             animation: typing 2s steps(16), blink .6s step-end infinite alternate;
