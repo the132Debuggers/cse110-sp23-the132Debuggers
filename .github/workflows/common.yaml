@@ -1,6 +1,9 @@
 name: Common CI
 on:
   pull_request:
+    - opened
+    - synchronize
+    - reopened
   merge_group:
 
 jobs:
