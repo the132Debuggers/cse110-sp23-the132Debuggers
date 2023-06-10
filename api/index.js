@@ -38,26 +38,16 @@ async function handler(request, response) {
   const { question, house } = request.body;
   const result = await query(question, house);
   response.setHeader('Access-Control-Allow-Origin', '*');
-  response.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  response.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET,OPTIONS,PATCH,DELETE,POST,PUT'
+  );
   response.status(200);
   response.json({
     answer: result,
     house,
-    question
+    question,
   });
 }
-
-const question = 'What will my career be?';
-const hogwartsHouse = 'gryffindor';
-
-query(question, hogwartsHouse)
-  .then((response) => {
-    console.log("Fortune Teller's Response:", response);
-    // Handle the response or perform additional operations
-  })
-  .catch((error) => {
-    console.error('Error occurred while querying:', error);
-    // Handle the error
-  });
 
 export default handler;

@@ -73,7 +73,7 @@ class AppHeader extends HTMLElement {
     this.shadowRoot
       .querySelector('#home-redirect')
       .addEventListener('click', () => {
-        navigateTo('home');
+        navigateTo('sort-or-choose');
       });
 
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
