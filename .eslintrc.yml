@@ -22,7 +22,6 @@ rules:
       ignoreStrings: true
       ignoreTemplateLiterals: true
   operator-linebreak:
-    - error
-    - after
+    - off
   comma-dangle:
     - off
