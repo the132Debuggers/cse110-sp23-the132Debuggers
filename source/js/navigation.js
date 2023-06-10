@@ -41,7 +41,7 @@ export function navigateTo(to, attributes = {}) {
   const app = document.querySelector('#app');
   const main = app.querySelector('main');
   const section = document.createElement(`${to}-section`);
-  const language = localStorage.getItem('currentLanguage');
+  // const language = localStorage.getItem('currentLanguage');
 
   // eslint-disable-next-line no-restricted-syntax
   for (const [key, value] of Object.entries(attributes)) {
@@ -57,7 +57,15 @@ export function navigateTo(to, attributes = {}) {
   localStorage.setItem('lastVisited', to);
   setBackground();
   main.replaceChildren(...children);
-  translate(language);
+  document
+    .querySelector('app-header')
+    .shadowRoot.querySelector('#home-redirect').textContent =
+    to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
+  translate(navigator.language);
+  document
+    .querySelector('app-header')
+    .shadowRoot.querySelector('#home-redirect').textContent =
+    to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
 }
 
 /**
