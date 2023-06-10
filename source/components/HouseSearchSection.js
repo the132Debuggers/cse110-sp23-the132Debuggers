@@ -166,6 +166,7 @@ class HouseSearchSection extends HTMLElement {
     const answer = this.shadowRoot.querySelector('#answer');
     const restartButton = this.shadowRoot.querySelector('#restart');
     const fortune = answer.querySelector('#fortune');
+    const synth = window.speechSynthesis;
 
     const handleInput = async () => {
       const text = input.value.trim();
@@ -178,7 +179,7 @@ class HouseSearchSection extends HTMLElement {
       answer.style.display = 'flex';
 
       const result = await query(text, house);
-      await wait(2000);
+      await wait(1500);
 
       fortune.id = 'response';
       fortune.textContent = '';
@@ -186,12 +187,17 @@ class HouseSearchSection extends HTMLElement {
 
       let index = 0;
       async function printNextCharacter() {
+        const utterance = new SpeechSynthesisUtterance(result);
+        utterance.rate = 0.85;
+        synth.speak(utterance);
+
         while (index < result.length) {
           fortune.textContent += result.charAt(index);
           index++;
           // eslint-disable-next-line no-await-in-loop
-          await wait(70);
+          await wait(50);
         }
+        // synth.cancel();
       }
       await printNextCharacter();
       restartButton.style.visibility = 'visible';
