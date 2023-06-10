@@ -57,8 +57,15 @@ export function navigateTo(to, attributes = {}) {
   localStorage.setItem('lastVisited', to);
   setBackground();
   main.replaceChildren(...children);
+  document
+    .querySelector('app-header')
+    .shadowRoot.querySelector('#home-redirect').textContent =
+    to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
   translate(navigator.language);
-  document.querySelector('app-header').shadowRoot.querySelector('#home-redirect').textContent = to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
+  document
+    .querySelector('app-header')
+    .shadowRoot.querySelector('#home-redirect').textContent =
+    to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
 }
 
 /**
