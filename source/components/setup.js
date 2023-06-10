@@ -9,7 +9,6 @@ import SettingsMenu from './SettingsMenu.js';
 import FinishSection from './FinishSection.js';
 import FinishButton from './FinishButton.js';
 
-
 customElements.define('app-header', AppHeader);
 customElements.define('home-section', HomeSection);
 customElements.define('sort-or-choose-section', SortOrChooseSection);

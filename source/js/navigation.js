@@ -57,7 +57,7 @@ export function navigateTo(to, attributes = {}) {
     children.push(document.createElement('back-button'));
   }
 
-  if (to === 'house-search' || to === 'finish') {
+  if (to === 'house-search') {
     children.push(document.createElement('finish-button'));
   }
 
