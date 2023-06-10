@@ -84,6 +84,8 @@ class ChooseHouseSection extends HTMLElement {
       `;
       option.addEventListener('click', () => {
         localStorage.setItem('house', house);
+        const audio = new Audio(`./sounds/${house}_house.m4a`);
+        audio.play();
         navigateTo('house-search');
       });
       flags.appendChild(option);
