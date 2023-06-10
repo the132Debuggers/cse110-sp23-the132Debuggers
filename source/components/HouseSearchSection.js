@@ -126,7 +126,6 @@ class HouseSearchSection extends HTMLElement {
 
       question.style.display = 'none';
       answer.style.display = 'flex';
-
       audio.play();
 
       const result = await query(text, house);
