@@ -1,4 +1,5 @@
 import query from '../js/fortunes.js';
+// import { navigateTo } from '../js/navigation.js';
 import { normalize, themeColor } from '../js/utils.js';
 
 class HouseSearchSection extends HTMLElement {
@@ -65,12 +66,12 @@ class HouseSearchSection extends HTMLElement {
             color: ${themeColor[house][1]};
         }
 
-        svg {
+        #text-area svg {
             width: 2rem;
             color: ${themeColor[house][1]};
         }
 
-        svg:hover {
+        #text-area svg:hover {
             cursor: pointer;
         }
 
@@ -106,6 +107,7 @@ class HouseSearchSection extends HTMLElement {
                 </div>
             </div>
         </div>
+        
     `;
 
     const question = this.shadowRoot.querySelector('#question');
@@ -141,6 +143,12 @@ class HouseSearchSection extends HTMLElement {
       answer.style.display = 'none';
       question.style.display = 'flex';
     });
+
+    /*
+    this.shadowRoot.querySelector('#final').addEventListener('click', () => {
+      navigateTo('finish');
+    });
+    */
   }
 }
 
