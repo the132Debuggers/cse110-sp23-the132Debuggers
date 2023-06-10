@@ -18,14 +18,15 @@ async function query(question, hogwartsHouse) {
     If the question is a question about the wizard/witch's future, answer the question by predicting the future. 
     The wizard/witch is from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
     Predict the future of this person based on what you know of their personality and the fact that they go to Hogwarts school in the world of Harry Potter.
-    Try to include specific elements of the magical harry potter world in your reponse
+    Try to include specific elements of the magical harry potter world in your reponse.
+    Make sure your response is 350 characters long or less.
     Question: '''${question}''' 
     `;
 
   const response = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt,
-    max_tokens: 50,
+    max_tokens: 100,
     temperature: 0.6,
   });
 
@@ -45,5 +46,18 @@ async function handler(request, response) {
     question
   });
 }
+
+const question = 'What will my career be?';
+const hogwartsHouse = 'gryffindor';
+
+query(question, hogwartsHouse)
+  .then((response) => {
+    console.log("Fortune Teller's Response:", response);
+    // Handle the response or perform additional operations
+  })
+  .catch((error) => {
+    console.error('Error occurred while querying:', error);
+    // Handle the error
+  });
 
 export default handler;
