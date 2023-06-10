@@ -139,6 +139,7 @@ class HouseSearchSection extends HTMLElement {
     this.shadowRoot.adoptedStyleSheets = [normalize, style];
 
     this.shadowRoot.innerHTML = `
+        <audio id="bgm" src="./sounds/${house}_bgm.mp3" autoplay loop></audio>
         <div id="avatar">
             <img src="./images/${house}/avatar.webp" alt="${house}'s avatar" />
         </div>
@@ -167,6 +168,9 @@ class HouseSearchSection extends HTMLElement {
     const restartButton = this.shadowRoot.querySelector('#restart');
     const fortune = answer.querySelector('#fortune');
     const synth = window.speechSynthesis;
+    const bgm = this.shadowRoot.getElementById("bgm");
+
+    bgm.volume = 0.1;
 
     const handleInput = async () => {
       const text = input.value.trim();
