@@ -119,7 +119,7 @@ class HouseSearchSection extends HTMLElement {
             </svg>
             <p id='text-area'>Recast Spell</p>
         </div>
-    `; 
+    `;
     const question = this.shadowRoot.querySelector('#question');
     const input = question.querySelector('input');
     const questionButton = question.querySelector('svg');
