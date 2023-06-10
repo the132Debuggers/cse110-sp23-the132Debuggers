@@ -170,7 +170,7 @@ class HouseSearchSection extends HTMLElement {
     const audio = new Audio(`./sounds/spells-${house}.mp3`);
     // const audio2 = new Audio('./sounds/windsound.mp3');
     const synth = window.speechSynthesis;
-    const bgm = this.shadowRoot.getElementById("bgm");
+    const bgm = this.shadowRoot.getElementById('bgm');
 
     bgm.volume = 0.1;
 
