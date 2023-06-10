@@ -49,7 +49,7 @@ class SortingHatSection extends HTMLElement {
       #tip {
         font-size: 2.25rem;
         padding: 0.5rem 1.5rem;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.6);
         border-radius: 0.5rem;
         text-align: center;
       }
