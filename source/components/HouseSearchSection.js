@@ -67,8 +67,17 @@ class HouseSearchSection extends HTMLElement {
             border: none;
         }
 
+        input[type="text"]:focus {
+            outline: none;
+        }
+
         input[type="text"]::placeholder {
             color: ${themeColor[house][1]};
+        }
+
+        #question > svg{
+            margin-left: 0.2rem;
+            margin-right: -0.2rem;
         }
 
         svg {
@@ -90,6 +99,10 @@ class HouseSearchSection extends HTMLElement {
 
         svg + p {
             margin-left: 0.3rem;
+        }
+
+        #restart:hover {
+            cursor: pointer;
         }
 
         p#fortune {
@@ -132,8 +145,8 @@ class HouseSearchSection extends HTMLElement {
         <div id="text-area">
             <div id="question">
                 <input type="text" placeholder="Predict Your Fortune..." autofocus /> 
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                <svg height="36" viewBox="0 0 20 20" width="36" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="m11.5 7c-.276 0-.5-.224-.5-.5 0-1.378-1.122-2.5-2.5-2.5-.276 0-.5-.224-.5-.5s.224-.5.5-.5c1.378 0 2.5-1.122 2.5-2.5 0-.276.224-.5.5-.5s.5.224.5.5c0 1.378 1.122 2.5 2.5 2.5.276 0 .5.224.5.5s-.224.5-.5.5c-1.378 0-2.5 1.122-2.5 2.5 0 .276-.224.5-.5.5zm-1.199-3.5c.49.296.903.708 1.199 1.199.296-.49.708-.903 1.199-1.199-.49-.296-.903-.708-1.199-1.199-.296.49-.708.903-1.199 1.199z"/><path d="m1.5 10c-.276 0-.5-.224-.5-.5s-.224-.5-.5-.5-.5-.224-.5-.5.224-.5.5-.5.5-.224.5-.5.224-.5.5-.5.5.224.5.5.224.5.5.5.5.224.5.5-.224.5-.5.5-.5.224-.5.5-.224.5-.5.5z"/><path d="m18.147 15.939-10.586-10.586c-.283-.283-.659-.438-1.061-.438s-.778.156-1.061.438l-.586.586c-.283.283-.438.659-.438 1.061s.156.778.438 1.061l10.586 10.586c.283.283.659.438 1.061.438s.778-.156 1.061-.438l.586-.586c.283-.283.438-.659.438-1.061s-.156-.778-.438-1.061zm-12.586-9.293.586-.586c.094-.094.219-.145.354-.145s.26.052.354.145l1.439 1.439-1.293 1.293-1.439-1.439c-.195-.195-.195-.512 0-.707zm11.878 10.708-.586.586c-.094.094-.219.145-.353.145s-.26-.052-.353-.145l-8.439-8.439 1.293-1.293 8.439 8.439c.195.195.195.512 0 .707z"/><path d="m3.5 5c-.276 0-.5-.224-.5-.5 0-.827-.673-1.5-1.5-1.5-.276 0-.5-.224-.5-.5s.224-.5.5-.5c.827 0 1.5-.673 1.5-1.5 0-.276.224-.5.5-.5s.5.224.5.5c0 .827.673 1.5 1.5 1.5.276 0 .5.224.5.5s-.224.5-.5.5c-.827 0-1.5.673-1.5 1.5 0 .276-.224.5-.5.5zm-.502-2.5c.19.143.359.312.502.502.143-.19.312-.359.502-.502-.19-.143-.359-.312-.502-.502-.143.19-.312.359-.502.502z"/><path d="m3.5 15c-.276 0-.5-.224-.5-.5 0-.827-.673-1.5-1.5-1.5-.276 0-.5-.224-.5-.5s.224-.5.5-.5c.827 0 1.5-.673 1.5-1.5 0-.276.224-.5.5-.5s.5.224.5.5c0 .827.673 1.5 1.5 1.5.276 0 .5.224.5.5s-.224.5-.5.5c-.827 0-1.5.673-1.5 1.5 0 .276-.224.5-.5.5zm-.502-2.5c.19.143.359.312.502.502.143-.19.312-.359.502-.502-.19-.143-.359-.312-.502-.502-.143.19-.312.359-.502.502z"/>
                 </svg>
             </div>
             <div id="answer">
@@ -153,6 +166,7 @@ class HouseSearchSection extends HTMLElement {
     const answer = this.shadowRoot.querySelector('#answer');
     const restartButton = this.shadowRoot.querySelector('#restart');
     const fortune = answer.querySelector('#fortune');
+    const synth = window.speechSynthesis;
 
     const handleInput = async () => {
       const text = input.value.trim();
@@ -165,7 +179,7 @@ class HouseSearchSection extends HTMLElement {
       answer.style.display = 'flex';
 
       const result = await query(text, house);
-      await wait(2000);
+      await wait(1500);
 
       fortune.id = 'response';
       fortune.textContent = '';
@@ -173,12 +187,17 @@ class HouseSearchSection extends HTMLElement {
 
       let index = 0;
       async function printNextCharacter() {
+        const utterance = new SpeechSynthesisUtterance(result);
+        utterance.rate = 0.85;
+        synth.speak(utterance);
+
         while (index < result.length) {
           fortune.textContent += result.charAt(index);
           index++;
           // eslint-disable-next-line no-await-in-loop
-          await wait(70);
+          await wait(50);
         }
+        // synth.cancel();
       }
       await printNextCharacter();
       restartButton.style.visibility = 'visible';

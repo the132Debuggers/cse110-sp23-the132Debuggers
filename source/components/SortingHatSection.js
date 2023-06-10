@@ -1,5 +1,6 @@
 import { normalize, themeColor, randomHouse } from '../js/utils.js';
 import { navigateTo } from '../js/navigation.js';
+import { isMuted } from '../js/audio.js';
 
 class SortingHatSection extends HTMLElement {
   constructor() {
@@ -83,6 +84,7 @@ class SortingHatSection extends HTMLElement {
         localStorage.setItem('house', house);
 
         const audio = new Audio(`./sounds/${house}_sort.m4a`);
+        audio.volume = isMuted() ? 0 : 1;
         audio.play();
 
         const tip = this.shadowRoot.querySelector('#tip');
