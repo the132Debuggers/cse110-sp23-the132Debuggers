@@ -35,13 +35,22 @@ async function query(question, hogwartsHouse) {
 }
 
 async function handler(request, response) {
-  const { question, house } = request.body;
-  const result = await query(question, house);
   response.setHeader('Access-Control-Allow-Origin', '*');
   response.setHeader(
     'Access-Control-Allow-Methods',
     'GET,OPTIONS,PATCH,DELETE,POST,PUT'
   );
+  response.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+
+  if (request.method === 'OPTIONS') {
+    response.status(200).end();
+    return;
+  }
+  const { question, house } = request.body;
+  const result = await query(question, house);
   response.status(200);
   response.json({
     answer: result,
