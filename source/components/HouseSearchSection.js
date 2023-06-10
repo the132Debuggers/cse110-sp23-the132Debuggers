@@ -172,7 +172,7 @@ class HouseSearchSection extends HTMLElement {
     const restartButton = this.shadowRoot.querySelector('#restart');
     const fortune = answer.querySelector('#fortune');
     const synth = window.speechSynthesis;
-    const bgm = this.shadowRoot.getElementById("bgm");
+    const bgm = this.shadowRoot.getElementById('bgm');
 
     bgm.volume = 0.1;
 
