@@ -55,7 +55,6 @@ export function navigateTo(to, attributes = {}) {
 
   if (to !== 'home') {
     children.push(document.createElement('back-button'));
-    children.push(document.createElement('finish-button'));
   }
 
   if (to === 'house-search' || to === 'finish') {
