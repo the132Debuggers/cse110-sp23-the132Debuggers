@@ -1,4 +1,5 @@
 import { translate } from './translation.js';
+import { themeColor } from '../js/utils.js';
 
 const routes = {
   home: {
@@ -23,12 +24,19 @@ const routes = {
  */
 function setBackground() {
   const app = document.querySelector('#app');
+  const header = document.querySelector('app-header');
   const lastVisited = localStorage.getItem('lastVisited');
+
   if (lastVisited === 'house-search') {
     const house = localStorage.getItem('house');
     app.style.backgroundImage = `url(./images/${house}/common-room.webp)`;
+    header.style.borderColor = `${themeColor[house][1]}`;
+    header.style.backgroundColor = `${themeColor[house][0]}b3`;
+    console.log(header.style.borderBottomColor);
   } else {
     app.style.backgroundImage = `url(./images/backgrounds/${lastVisited}.webp)`;
+    header.style.backgroundColor = 'rgb(30, 41, 59, 0.5)';
+    header.style.borderBottomColor = 'black';
   }
 }
 
