@@ -67,6 +67,10 @@ class HouseSearchSection extends HTMLElement {
             border: none;
         }
 
+        input[type="text"]:focus {
+            outline: none;
+        }
+
         input[type="text"]::placeholder {
             color: ${themeColor[house][1]};
         }
