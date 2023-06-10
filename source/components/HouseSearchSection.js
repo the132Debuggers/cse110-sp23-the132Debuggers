@@ -67,6 +67,10 @@ class HouseSearchSection extends HTMLElement {
             border: none;
         }
 
+        input[type="text"]:focus {
+            outline: none;
+        }
+
         input[type="text"]::placeholder {
             color: ${themeColor[house][1]};
         }
@@ -95,6 +99,10 @@ class HouseSearchSection extends HTMLElement {
 
         svg + p {
             margin-left: 0.3rem;
+        }
+
+        #restart:hover {
+            cursor: pointer;
         }
 
         p#fortune {
