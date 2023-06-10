@@ -107,7 +107,8 @@ class HouseSearchSection extends HTMLElement {
             </div>
         </div>
     `;
-
+    const audio = new Audio(`./sounds/${house}_house.m4a`);
+    audio.play();
     const question = this.shadowRoot.querySelector('#question');
     const input = question.querySelector('input');
     const questionButton = question.querySelector('svg');
