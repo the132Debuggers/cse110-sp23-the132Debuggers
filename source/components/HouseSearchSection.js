@@ -114,6 +114,8 @@ class HouseSearchSection extends HTMLElement {
     const answer = this.shadowRoot.querySelector('#answer');
     const restartButton = answer.querySelector('svg');
     const fortune = answer.querySelector('#fortune');
+    const audio = new Audio(`./sounds/spells-${house}.mp3`);
+    // const audio2 = new Audio('./sounds/windsound.mp3');
 
     const handleInput = async () => {
       const text = input.value.trim();
@@ -124,6 +126,8 @@ class HouseSearchSection extends HTMLElement {
 
       question.style.display = 'none';
       answer.style.display = 'flex';
+
+      audio.play();
 
       const result = await query(text, house);
       fortune.textContent = result;
@@ -140,9 +144,6 @@ class HouseSearchSection extends HTMLElement {
       fortune.textContent = 'Casting spells...';
       answer.style.display = 'none';
       question.style.display = 'flex';
-
-      const audio = new Audio(`./audio/spells-${house}.mp3`);
-      audio.play();
     });
   }
 }
