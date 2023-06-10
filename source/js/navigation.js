@@ -58,6 +58,7 @@ export function navigateTo(to, attributes = {}) {
   setBackground();
   main.replaceChildren(...children);
   translate(navigator.language);
+  document.querySelector('app-header').shadowRoot.querySelector('#home-redirect').textContent = to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
 }
 
 /**
