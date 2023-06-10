@@ -1,6 +1,12 @@
 import query from '../js/fortunes.js';
 import { normalize, themeColor } from '../js/utils.js';
 
+function wait(ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(), ms);
+  });
+}
+
 class HouseSearchSection extends HTMLElement {
   constructor() {
     super();
@@ -172,7 +178,7 @@ class HouseSearchSection extends HTMLElement {
         while (index < result.length) {
           fortune.textContent += result.charAt(index);
           index++;
-          console.log(index);
+          // eslint-disable-next-line no-await-in-loop
           await wait(70);
         }
       }
@@ -207,10 +213,6 @@ class HouseSearchSection extends HTMLElement {
       input.focus();
     }, 0);
   }
-}
-
-function wait(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 export default HouseSearchSection;
