@@ -93,7 +93,7 @@ class FinishSection extends HTMLElement {
     twinkle(this.shadowRoot, stars);
 
     this.addEventListener('click', () => {
-      navigateTo('home');
+      navigateTo('sort-or-choose');
     });
   }
 }
