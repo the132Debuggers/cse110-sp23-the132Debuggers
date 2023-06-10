@@ -86,6 +86,27 @@ class HouseSearchSection extends HTMLElement {
             margin-left: 0.3rem;
         }
 
+        p#fortune {
+            width: 15ch;
+            animation: typing 2s steps(16), blink .6s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            justify-content: center;
+            border-right: 2px solid ${themeColor[house][1]};
+          }
+
+        @keyframes typing {
+            from{
+                width: 0;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
         @media (max-width: 768px) {
             :host {
                 place-content: flex-start;
@@ -140,7 +161,22 @@ class HouseSearchSection extends HTMLElement {
       answer.style.display = 'flex';
 
       const result = await query(text, house);
-      fortune.textContent = result;
+      await wait(2000);
+
+      fortune.id = 'response';
+      fortune.textContent = '';
+      answer.style.placeItems = 'start';
+
+      let index = 0;
+      async function printNextCharacter() {
+        while (index < result.length) {
+          fortune.textContent += result.charAt(index);
+          index++;
+          console.log(index);
+          await wait(70);
+        }
+      }
+      await printNextCharacter();
       restartButton.style.visibility = 'visible';
     };
 
@@ -153,10 +189,13 @@ class HouseSearchSection extends HTMLElement {
     });
 
     restartButton.addEventListener('click', () => {
-      fortune.textContent = 'Casting spells...';
       answer.style.display = 'none';
+      answer.style.placeItems = 'center';
       question.style.display = 'flex';
       restartButton.style.visibility = 'hidden';
+      fortune.textContent = 'Casting Spells...';
+      fortune.id = 'fortune';
+
       this.connectedCallback();
     });
     this.connectedCallback();
@@ -168,6 +207,10 @@ class HouseSearchSection extends HTMLElement {
       input.focus();
     }, 0);
   }
+}
+
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 export default HouseSearchSection;
