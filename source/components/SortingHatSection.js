@@ -1,5 +1,6 @@
 import { normalize, themeColor, randomHouse } from '../js/utils.js';
 import { navigateTo } from '../js/navigation.js';
+import { isMuted } from '../js/audio.js';
 
 class SortingHatSection extends HTMLElement {
   constructor() {
@@ -48,7 +49,7 @@ class SortingHatSection extends HTMLElement {
       #tip {
         font-size: 2.25rem;
         padding: 0.5rem 1.5rem;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.6);
         border-radius: 0.5rem;
         text-align: center;
       }
@@ -83,6 +84,7 @@ class SortingHatSection extends HTMLElement {
         localStorage.setItem('house', house);
 
         const audio = new Audio(`./sounds/${house}_sort.m4a`);
+        audio.volume = isMuted() ? 0 : 1;
         audio.play();
 
         const tip = this.shadowRoot.querySelector('#tip');
@@ -102,7 +104,7 @@ class SortingHatSection extends HTMLElement {
             display: block;
             border: 2px solid ${themeColor[house][1]};
             -webkit-text-stroke: 1px ${themeColor[house][1]};
-            color: ${themeColor[house][0]};
+            color: ${themeColor[house][1]};
             background-color: ${themeColor[house][0]};
           `;
           tip.textContent = house;

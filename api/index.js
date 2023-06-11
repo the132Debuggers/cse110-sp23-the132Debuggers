@@ -19,14 +19,15 @@ async function query(question, hogwartsHouse) {
     If the question is a question about the wizard/witch's future, answer the question by predicting the future. 
     The wizard/witch is from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
     Predict the future of this person based on what you know of their personality and the fact that they go to Hogwarts school in the world of Harry Potter.
-    Try to include specific elements of the magical harry potter world in your reponse
+    Try to include specific elements of the magical harry potter world in your reponse.
+    Make sure your response is 350 characters long or less.
     Question: '''${question}''' 
     `;
 
   const response = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt,
-    max_tokens: 50,
+    max_tokens: 100,
     temperature: 0.6,
   });
 
@@ -34,11 +35,29 @@ async function query(question, hogwartsHouse) {
   return result.trim();
 }
 
-export default async function handler(request, response) {
-  const { house } = request.query;
-  const { question } = request.body;
+async function handler(request, response) {
+  response.setHeader('Access-Control-Allow-Origin', '*');
+  response.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET,OPTIONS,PATCH,DELETE,POST,PUT'
+  );
+  response.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+
+  if (request.method === 'OPTIONS') {
+    response.status(200).end();
+    return;
+  }
+  const { question, house } = request.body;
   const result = await query(question, house);
-  response.status(200).json({
+  response.status(200);
+  response.json({
     answer: result,
+    house,
+    question,
   });
 }
+
+export default handler;
