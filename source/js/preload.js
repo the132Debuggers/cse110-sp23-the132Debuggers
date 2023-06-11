@@ -3,6 +3,7 @@ const images = [
   './images/backgrounds/home.webp',
   './images/backgrounds/sort-or-choose.webp',
   './images/backgrounds/sorting-hat.webp',
+  './images/backgrounds/finish.webp',
 
   './images/gryffindor/common-room.webp',
   './images/hufflepuff/common-room.webp',
