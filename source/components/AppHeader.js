@@ -21,11 +21,12 @@ class AppHeader extends HTMLElement {
                 background-color: rgb(30, 41, 59, 0.5);
                 backdrop-filter: blur(2px);
                 box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                border-bottom: 2px solid #000;
                 word-spacing: 0.125em;
                 padding: 0.5rem;
                 display: flex;
                 flex-direction: row;
-                align-items: center
+                align-items: center;
             }
 
             #logo {

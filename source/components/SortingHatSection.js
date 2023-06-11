@@ -84,7 +84,7 @@ class SortingHatSection extends HTMLElement {
         localStorage.setItem('house', house);
 
         const audio = new Audio(`./sounds/${house}_sort.m4a`);
-        audio.muted = isMuted();
+        audio.volume = isMuted() ? 0 : 1;
         audio.play();
 
         const tip = this.shadowRoot.querySelector('#tip');
