@@ -1,4 +1,3 @@
-import { isMuted } from '../js/audio.js';
 import { navigateTo } from '../js/navigation.js';
 import { normalize, houses } from '../js/utils.js';
 
@@ -85,9 +84,6 @@ class ChooseHouseSection extends HTMLElement {
       `;
       option.addEventListener('click', () => {
         localStorage.setItem('house', house);
-        const audio = new Audio(`./sounds/${house}_house.m4a`);
-        audio.muted = isMuted();
-        audio.play();
         navigateTo('house-search');
       });
       flags.appendChild(option);
