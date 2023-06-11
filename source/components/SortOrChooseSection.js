@@ -39,7 +39,7 @@ class SortOrChooseSection extends HTMLElement {
 
       .option h1 {
         font-size: 1.5rem;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.6);
         padding: 0.5rem 1.5rem;
         border-radius: 0.5rem;
       }

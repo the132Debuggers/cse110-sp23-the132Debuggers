@@ -17,6 +17,9 @@ const routes = {
   'house-search': {
     back: 'sort-or-choose',
   },
+  finish: {
+    back: 'house-search',
+  },
 };
 
 /**
@@ -62,10 +65,22 @@ export function navigateTo(to, attributes = {}) {
     children.push(document.createElement('back-button'));
   }
 
+  if (to === 'house-search') {
+    children.push(document.createElement('finish-button'));
+  }
+
   localStorage.setItem('lastVisited', to);
   setBackground();
   main.replaceChildren(...children);
+  document
+    .querySelector('app-header')
+    .shadowRoot.querySelector('#home-redirect').textContent =
+    to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
   translate(navigator.language);
+  document
+    .querySelector('app-header')
+    .shadowRoot.querySelector('#home-redirect').textContent =
+    to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
 }
 
 /**

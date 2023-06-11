@@ -1,4 +1,5 @@
 import query from '../js/fortunes.js';
+// import { navigateTo } from '../js/navigation.js';
 import { normalize, themeColor } from '../js/utils.js';
 
 function wait(ms) {
@@ -85,7 +86,7 @@ class HouseSearchSection extends HTMLElement {
             color: ${themeColor[house][1]};
         }
 
-        svg:hover {
+        #text-area svg:hover {
             cursor: pointer;
         }
 
@@ -151,13 +152,12 @@ class HouseSearchSection extends HTMLElement {
             </div>
             <div id="answer">
                 <p id="fortune">Casting spells...</p>
+                <div id="restart">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                </div>
             </div>
-        </div>
-        <div id="restart">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-            </svg>
-            <p id='text-area'>Recast Spell</p>
         </div>
     `;
     const question = this.shadowRoot.querySelector('#question');
@@ -166,6 +166,9 @@ class HouseSearchSection extends HTMLElement {
     const answer = this.shadowRoot.querySelector('#answer');
     const restartButton = this.shadowRoot.querySelector('#restart');
     const fortune = answer.querySelector('#fortune');
+    const audio = new Audio(`./sounds/spells-${house}.mp3`);
+    // const audio2 = new Audio('./sounds/windsound.mp3');
+    const synth = window.speechSynthesis;
 
     const handleInput = async () => {
       const text = input.value.trim();
@@ -176,9 +179,10 @@ class HouseSearchSection extends HTMLElement {
 
       question.style.display = 'none';
       answer.style.display = 'flex';
+      audio.play();
 
       const result = await query(text, house);
-      await wait(2000);
+      await wait(1500);
 
       fortune.id = 'response';
       fortune.textContent = '';
@@ -186,12 +190,17 @@ class HouseSearchSection extends HTMLElement {
 
       let index = 0;
       async function printNextCharacter() {
+        const utterance = new SpeechSynthesisUtterance(result);
+        utterance.rate = 0.85;
+        synth.speak(utterance);
+
         while (index < result.length) {
           fortune.textContent += result.charAt(index);
           index++;
           // eslint-disable-next-line no-await-in-loop
-          await wait(70);
+          await wait(50);
         }
+        // synth.cancel();
       }
       await printNextCharacter();
       restartButton.style.visibility = 'visible';

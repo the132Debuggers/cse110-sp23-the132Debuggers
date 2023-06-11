@@ -49,7 +49,7 @@ class SortingHatSection extends HTMLElement {
       #tip {
         font-size: 2.25rem;
         padding: 0.5rem 1.5rem;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.6);
         border-radius: 0.5rem;
         text-align: center;
       }
@@ -104,7 +104,7 @@ class SortingHatSection extends HTMLElement {
             display: block;
             border: 2px solid ${themeColor[house][1]};
             -webkit-text-stroke: 1px ${themeColor[house][1]};
-            color: ${themeColor[house][0]};
+            color: ${themeColor[house][1]};
             background-color: ${themeColor[house][0]};
           `;
           tip.textContent = house;
