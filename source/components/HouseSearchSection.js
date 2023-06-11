@@ -1,6 +1,6 @@
 import query from '../js/fortunes.js';
-// import { navigateTo } from '../js/navigation.js';
 import { normalize, themeColor } from '../js/utils.js';
+import { isMuted } from '../js/audio.js';
 
 function wait(ms) {
   return new Promise((resolve) => {
@@ -168,7 +168,6 @@ class HouseSearchSection extends HTMLElement {
     const restartButton = this.shadowRoot.querySelector('#restart');
     const fortune = answer.querySelector('#fortune');
     const audio = new Audio(`./sounds/spells-${house}.mp3`);
-    // const audio2 = new Audio('./sounds/windsound.mp3');
     const synth = window.speechSynthesis;
 
     const handleInput = async () => {
@@ -180,6 +179,7 @@ class HouseSearchSection extends HTMLElement {
 
       question.style.display = 'none';
       answer.style.display = 'flex';
+      audio.muted = isMuted();
       audio.play();
 
       const result = await query(text, house);
@@ -192,6 +192,7 @@ class HouseSearchSection extends HTMLElement {
       let index = 0;
       async function printNextCharacter() {
         const utterance = new SpeechSynthesisUtterance(result);
+        utterance.volume = isMuted() ? 0 : 1;
         utterance.rate = 0.85;
         synth.speak(utterance);
 
