@@ -20,7 +20,7 @@ async function query(question, hogwartsHouse) {
     The wizard/witch is from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
     Predict the future of this person based on what you know of their personality and the fact that they go to Hogwarts school in the world of Harry Potter.
     Try to include specific elements of the magical harry potter world in your reponse.
-    Make sure your response is 350 characters long or less.
+    Your response has to be 350 characters long or less.
     Question: '''${question}''' 
     `;
 
