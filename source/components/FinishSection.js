@@ -26,6 +26,7 @@ class FinishSection extends HTMLElement {
 
       #banner h1 {
         font-size: 3rem;
+        word-spacing: 10px;
       }
 
       #banner h2 {
@@ -62,7 +63,7 @@ class FinishSection extends HTMLElement {
         animation-iteration-count: infinite;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 800px) {
         #banner h1 {
           font-size: 4.5rem;
         }
