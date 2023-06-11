@@ -104,7 +104,7 @@ class SortingHatSection extends HTMLElement {
             display: block;
             border: 2px solid ${themeColor[house][1]};
             -webkit-text-stroke: 1px ${themeColor[house][1]};
-            color: ${themeColor[house][0]};
+            color: ${themeColor[house][1]};
             background-color: ${themeColor[house][0]};
           `;
           tip.textContent = house;

@@ -16,6 +16,9 @@ const routes = {
   'house-search': {
     back: 'sort-or-choose',
   },
+  finish: {
+    back: 'house-search',
+  },
 };
 
 /**
@@ -52,6 +55,10 @@ export function navigateTo(to, attributes = {}) {
 
   if (to !== 'home') {
     children.push(document.createElement('back-button'));
+  }
+
+  if (to === 'house-search') {
+    children.push(document.createElement('finish-button'));
   }
 
   localStorage.setItem('lastVisited', to);
