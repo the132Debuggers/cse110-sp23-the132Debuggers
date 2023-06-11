@@ -77,7 +77,6 @@ class SortingHatSection extends HTMLElement {
          <div>
     `;
 
-  
     this.shadowRoot.querySelector('#button').addEventListener(
       'click',
       () => {
