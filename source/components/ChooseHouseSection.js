@@ -75,7 +75,7 @@ class ChooseHouseSection extends HTMLElement {
     `;
 
     const flags = this.shadowRoot.querySelector('#flags');
-    const button_audio = new Audio(`./sounds/button-click.mp3`);
+    const buttonSound = new Audio('./sounds/button-click.mp3');
 
     // eslint-disable-next-line no-restricted-syntax
     for (const house of houses) {
@@ -85,7 +85,7 @@ class ChooseHouseSection extends HTMLElement {
         <img src="./images/${house}/flag.webp" alt="${house}'s flag" />
       `;
       option.addEventListener('click', () => {
-        button_audio.play();
+        buttonSound.play();
         localStorage.setItem('house', house);
         const audio = new Audio(`./sounds/${house}_house.m4a`);
         audio.muted = isMuted();

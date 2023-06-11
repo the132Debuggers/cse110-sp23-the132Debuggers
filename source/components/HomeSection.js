@@ -94,8 +94,8 @@ class Home extends HTMLElement {
     twinkle(this.shadowRoot, stars);
 
     this.addEventListener('click', () => {
-      const button_audio = new Audio(`./sounds/button-click.mp3`);
-      button_audio.play();
+      const buttonSound = new Audio('./sounds/button-click.mp3');
+      buttonSound.play();
       navigateTo('sort-or-choose');
     });
   }

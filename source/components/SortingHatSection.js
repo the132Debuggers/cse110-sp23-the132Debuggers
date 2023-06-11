@@ -80,8 +80,8 @@ class SortingHatSection extends HTMLElement {
     this.shadowRoot.querySelector('#button').addEventListener(
       'click',
       () => {
-        const button_audio = new Audio(`./sounds/button-click.mp3`);
-        button_audio.play();
+        const buttonSound = new Audio('./sounds/button-click.mp3');
+        buttonSound.play();
         const house = randomHouse();
         localStorage.setItem('house', house);
 

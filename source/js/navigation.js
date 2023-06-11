@@ -1,4 +1,3 @@
-import { translate } from './translation.js';
 import { themeColor } from './utils.js';
 
 const routes = {
