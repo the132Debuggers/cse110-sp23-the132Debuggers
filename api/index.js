@@ -12,22 +12,17 @@ const houseTraits = {
 };
 
 async function query(question, hogwartsHouse) {
-  const prompt = `You are a fortune teller in the world of harry potter.
-    Your task is only to answer questions from wizards and witches about their future.
-    Given the question delimited by ''', generate a response to the witches or wizards question.
-    If the question is anything but a question about the wizard/witch's future, respond with "This is not a question about your future, and as a fortune teller I cannot answer this. Try again with a question about your future".
-    If the question is a question about the wizard/witch's future, answer the question by predicting the future. 
-    The wizard/witch is from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
-    Predict the future of this person based on what you know of their personality and the fact that they go to Hogwarts school in the world of Harry Potter.
-    Try to include specific elements of the magical harry potter world in your reponse.
-    Your response has to be 250 characters long or less.
+  const prompt = `You are a fortune teller.
+    The user is from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
+    Predict user's future based on what you know of their traits and the that they go to Hogwarts school in the world of Harry Potter.
+    Your response has a maximum of 20 words with complete sentences.
     Question: '''${question}''' 
     `;
 
   const response = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt,
-    max_tokens: 100,
+    max_tokens: 300,
     temperature: 0.6,
   });
 
