@@ -77,12 +77,14 @@ class SortOrChooseSection extends HTMLElement {
           </div>
         <div>
     `;
-
+    const button_audio = new Audio(`./sounds/button-click.mp3`);
     this.shadowRoot.querySelector('#choose').addEventListener('click', () => {
+      button_audio.play();
       navigateTo('choose-house');
     });
 
     this.shadowRoot.querySelector('#sort').addEventListener('click', () => {
+      button_audio.play();
       navigateTo('sorting-hat');
     });
   }

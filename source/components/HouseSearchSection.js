@@ -92,7 +92,7 @@ class HouseSearchSection extends HTMLElement {
 
         #restart {
             visibility: hidden;
-            margin-top: -1rem;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             font-size: 1.2rem;
@@ -181,8 +181,9 @@ class HouseSearchSection extends HTMLElement {
       answer.style.display = 'flex';
       audio.play();
 
-      const result = await query(text, house);
+      let result = await query(text, house);
       await wait(1500);
+
 
       fortune.id = 'response';
       fortune.textContent = '';
