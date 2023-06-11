@@ -76,12 +76,12 @@ class AppHeader extends HTMLElement {
     const triggerSvg = this.shadowRoot.querySelector('#settings > svg');
     const audio = new Audio('./audio/music_hedwigs_theme.mp3');
     audio.loop = true;
-    audio.volume = isMuted() ? 0 : 1;
-    audio.play();
+    audio.muted = isMuted();
+    audio.autoplay = true;
 
     triggerSvg.addEventListener('click', () => {
       toggleMute();
-      audio.volume = isMuted() ? 0 : 1;
+      audio.muted = isMuted();
       triggerSvg.innerHTML = getPath();
     });
 
