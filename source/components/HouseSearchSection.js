@@ -74,6 +74,7 @@ class HouseSearchSection extends HTMLElement {
 
         input[type="text"]::placeholder {
             color: ${themeColor[house][1]};
+            word-spacing: 0.125em;
         }
 
         #question > svg{
