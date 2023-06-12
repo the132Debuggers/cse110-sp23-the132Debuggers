@@ -177,12 +177,12 @@ class HouseSearchSection extends HTMLElement {
     const synth = window.speechSynthesis;
 
     const handleInput = async () => {
-      let broken = false;
       const text = input.value.trim();
       if (!text) {
         return;
       }
       input.value = '';
+
       question.style.display = 'none';
       answer.style.display = 'flex';
       audio.muted = isMuted();
@@ -207,27 +207,18 @@ class HouseSearchSection extends HTMLElement {
         utterance.volume = isMuted() ? 0 : 1;
         utterance.rate = 0.85;
         synth.speak(utterance);
-        if (stopAudio() === true) {
-          synth.cancel();
-          broken = true;
-          return;
-        }
 
         while (index < result.length) {
           fortune.textContent += result.charAt(index);
           index++;
           if (stopAudio() === true) {
             synth.cancel();
-            broken = true;
-            return;
+            break;
           }
           // eslint-disable-next-line no-await-in-loop
           await wait(50);
         }
-        synth.cancel();
-      }
-      if (broken) {
-        return;
+        // synth.cancel();
       }
       await printNextCharacter();
       restartButton.style.visibility = 'visible';
