@@ -1,5 +1,6 @@
 import { normalize } from '../js/utils.js';
 import { navigateTo } from '../js/navigation.js';
+import { isMuted } from '../js/audio.js';
 
 class SortOrChooseSection extends HTMLElement {
   constructor() {
@@ -79,11 +80,13 @@ class SortOrChooseSection extends HTMLElement {
     `;
     const buttonSound = new Audio('./sounds/button-click.mp3');
     this.shadowRoot.querySelector('#choose').addEventListener('click', () => {
+      buttonSound.muted = isMuted();
       buttonSound.play();
       navigateTo('choose-house');
     });
 
     this.shadowRoot.querySelector('#sort').addEventListener('click', () => {
+      buttonSound.muted = isMuted();
       buttonSound.play();
       navigateTo('sorting-hat');
     });

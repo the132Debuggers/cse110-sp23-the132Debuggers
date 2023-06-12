@@ -1,5 +1,6 @@
 import { navigateTo } from '../js/navigation.js';
 import { normalize, twinkle } from '../js/utils.js';
+import { isMuted } from '../js/audio.js';
 
 class FinishSection extends HTMLElement {
   constructor() {
@@ -95,6 +96,7 @@ class FinishSection extends HTMLElement {
 
     this.addEventListener('click', () => {
       const buttonSound = new Audio('./sounds/button-click.mp3');
+      buttonSound.muted = isMuted();
       buttonSound.play();
       navigateTo('sort-or-choose');
     });

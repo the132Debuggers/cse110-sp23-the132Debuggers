@@ -81,6 +81,7 @@ class SortingHatSection extends HTMLElement {
       'click',
       () => {
         const buttonSound = new Audio('./sounds/button-click.mp3');
+        buttonSound.muted = isMuted();
         buttonSound.play();
         const house = randomHouse();
         localStorage.setItem('house', house);
