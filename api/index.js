@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
@@ -12,6 +13,7 @@ const houseTraits = {
 };
 
 async function query(question, hogwartsHouse) {
+<<<<<<< HEAD
   const prompt = `You are a fortune teller in the world of harry potter.
     Your task is only to answer questions from wizards and witches about their future (every user is a witch or wizard).
     Given the question delimited by ''', generate a response to the witches or wizards question.
@@ -21,14 +23,27 @@ async function query(question, hogwartsHouse) {
     Predict the future of this person based on what you know of their personality and the fact that they go to Hogwarts school in the world of Harry Potter.
     Try to include specific elements of the magical harry potter world in your reponse.
     Make sure your response is 300 characters long or less and in complete sentances.
+=======
+  const prompt = `You are a fortune teller.
+    The user is from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
+    Predict user's future based on what you know of their traits and the that they go to Hogwarts school in the world of Harry Potter.
+    Your response has a maximum of 20 words with complete sentences.
+>>>>>>> b8161ff1c25d6a3dc21bd9e3d4b8faddba6367db
     Question: '''${question}''' 
     `;
 
   const response = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt,
+<<<<<<< HEAD
     max_tokens: 100,
+=======
+>>>>>>> b8161ff1c25d6a3dc21bd9e3d4b8faddba6367db
     temperature: 0.6,
+    max_tokens: 256,
+    top_p: 1,
+    frequency_penalty: 0,
+    presence_penalty: 0,
   });
 
   const result = response.data.choices[0].text;

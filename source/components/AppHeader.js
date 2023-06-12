@@ -21,11 +21,12 @@ class AppHeader extends HTMLElement {
                 background-color: rgb(30, 41, 59, 0.5);
                 backdrop-filter: blur(2px);
                 box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                border-bottom: 2px solid #000;
                 word-spacing: 0.125em;
                 padding: 0.5rem;
                 display: flex;
                 flex-direction: row;
-                align-items: center
+                align-items: center;
             }
 
             #logo {
@@ -66,24 +67,41 @@ class AppHeader extends HTMLElement {
             <header>
                 <h1 id="home-redirect">Wizarding World of Fortune Telling</h1>
                 <div id="settings">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <svg id="mute-control" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         ${getPath()}
+                    </svg>
+                    <svg id="bgm-control" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
+                      <line id="bgm-stroke" x1="1.58" y1="22.53" x2="22.697" y2="1.249"/>
                     </svg>
                 </div>
             </header>
         `;
 
-    const triggerSvg = this.shadowRoot.querySelector('#settings > svg');
+    const muteControl = this.shadowRoot.querySelector('#mute-control');
+
+    muteControl.addEventListener('click', () => {
+      toggleMute();
+      muteControl.innerHTML = getPath();
+    });
+
     const audio = new Audio('./audio/music_hedwigs_theme.mp3');
     audio.loop = true;
-    audio.volume = isMuted() ? 0 : 1;
-    audio.play();
 
-    triggerSvg.addEventListener('click', () => {
-      toggleMute();
-      audio.volume = isMuted() ? 0 : 1;
-      triggerSvg.innerHTML = getPath();
-    });
+    const bgmControl = this.shadowRoot.querySelector('#bgm-control');
+    const bgmStroke = this.shadowRoot.querySelector('#bgm-stroke');
+    bgmControl.addEventListener(
+      'click',
+      () => {
+        audio.play();
+        bgmStroke.style.display = 'none';
+        bgmControl.addEventListener('click', () => {
+          audio.muted = !audio.muted;
+          bgmStroke.style.display = audio.muted ? 'block' : 'none';
+        });
+      },
+      { once: true }
+    );
 
     this.shadowRoot
       .querySelector('#home-redirect')
