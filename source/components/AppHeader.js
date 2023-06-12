@@ -1,6 +1,6 @@
 import { normalize } from '../js/utils.js';
 import { navigateTo } from '../js/navigation.js';
-import { isMuted, toggleMute } from '../js/audio.js';
+import { isMuted, toggleMute, switchStop } from '../js/audio.js';
 
 function getPath() {
   return isMuted()
@@ -137,6 +137,7 @@ class AppHeader extends HTMLElement {
     this.shadowRoot
       .querySelector('#home-redirect')
       .addEventListener('click', () => {
+        switchStop('true');
         navigateTo('home');
       });
 

@@ -1,6 +1,6 @@
 import { navigateBack } from '../js/navigation.js';
 import { normalize } from '../js/utils.js';
-import { isMuted } from '../js/audio.js';
+import { isMuted, switchStop } from '../js/audio.js';
 
 class BackButton extends HTMLElement {
   constructor() {
@@ -46,6 +46,7 @@ class BackButton extends HTMLElement {
       const buttonSound = new Audio('./sounds/button-click.mp3');
       buttonSound.muted = isMuted();
       buttonSound.play();
+      switchStop('true');
       navigateBack();
     });
 
