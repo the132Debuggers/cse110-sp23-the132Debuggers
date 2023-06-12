@@ -224,7 +224,6 @@ class HouseSearchSection extends HTMLElement {
           // eslint-disable-next-line no-await-in-loop
           await wait(50);
         }
-        synth.cancel();
       }
       if (broken) {
         return;
