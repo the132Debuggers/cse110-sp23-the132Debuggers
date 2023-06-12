@@ -1,5 +1,4 @@
 import query from '../js/fortunes.js';
-// import { navigateTo } from '../js/navigation.js';
 import { normalize, themeColor } from '../js/utils.js';
 import { isMuted } from '../js/audio.js';
 

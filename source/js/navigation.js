@@ -52,7 +52,6 @@ export function navigateTo(to, attributes = {}) {
   const app = document.querySelector('#app');
   const main = app.querySelector('main');
   const section = document.createElement(`${to}-section`);
-  // const language = localStorage.getItem('currentLanguage');
 
   // eslint-disable-next-line no-restricted-syntax
   for (const [key, value] of Object.entries(attributes)) {

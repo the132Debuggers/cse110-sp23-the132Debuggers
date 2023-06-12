@@ -1,5 +1,6 @@
 import { navigateTo } from '../js/navigation.js';
 import { normalize, houses } from '../js/utils.js';
+import { isMuted } from '../js/audio.js';
 
 class ChooseHouseSection extends HTMLElement {
   constructor() {
@@ -84,6 +85,7 @@ class ChooseHouseSection extends HTMLElement {
         <img src="./images/${house}/flag.webp" alt="${house}'s flag" />
       `;
       option.addEventListener('click', () => {
+        buttonSound.muted = isMuted();
         buttonSound.play();
         localStorage.setItem('house', house);
         const audio = new Audio(`./sounds/${house}_house.m4a`);

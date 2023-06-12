@@ -1,5 +1,6 @@
 import { navigateTo } from '../js/navigation.js';
 import { normalize } from '../js/utils.js';
+import { isMuted } from '../js/audio.js';
 
 class FinishButton extends HTMLElement {
   constructor() {
@@ -44,6 +45,9 @@ class FinishButton extends HTMLElement {
     `;
 
     this.addEventListener('click', () => {
+      const buttonSound = new Audio('./sounds/button-click.mp3');
+      buttonSound.muted = isMuted();
+      buttonSound.play();
       navigateTo('finish');
     });
 
