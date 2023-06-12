@@ -1,4 +1,3 @@
-import { isMuted } from '../js/audio.js';
 import { navigateTo } from '../js/navigation.js';
 import { normalize, houses } from '../js/utils.js';
 
@@ -75,6 +74,7 @@ class ChooseHouseSection extends HTMLElement {
     `;
 
     const flags = this.shadowRoot.querySelector('#flags');
+    const buttonSound = new Audio('./sounds/button-click.mp3');
 
     // eslint-disable-next-line no-restricted-syntax
     for (const house of houses) {
@@ -84,9 +84,9 @@ class ChooseHouseSection extends HTMLElement {
         <img src="./images/${house}/flag.webp" alt="${house}'s flag" />
       `;
       option.addEventListener('click', () => {
+        buttonSound.play();
         localStorage.setItem('house', house);
         const audio = new Audio(`./sounds/${house}_house.m4a`);
-        audio.muted = isMuted();
         audio.play();
         navigateTo('house-search');
       });

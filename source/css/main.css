@@ -17,6 +17,7 @@ body {
   background-size: cover;
   background-position: center;
   overflow: auto;
+  transition: background 1s ease-in-out 0.5s;
 }
 
 app-header {
