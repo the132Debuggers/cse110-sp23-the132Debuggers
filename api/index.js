@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
@@ -22,8 +23,11 @@ async function query(question, hogwartsHouse) {
   const response = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt,
-    max_tokens: 300,
     temperature: 0.6,
+    max_tokens: 256,
+    top_p: 1,
+    frequency_penalty: 0,
+    presence_penalty: 0,
   });
 
   const result = response.data.choices[0].text;
