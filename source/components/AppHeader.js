@@ -27,6 +27,11 @@ class AppHeader extends HTMLElement {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                height: 60px;
+                padding-top: 6px; 
+                padding-bottom: 6px;
+                padding-left: 6px;
+                padding-right: 6px;
             }
 
             #logo {
@@ -42,6 +47,18 @@ class AppHeader extends HTMLElement {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
+                height: 50px;
+            }
+
+            #effects-wrapper{
+              position: absolute;
+              bottom: 0.2rem;
+              right: 3.5rem;
+            }
+
+            #music-wrapper{
+              position: absolute;
+              bottom: 0.2rem;
             }
 
             svg {
@@ -67,13 +84,20 @@ class AppHeader extends HTMLElement {
             <header>
                 <h1 id="home-redirect">Wizarding World of Fortune Telling</h1>
                 <div id="settings">
-                    <svg id="mute-control" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        ${getPath()}
+                  <div id="effects-wrapper">
+                    <small id="effects-label">effects</small>
+                    <svg id="mute-control" xmlns="http://www.w3.org/2000/svg" height="30" fill="none" viewBox="-4 6 27 17" stroke-width="1.5" stroke="currentColor">
+                      ${getPath()}
                     </svg>
-                    <svg id="bgm-control" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  </div>
+                    
+                  <div id="music-wrapper">
+                    <small id="music-label">music</small>
+                    <svg id="bgm-control" xmlns="http://www.w3.org/2000/svg" height="30" fill="none" viewBox="-4 7 30 17" stroke-width="1.5" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
                       <line id="bgm-stroke" x1="1.58" y1="22.53" x2="22.697" y2="1.249"/>
                     </svg>
+                  </div>
                 </div>
             </header>
         `;
