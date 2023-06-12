@@ -213,7 +213,7 @@ class HouseSearchSection extends HTMLElement {
           index++;
           if (stopAudio() === true) {
             synth.cancel();
-            break; // Exit the loop if stopAudio is true
+            break;
           }
           // eslint-disable-next-line no-await-in-loop
           await wait(50);
