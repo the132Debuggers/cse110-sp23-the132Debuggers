@@ -1,6 +1,6 @@
 import query from '../js/fortunes.js';
 import { normalize, themeColor } from '../js/utils.js';
-import { isMuted } from '../js/audio.js';
+import { isMuted, stopAudio, switchStop } from '../js/audio.js';
 
 function wait(ms) {
   return new Promise((resolve) => {
@@ -202,6 +202,7 @@ class HouseSearchSection extends HTMLElement {
 
       let index = 0;
       async function printNextCharacter() {
+        switchStop('false');
         const utterance = new SpeechSynthesisUtterance(result);
         utterance.volume = isMuted() ? 0 : 1;
         utterance.rate = 0.85;
@@ -210,6 +211,10 @@ class HouseSearchSection extends HTMLElement {
         while (index < result.length) {
           fortune.textContent += result.charAt(index);
           index++;
+          if (stopAudio() === true) {
+            synth.cancel();
+            break; // Exit the loop if stopAudio is true
+          }
           // eslint-disable-next-line no-await-in-loop
           await wait(50);
         }
