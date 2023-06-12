@@ -51,18 +51,25 @@ class AppHeader extends HTMLElement {
             }
 
             #effects-wrapper{
+              display: flex;
+              flex-direction: column;
+              place-items: center;
               position: absolute;
               bottom: 0.2rem;
               right: 3.5rem;
             }
 
             #music-wrapper{
+              display: flex;
+              flex-direction: column;
+              place-items: center;
               position: absolute;
               bottom: 0.2rem;
+              right: 0.05rem;
             }
 
             svg {
-                width: 2rem;
+                width: 70%;
             }
 
             svg:hover {
@@ -86,14 +93,14 @@ class AppHeader extends HTMLElement {
                 <div id="settings">
                   <div id="effects-wrapper">
                     <small id="effects-label">effects</small>
-                    <svg id="mute-control" xmlns="http://www.w3.org/2000/svg" height="30" fill="none" viewBox="-4 6 27 17" stroke-width="1.5" stroke="currentColor">
+                    <svg id="mute-control" xmlns="http://www.w3.org/2000/svg" height="30" fill="none" viewBox="-2 5 27 17" stroke-width="1.5" stroke="currentColor">
                       ${getPath()}
                     </svg>
                   </div>
                     
                   <div id="music-wrapper">
                     <small id="music-label">music</small>
-                    <svg id="bgm-control" xmlns="http://www.w3.org/2000/svg" height="30" fill="none" viewBox="-4 7 30 17" stroke-width="1.5" stroke="currentColor">
+                    <svg id="bgm-control" xmlns="http://www.w3.org/2000/svg" height="30" fill="none" viewBox="-2 5 30 18" stroke-width="1.5" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
                       <line id="bgm-stroke" x1="1.58" y1="22.53" x2="22.697" y2="1.249"/>
                     </svg>
