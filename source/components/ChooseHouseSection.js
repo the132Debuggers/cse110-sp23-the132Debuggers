@@ -84,6 +84,10 @@ class ChooseHouseSection extends HTMLElement {
       option.innerHTML = `
         <img src="./images/${house}/flag.webp" alt="${house}'s flag" />
       `;
+      /**
+       * @event click - House is saved to localStorage, click sound is played,
+       *                and the user is navigated to the house search page
+       */
       option.addEventListener('click', () => {
         buttonSound.muted = isMuted();
         buttonSound.play();

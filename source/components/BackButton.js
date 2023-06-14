@@ -42,6 +42,10 @@ class BackButton extends HTMLElement {
       </div>
     `;
 
+    /**
+     * @event click - When the user clicks the back button, the app navigates
+     *                back to the previous page and play click sound.
+     */
     this.addEventListener('click', () => {
       const buttonSound = new Audio('./sounds/button-click.mp3');
       buttonSound.muted = isMuted();

@@ -93,7 +93,10 @@ class Home extends HTMLElement {
     stars.id = 'stars';
 
     twinkle(this.shadowRoot, stars);
-
+    /**
+     * @event click - When user clicks anywhere on the page, play click sound
+     *                and navigate to sort-or-choose page
+     */
     this.addEventListener('click', () => {
       const buttonSound = new Audio('./sounds/button-click.mp3');
       buttonSound.muted = isMuted();

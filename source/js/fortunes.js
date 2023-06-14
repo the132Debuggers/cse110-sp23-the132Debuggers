@@ -1,5 +1,5 @@
 /**
- *
+ * Queries the model for an answer to the question.
  * @param {string} input The question to ask the model.
  * @param {string} house The house of the user.
  * @returns {Promise<string>} The answer to the question.

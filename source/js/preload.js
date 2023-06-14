@@ -1,3 +1,6 @@
+/**
+ * Images to preload
+ */
 const images = [
   './images/backgrounds/choose-house.webp',
   './images/backgrounds/home.webp',
@@ -16,6 +19,9 @@ const images = [
   './images/slytherin/avatar.webp',
 ];
 
+/**
+ * Preload images
+ */
 export default function preload() {
   images.forEach((image) => {
     const img = new Image();
