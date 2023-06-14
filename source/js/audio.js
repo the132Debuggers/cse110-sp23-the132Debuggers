@@ -1,12 +1,12 @@
 /**
- *
+ * Checks if the audio is muted
  * @returns Whether the audio is muted
  */
 function isMuted() {
   return localStorage.getItem('isMuted') === 'true';
 }
 /**
- *
+ * Checks if the audio should stop
  * @returns Whether the audio should stop
  */
 function stopAudio() {
