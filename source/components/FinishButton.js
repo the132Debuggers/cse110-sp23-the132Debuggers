@@ -44,6 +44,9 @@ class FinishButton extends HTMLElement {
       </div>
     `;
 
+    /**
+     * @event click - Navigates to finish page and play click sound
+     */
     this.addEventListener('click', () => {
       const buttonSound = new Audio('./sounds/button-click.mp3');
       buttonSound.muted = isMuted();

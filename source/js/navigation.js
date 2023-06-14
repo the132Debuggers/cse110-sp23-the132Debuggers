@@ -1,6 +1,9 @@
 import { translate } from './translation.js';
 import { themeColor } from './utils.js';
 
+/**
+ * The routes of the app
+ */
 const routes = {
   home: {
     back: null,

@@ -78,13 +78,17 @@ class SortOrChooseSection extends HTMLElement {
           </div>
         <div>
     `;
+
+    /**
+     * Add event listeners to the two options. Users can click on either one
+     * to navigate to the corresponding page.
+     */
     const buttonSound = new Audio('./sounds/button-click.mp3');
     this.shadowRoot.querySelector('#choose').addEventListener('click', () => {
       buttonSound.muted = isMuted();
       buttonSound.play();
       navigateTo('choose-house');
     });
-
     this.shadowRoot.querySelector('#sort').addEventListener('click', () => {
       buttonSound.muted = isMuted();
       buttonSound.play();

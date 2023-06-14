@@ -2,6 +2,11 @@ import query from '../js/fortunes.js';
 import { normalize, themeColor } from '../js/utils.js';
 import { isMuted, stopAudio, switchStop } from '../js/audio.js';
 
+/**
+ * Wait for a specified amount of time
+ * @param {*} ms time to wait in milliseconds
+ * @returns A promise that resolves after the specified amount of time
+ */
 function wait(ms) {
   return new Promise((resolve) => {
     setTimeout(() => resolve(), ms);
@@ -167,6 +172,7 @@ class HouseSearchSection extends HTMLElement {
             <p id='text-area'>Cast A New Spell</p >
         </div>
     `;
+    // select elements from the shadow root
     const question = this.shadowRoot.querySelector('#question');
     const input = question.querySelector('input');
     const questionButton = question.querySelector('svg');
@@ -176,6 +182,9 @@ class HouseSearchSection extends HTMLElement {
     const audio = new Audio(`./sounds/spells-${house}.mp3`);
     const synth = window.speechSynthesis;
 
+    /**
+     * generate answer from user's question, and display it properly
+     */
     const handleInput = async () => {
       let broken = false;
       const text = input.value.trim();
@@ -189,7 +198,6 @@ class HouseSearchSection extends HTMLElement {
       audio.play();
 
       let result = await query(text, house);
-      await wait(1500);
       const lastPeriodIndex = result.lastIndexOf('.');
       if (lastPeriodIndex !== -1) {
         result = result.substring(0, lastPeriodIndex + 1);
@@ -201,6 +209,9 @@ class HouseSearchSection extends HTMLElement {
       answer.style.placeItems = 'start';
 
       let index = 0;
+      /**
+       * result's text animation and speech synthesizer audio read it out
+       */
       async function printNextCharacter() {
         switchStop('false');
         const utterance = new SpeechSynthesisUtterance(result);
@@ -234,12 +245,18 @@ class HouseSearchSection extends HTMLElement {
 
     questionButton.addEventListener('click', handleInput);
 
+    /**
+     * handle enter key press
+     */
     input.addEventListener('keydown', async (event) => {
       if (event.key === 'Enter') {
         await handleInput();
       }
     });
 
+    /**
+     * handle restart button click - reset the page to its initial state
+     */
     restartButton.addEventListener('click', () => {
       answer.style.display = 'none';
       answer.style.placeItems = 'center';
@@ -247,12 +264,14 @@ class HouseSearchSection extends HTMLElement {
       restartButton.style.visibility = 'hidden';
       fortune.textContent = 'Casting Spells...';
       fortune.id = 'fortune';
-
       this.connectedCallback();
     });
     this.connectedCallback();
   }
 
+  /**
+   * focus on input
+   */
   connectedCallback() {
     setTimeout(() => {
       const input = this.shadowRoot.querySelector('input');

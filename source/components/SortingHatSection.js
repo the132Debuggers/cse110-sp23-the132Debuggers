@@ -77,31 +77,39 @@ class SortingHatSection extends HTMLElement {
          <div>
     `;
 
+    /**
+     * @event click - When the user clicks the button, the house is randomly
+     *                chosen and the user is navigated to the house search page.
+     */
     this.shadowRoot.querySelector('#button').addEventListener(
       'click',
       () => {
+        // click sound of the button
         const buttonSound = new Audio('./sounds/button-click.mp3');
         buttonSound.muted = isMuted();
         buttonSound.play();
+
+        // randomly choosing a house
         const house = randomHouse();
         localStorage.setItem('house', house);
 
+        // sorting hat's audio for corresponding house
         const audio = new Audio(`./sounds/${house}_sort.m4a`);
         audio.muted = isMuted();
         audio.play();
 
+        // set the notification and tip to corresponding house
         const tip = this.shadowRoot.querySelector('#tip');
         tip.textContent = house;
-
         const notification = this.shadowRoot.querySelector('#notification');
         notification.style = `
           display: block;
         `;
-
         tip.style = `
           display: none;
         `;
 
+        // set the time for display result and navigation to house search page
         setTimeout(() => {
           tip.style = `
             display: block;
@@ -112,10 +120,11 @@ class SortingHatSection extends HTMLElement {
           `;
           tip.textContent = house;
 
+          // wait and navigate to house search page
           setTimeout(() => {
             navigateTo('house-search');
           }, 1000);
-        }, 3350);
+        }, 3150);
       },
       { once: true }
     );
