@@ -30,6 +30,4 @@ function switchStop(i) {
   }
 }
 
-export {
-  isMuted, toggleMute, stopAudio, switchStop
-};
+export { isMuted, toggleMute, stopAudio, switchStop };
