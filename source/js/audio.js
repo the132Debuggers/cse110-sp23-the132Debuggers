@@ -5,6 +5,7 @@
 function isMuted() {
   return localStorage.getItem('isMuted') === 'true';
 }
+
 /**
  * Checks if the audio should stop
  * @returns Whether the audio should stop
@@ -12,12 +13,14 @@ function isMuted() {
 function stopAudio() {
   return localStorage.getItem('stopAudio') === 'true';
 }
+
 /**
  * Toggles the mute state of the audio
  */
 function toggleMute() {
   localStorage.setItem('isMuted', !isMuted());
 }
+
 /**
  * Sets the stopAudio state of the audio
  * @param {*} i boolean value to set stopAudio to
@@ -30,6 +33,5 @@ function switchStop(i) {
   }
 }
 
-export {
-  isMuted, toggleMute, stopAudio, switchStop
-};
+export { isMuted, toggleMute };
+export { stopAudio, switchStop };
