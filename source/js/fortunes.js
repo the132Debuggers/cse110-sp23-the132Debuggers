@@ -21,5 +21,5 @@ export default async function query(input, house) {
 }
 
 module.exports = {
-  query: query
+  query,
 };
