@@ -1,5 +1,6 @@
 import { navigateTo } from '../js/navigation.js';
-import { normalize, houses } from '../js/utils.js';
+import { normalize } from '../js/css.js';
+import { houses } from '../js/utils.js';
 import { isMuted } from '../js/audio.js';
 
 class ChooseHouseSection extends HTMLElement {

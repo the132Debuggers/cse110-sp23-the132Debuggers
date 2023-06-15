@@ -1,5 +1,5 @@
 import { navigateTo } from '../js/navigation.js';
-import { normalize } from '../js/utils.js';
+import { normalize } from '../js/css.js';
 import { isMuted, switchStop } from '../js/audio.js';
 
 class FinishButton extends HTMLElement {

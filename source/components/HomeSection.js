@@ -1,5 +1,5 @@
 import { navigateTo } from '../js/navigation.js';
-import { normalize, twinkle } from '../js/utils.js';
+import { normalize, twinkle } from '../js/css.js';
 import { isMuted } from '../js/audio.js';
 
 class Home extends HTMLElement {

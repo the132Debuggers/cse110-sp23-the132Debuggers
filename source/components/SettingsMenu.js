@@ -1,4 +1,4 @@
-import { normalize } from '../js/utils.js';
+import { normalize } from '../js/css.js';
 import { translate } from '../js/translation.js';
 
 class SettingsMenu extends HTMLElement {

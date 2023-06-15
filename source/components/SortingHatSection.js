@@ -1,4 +1,5 @@
-import { normalize, themeColor, randomHouse } from '../js/utils.js';
+import { normalize } from '../js/css.js';
+import { themeColor, randomHouse } from '../js/utils.js';
 import { navigateTo } from '../js/navigation.js';
 import { isMuted } from '../js/audio.js';
 
