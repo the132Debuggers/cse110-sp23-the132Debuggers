@@ -4,7 +4,9 @@ describe('Home', () => {
   });
 
   it('should be titled "Wizarding World of Fortune Telling"', async () => {
-    await expect(page.title()).resolves.toMatch('Wizarding World of Fortune Telling');
+    await expect(page.title()).resolves.toMatch(
+      'Wizarding World of Fortune Telling'
+    );
   });
 
   it('should have a header', async () => {
@@ -29,7 +31,9 @@ describe('Home', () => {
   });
 
   it('should have sort or choose button', async () => {
-    const sortOrChoose = await (await page.$('sort-or-choose-section')).getProperty('shadowRoot');
+    const sortOrChoose = await (
+      await page.$('sort-or-choose-section')
+    ).getProperty('shadowRoot');
     const sort = await sortOrChoose.$('div#sort');
     const choose = await sortOrChoose.$('div#choose');
 
@@ -45,7 +49,9 @@ describe('Home', () => {
   });
 
   it('should have four buttons for house choosing', async () => {
-    const chooseHouse = await (await page.$('choose-house-section')).getProperty('shadowRoot');
+    const chooseHouse = await (
+      await page.$('choose-house-section')
+    ).getProperty('shadowRoot');
     const options = await chooseHouse.$$('.option');
     expect(options.length).toBe(4);
 
@@ -58,7 +64,9 @@ describe('Home', () => {
   });
 
   it('should be able to tell my fortune', async () => {
-    const houseSearch = await (await page.$('house-search-section')).getProperty('shadowRoot');
+    const houseSearch = await (
+      await page.$('house-search-section')
+    ).getProperty('shadowRoot');
     const input = await houseSearch.$('input');
     const submit = await houseSearch.$('svg');
 
@@ -66,7 +74,9 @@ describe('Home', () => {
     await submit.click();
 
     await houseSearch.waitForSelector('#response');
-    const response = await (await houseSearch.$('#response')).getProperty('textContent');
+    const response = await (
+      await houseSearch.$('#response')
+    ).getProperty('textContent');
     expect(response !== '');
   }, 30000);
 });
