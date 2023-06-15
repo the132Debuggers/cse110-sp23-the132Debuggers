@@ -53,5 +53,7 @@ jobs:
       - uses: actions/setup-node@v3
       - name: Install Dependencies
         run: npm install
+      - name: Serve The Website
+        run: npm run serve &
       - name: Run Unit Tests
         run: npm test
