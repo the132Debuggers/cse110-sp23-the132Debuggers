@@ -1,4 +1,4 @@
-import os from 'os';
+const os = require('os');
 
 let executablePath;
 
@@ -7,7 +7,7 @@ if (os.platform() === 'darwin') {
 } else if (os.platform() === 'win32') {
   executablePath = 'C:\\Program Files\\Chromium\\chrome.exe';
 } else if (os.platform() === 'linux') {
-  if (os.release().includes('arch')) {
+  if (os.release().includes('arch') || os.arch().includes('arm')) {
     executablePath = '/usr/bin/chromium';
   } else if (os.release().includes('ubuntu')) {
     executablePath = '/usr/bin/chromium-browser';
@@ -20,10 +20,9 @@ if (os.platform() === 'darwin') {
   throw new Error(`Unsupported platform: ${os.platform()}`);
 }
 
-export default {
+module.exports = {
   launch: {
     headless: 'new',
-    slowMo: 25,
     executablePath,
     args: ['--no-sandbox'],
   },
