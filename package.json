@@ -8,8 +8,10 @@
     "generate-docs": "jsdoc -c .jsdoc.json"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
+    "babel-jest": "^29.5.0",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2",
@@ -20,5 +22,10 @@
   "dependencies": {
     "openai": "^3.2.1"
   },
-  "type": "module"
+  "type": "module",
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  }
 }

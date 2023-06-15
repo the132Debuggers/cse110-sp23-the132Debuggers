@@ -1,5 +1,6 @@
 import query from '../js/fortunes.js';
-import { normalize, themeColor } from '../js/utils.js';
+import { normalize } from '../js/css.js';
+import { themeColor } from '../js/utils.js';
 import { isMuted, stopAudio, switchStop } from '../js/audio.js';
 
 /**

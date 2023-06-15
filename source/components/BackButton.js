@@ -1,5 +1,5 @@
 import { navigateBack } from '../js/navigation.js';
-import { normalize } from '../js/utils.js';
+import { normalize } from '../js/css.js';
 import { isMuted, switchStop } from '../js/audio.js';
 
 class BackButton extends HTMLElement {
