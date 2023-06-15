@@ -12,6 +12,12 @@ const houseTraits = {
   slytherin: 'ambitious and cunning',
 };
 
+/**
+ *
+ * @param {*} question - provided question from user
+ * @param {*} hogwartsHouse - selected user hogwarts house
+ * @returns
+ */
 async function query(question, hogwartsHouse) {
   const prompt = `You are a fortune teller.
     The user is from hogwarts house ${hogwartsHouse} and people from ${hogwartsHouse} house are known to be ${houseTraits[hogwartsHouse]}. 
@@ -34,6 +40,12 @@ async function query(question, hogwartsHouse) {
   return result.trim();
 }
 
+/**
+ *
+ * @param {*} request -  handle response
+ * @param {*} response - generae response to the question
+ * @returns
+ */
 async function handler(request, response) {
   response.setHeader('Access-Control-Allow-Origin', '*');
   response.setHeader(
