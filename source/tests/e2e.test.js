@@ -92,12 +92,16 @@ describe('Home', () => {
     const sortOrChoose = await page.$('sort-or-choose-section');
     expect(sortOrChoose).toBeTruthy();
 
-    const sortButton = await (await sortOrChoose.getProperty('shadowRoot')).$('div#sort');
+    const sortButton = await (
+      await sortOrChoose.getProperty('shadowRoot')
+    ).$('div#sort');
     await sortButton.click();
   });
 
   it('should have sort button', async () => {
-    const sortingHat = await (await page.$('sorting-hat-section')).getProperty('shadowRoot');
+    const sortingHat = await (
+      await page.$('sorting-hat-section')
+    ).getProperty('shadowRoot');
     const button = await sortingHat.$('div#button');
     expect(button).toBeTruthy();
 
