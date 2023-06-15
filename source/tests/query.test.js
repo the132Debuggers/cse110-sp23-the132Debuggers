@@ -1,4 +1,4 @@
-import { query } from '../js/fortunes.js';
+import query from '../js/fortunes.js';
 
 describe('query', () => {
   test('should not be a question', async () => {

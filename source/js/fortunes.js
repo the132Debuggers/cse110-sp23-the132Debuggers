@@ -19,8 +19,3 @@ export default async function query(input, house) {
   const result = (await response.json()).answer;
   return result;
 }
-
-module.exports = {
-  // eslint-disable-next-line object-shorthand
-  query: query,
-};
