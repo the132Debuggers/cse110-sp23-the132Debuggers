@@ -5,7 +5,7 @@ import ChooseHouseSection from './ChooseHouseSection.js';
 import SortingHatSection from './SortingHatSection.js';
 import HouseSearchSection from './HouseSearchSection.js';
 import BackButton from './BackButton.js';
-import SettingsMenu from './SettingsMenu.js';
+import SettingsMenu from './SettingsMenu.js'; // feature no longer in use
 import FinishSection from './FinishSection.js';
 import FinishButton from './FinishButton.js';
 
@@ -16,6 +16,6 @@ customElements.define('choose-house-section', ChooseHouseSection);
 customElements.define('sorting-hat-section', SortingHatSection);
 customElements.define('house-search-section', HouseSearchSection);
 customElements.define('back-button', BackButton);
-customElements.define('settings-menu', SettingsMenu);
+customElements.define('settings-menu', SettingsMenu); // feature no longer in use
 customElements.define('finish-section', FinishSection);
 customElements.define('finish-button', FinishButton);

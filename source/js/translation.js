@@ -1,4 +1,7 @@
 let wordsList;
+/**
+ * Fetches the words list from the JSON file
+ */
 await fetch('./js/wordsList.json')
   .then((response) => response.json())
   .then((data) => {
