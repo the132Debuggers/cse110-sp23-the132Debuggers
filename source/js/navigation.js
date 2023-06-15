@@ -1,4 +1,3 @@
-import { translate } from './translation.js';
 import { themeColor } from './utils.js';
 
 /**
@@ -78,7 +77,6 @@ export function navigateTo(to, attributes = {}) {
     .querySelector('app-header')
     .shadowRoot.querySelector('#home-redirect').textContent =
     to !== 'home' ? 'Wizarding World of Fortune Telling' : '';
-  translate(navigator.language);
   document
     .querySelector('app-header')
     .shadowRoot.querySelector('#home-redirect').textContent =
