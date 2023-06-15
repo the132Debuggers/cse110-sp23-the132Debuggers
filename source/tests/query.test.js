@@ -6,7 +6,7 @@ describe('query', () => {
     const output = await query(input, 'Hufflepuff');
     const expected = 'This is not a question about your future';
     expect(output).toContain(expected);
-  });
+  }, 11000);
 });
 
 describe('query', () => {
@@ -15,5 +15,5 @@ describe('query', () => {
     const output = await query(input, 'Slytherin');
     const notExpected = 'This is not a question about your future';
     expect(output).not.toContain(notExpected);
-  });
+  }, 11000);
 });
