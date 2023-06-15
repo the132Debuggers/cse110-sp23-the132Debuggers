@@ -53,6 +53,7 @@ jobs:
       - uses: actions/setup-node@v3
       - name: Install Dependencies
         run: npm install
+      - uses: browser-actions/setup-chrome@v1
       - name: Serve The Website
         run: npm run serve &
       - name: Run Unit Tests
