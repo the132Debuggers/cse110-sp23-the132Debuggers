@@ -21,5 +21,6 @@ export default async function query(input, house) {
 }
 
 module.exports = {
-  query,
+  // eslint-disable-next-line object-shorthand
+  query: query,
 };
