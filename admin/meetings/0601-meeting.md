@@ -1,29 +1,25 @@
 ---
-title: 05-28-23 Meeting
+title: 06-01-23 Meeting
 type: routine 
-date: 2023/05/23
+date: 2023/06/01
 time: 2:00 PM - 4:00 PM 
-method: hybrid
+method: in-person
 ---
 
-# Routine Meeting 
+# Saturday Routine Meeting
 
 ## Attendance
 
-In-person:
+Virtual
 
 - [X] Frank Li 
-- [X] Grace Yang 
+- [ ] Grace Yang 
 - [X] Helena Hundhausen 
-- [X] Kiyoshi Guo 
-- [X] Leica Shen
-- [ ] Pascal Huang 
-- [X] Nathaniel Greenburg 
+- [ ] Kiyoshi Guo 
+- [ ] Leica Shen
+- [X] Pascal Huang 
+- [ ] Nathaniel Greenburg 
 - [X] William Heng 
-
-
-Virtual:
-
 - [X] Edwin Pham 
 - [X] Shreya Gupta 
 
@@ -33,27 +29,26 @@ Virtual:
 
 ### Objective Statements
 
-- Complete the assignments due at the end of week eight. 
+- Complete remaining application feature tasks
 
 ### Agenda
 #### New Business 
-- Agile - Spring Review Meeting First Submission 
-- Agile - Retrospective Meeting First Submission 
+- Revise the badge logo of the four different houses 
 
 #### Old Business
-- n/a 
+- Language Selection Fix 
 
 --- 
 
 ## Notes
 
 ### Completed Tasks
-- [X] Agile - Spring Review Meeting First Submission 
-- [X] Agile - Retrospective Meeting First Submission 
+- [X] Fixed the language selection 
+- [X] Revised the badge of the four different houses presented on the house selection page 
 
 ### Tasks To Be completed 
-- [ ] n/a 
-
+- [ ] Replace the ravenclaw image 
+- [ ] Fill in the text to be bolded 
 ---
 
 ## Project Timeline
@@ -70,10 +65,10 @@ Virtual:
 - [X] Ask TA for recommendations and other thoughts
 
 *Week 8*
-- [ ] Code, test, ask TA for review
+- [X] Code, test, ask TA for review
 
 *Week 9*
-- [ ] Code, test, ask TA for review
+- [X] Code, test, ask TA for review
 
 *Week 10*
 - [ ] Code, test, ask TA for review
@@ -87,16 +82,14 @@ Virtual:
 ---
 
 ### Upcoming Deadlines
-#### *May 28, 2023*
-- *Agile - Retrospective* 
-- *Agile - Spring Review Meetings*
+- n/a
 
 ---
 
 ### Decisions Made
-1. n/a 
+1. Decided to have the language feature be carried through the application once it was decided by the user in the setting menu
 
 ---
 
 ## Misc / Q&As
-- 
+- n/a 
