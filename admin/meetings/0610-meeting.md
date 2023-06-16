@@ -1,29 +1,25 @@
 ---
-title: 05-28-23 Meeting
+title: 06-10-23 Meeting
 type: routine 
-date: 2023/05/23
-time: 2:00 PM - 4:00 PM 
-method: hybrid
+date: 2023/06/10
+time: 1:00 PM - 5:00 PM 
+method: virtual
 ---
 
-# Routine Meeting 
+# Saturday Routine Meeting
 
 ## Attendance
 
-In-person:
+Virtual
 
 - [X] Frank Li 
 - [X] Grace Yang 
 - [X] Helena Hundhausen 
 - [X] Kiyoshi Guo 
 - [X] Leica Shen
-- [ ] Pascal Huang 
+- [X] Pascal Huang 
 - [X] Nathaniel Greenburg 
 - [X] William Heng 
-
-
-Virtual:
-
 - [X] Edwin Pham 
 - [X] Shreya Gupta 
 
@@ -33,27 +29,27 @@ Virtual:
 
 ### Objective Statements
 
-- Complete the assignments due at the end of week eight. 
+- Wrap up the entire project.
 
 ### Agenda
 #### New Business 
-- Agile - Spring Review Meeting First Submission 
-- Agile - Retrospective Meeting First Submission 
+- Sound Effects 
 
 #### Old Business
-- n/a 
+- API Fix 
+- Review User-Interface 
 
 --- 
 
 ## Notes
 
 ### Completed Tasks
-- [X] Agile - Spring Review Meeting First Submission 
-- [X] Agile - Retrospective Meeting First Submission 
+- [X] Reviewed user-interface 
+- [X] API Fix 
+- [X] Sound Effects Fix + Implementation
 
 ### Tasks To Be completed 
-- [ ] n/a 
-
+- [ ] 
 ---
 
 ## Project Timeline
@@ -70,26 +66,25 @@ Virtual:
 - [X] Ask TA for recommendations and other thoughts
 
 *Week 8*
-- [ ] Code, test, ask TA for review
+- [X] Code, test, ask TA for review
 
 *Week 9*
-- [ ] Code, test, ask TA for review
+- [X] Code, test, ask TA for review
 
 *Week 10*
-- [ ] Code, test, ask TA for review
-- [ ] Finalize application
+- [X] Code, test, ask TA for review
+- [X] Finalize application
 - [ ] Create presentation
 
 
 *Finals Week*
-- [ ] Present + Final Interviews 
+- [X] Present + Final Interviews 
   
 ---
 
 ### Upcoming Deadlines
-#### *May 28, 2023*
-- *Agile - Retrospective* 
-- *Agile - Spring Review Meetings*
+#### *June 11, 2023*
+- Code Freeze
 
 ---
 

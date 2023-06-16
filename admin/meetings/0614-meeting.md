@@ -1,30 +1,26 @@
 ---
-title: 05-28-23 Meeting
-type: routine 
-date: 2023/05/23
-time: 2:00 PM - 4:00 PM 
-method: hybrid
+title: 06-14-23 Meeting
+type: popup
+date: 2023/06/14
+time: 7:00 PM - 12:20 AM
+method: in-person
 ---
 
-# Routine Meeting 
+# Popup Meeting
 
 ## Attendance
 
 In-person:
 
-- [X] Frank Li 
+- [ ] Frank Li 
 - [X] Grace Yang 
 - [X] Helena Hundhausen 
 - [X] Kiyoshi Guo 
 - [X] Leica Shen
 - [ ] Pascal Huang 
 - [X] Nathaniel Greenburg 
-- [X] William Heng 
-
-
-Virtual:
-
-- [X] Edwin Pham 
+- [ ] William Heng 
+- [ ] Edwin Pham 
 - [X] Shreya Gupta 
 
 --- 
@@ -33,12 +29,14 @@ Virtual:
 
 ### Objective Statements
 
-- Complete the assignments due at the end of week eight. 
+- Complete testing and the video assignments. 
 
 ### Agenda
 #### New Business 
-- Agile - Spring Review Meeting First Submission 
-- Agile - Retrospective Meeting First Submission 
+- Public Video 
+- Private Video 
+- Unit Tests 
+- E2E Testing 
 
 #### Old Business
 - n/a 
@@ -48,12 +46,14 @@ Virtual:
 ## Notes
 
 ### Completed Tasks
-- [X] Agile - Spring Review Meeting First Submission 
-- [X] Agile - Retrospective Meeting First Submission 
+- [X] Private Video 
+- [X] Public Video 
+- [X] Unit Tests 
+- [X] E2E Testing
 
 ### Tasks To Be completed 
-- [ ] n/a 
-
+- n/a 
+  
 ---
 
 ## Project Timeline
@@ -70,33 +70,34 @@ Virtual:
 - [X] Ask TA for recommendations and other thoughts
 
 *Week 8*
-- [ ] Code, test, ask TA for review
+- [X] Code, test, ask TA for review
 
 *Week 9*
-- [ ] Code, test, ask TA for review
+- [X] Code, test, ask TA for review
 
 *Week 10*
-- [ ] Code, test, ask TA for review
-- [ ] Finalize application
-- [ ] Create presentation
-
+- [X] Code, test, ask TA for review
+- [X] Finalize application
+- [X] Create presentation
 
 *Finals Week*
-- [ ] Present + Final Interviews 
+- [X] Present + Final Interviews 
   
 ---
 
 ### Upcoming Deadlines
-#### *May 28, 2023*
-- *Agile - Retrospective* 
-- *Agile - Spring Review Meetings*
+#### *June 14, 2023*
+- Final Project Video - Public Version
+- Final Project Video - Private Version 
+- Unit Tests 
+- E2E Testing
 
 ---
 
 ### Decisions Made
-1. n/a 
+- n/a
 
 ---
 
 ## Misc / Q&As
-- 
+- n/a 
